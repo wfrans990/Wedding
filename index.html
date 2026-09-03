@@ -116,6 +116,21 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
 /* TOAST */
 .toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,120px);background:#151515;color:#fff;padding:14px 22px;font-size:12px;z-index:12000;transition:.35s}.toast.show{transform:translate(-50%,0)}
 
+
+/* QRIS ON-DEMAND */
+.qris-card{position:relative}
+.qris-preview{text-align:center;width:100%}
+.qris-icon{width:72px;height:72px;border:1px solid rgba(255,255,255,.35);border-radius:50%;display:grid;place-items:center;font-size:32px;margin:auto;color:var(--accent)}
+.qris-button{margin-top:25px;padding:14px 22px}
+.qris-modal{position:fixed;inset:0;background:rgba(0,0,0,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);z-index:12000;display:none;align-items:center;justify-content:center;padding:20px}
+.qris-modal.active{display:flex}
+.qris-modal-card{width:min(390px,100%);background:#f4f1ec;padding:38px 28px;text-align:center;position:relative;animation:qrisIn .35s cubic-bezier(.2,.8,.2,1)}
+.qris-modal-card h3{font-family:Italiana,serif;font-size:48px;font-weight:400;margin:16px 0 28px}
+.qris-large{width:min(260px,75vw);aspect-ratio:1;background:#fff;border:1px solid var(--line);margin:auto;display:grid;place-items:center;font-family:DM Mono,monospace;font-size:58px;color:#151515}
+.qris-modal-card p{margin:24px auto 0;max-width:290px;color:var(--muted);font-size:12px;line-height:1.8}
+.qris-close{position:absolute;right:14px;top:8px;border:0;background:transparent;font-size:32px;cursor:pointer;color:#151515}
+@keyframes qrisIn{from{opacity:0;transform:translateY(20px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+
 /* =========================================================
    MOBILE EXPERIENCE — REDESIGNED FOR PHONE
 ========================================================= */
@@ -403,8 +418,12 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
     <button class="btn copy-button" id="copyAccount">SALIN NOMOR REKENING</button>
    </div>
    <div class="qris-card reveal">
-    <!-- GANTI DIV INI DENGAN <img src="qris.png"> SAAT QRIS SUDAH ADA -->
-    <div class="qris-placeholder">QR</div><div style="margin-top:25px;font-size:10px;letter-spacing:4px">QRIS</div><p style="margin-top:10px;color:#aaa;font-size:11px">Tambahkan QRIS Anda di sini</p>
+    <div class="qris-preview">
+      <div class="qris-icon">⌘</div>
+      <div style="font-size:10px;letter-spacing:4px;margin-top:16px">QRIS PAYMENT</div>
+      <p style="margin-top:10px;color:#aaa;font-size:11px">Klik tombol untuk menampilkan QR Code</p>
+      <button class="btn dark qris-button" id="showQris">TAMPILKAN QRIS</button>
+    </div>
    </div>
   </div>
  </div>
@@ -447,6 +466,17 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
 <div class="video-modal" id="videoModal">
  <button class="close-modal" id="closeVideo">×</button>
  <div class="video-box"><iframe id="videoFrame" src="" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+</div>
+
+<div class="qris-modal" id="qrisModal">
+ <div class="qris-modal-card">
+  <button class="qris-close" id="closeQris">×</button>
+  <div class="label">Wedding Gift</div>
+  <h3>Scan QRIS</h3>
+  <!-- GANTI DIV DI BAWAH DENGAN FOTO QRIS ASLI ANDA -->
+  <div class="qris-large">QR</div>
+  <p>Silakan scan QR Code untuk mengirimkan tanda kasih kepada kami.</p>
+ </div>
 </div>
 
 <div class="toast" id="toast"></div>
@@ -552,6 +582,20 @@ $("playFilm").addEventListener("click",()=>{
  $("videoFrame").src=WEDDING_CONFIG.videoUrl;$("videoModal").classList.add("active");document.body.classList.add("lock");
 });
 $("closeVideo").onclick=()=>{$("videoModal").classList.remove("active");$("videoFrame").src="";document.body.classList.remove("lock")};
+
+
+/* QRIS modal */
+$("showQris").addEventListener("click",()=>{
+ $("qrisModal").classList.add("active");
+ document.body.classList.add("lock");
+});
+$("closeQris").addEventListener("click",()=>{
+ $("qrisModal").classList.remove("active");
+ document.body.classList.remove("lock");
+});
+$("qrisModal").addEventListener("click",e=>{
+ if(e.target===$("qrisModal")) $("closeQris").click();
+});
 
 /* RSVP + wishes
    Mode default: tampil langsung di browser.
