@@ -594,6 +594,192 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
   .mobile-nav a{font-size:7px}
 }
 
+
+/* =========================================================
+   CINEMATIC MOMENTS VIEWER — PREMIUM GALLERY EXPERIENCE
+========================================================= */
+#galleryModal,
+.gallery-modal{
+  position:fixed!important;
+  inset:0!important;
+  z-index:20000!important;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255,255,255,.08), transparent 32%),
+    rgba(7,7,8,.96)!important;
+  backdrop-filter:blur(20px)!important;
+  -webkit-backdrop-filter:blur(20px)!important;
+  display:none;
+  overflow:hidden;
+}
+#galleryModal.active,
+.gallery-modal.active{display:block!important}
+
+#galleryModal .modal-inner,
+.gallery-modal .modal-inner{
+  width:100%!important;
+  height:100%!important;
+  max-width:none!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  padding:82px 110px 105px!important;
+  box-sizing:border-box;
+}
+
+#galleryModal img,
+.gallery-modal img,
+#modalImage{
+  width:auto!important;
+  height:auto!important;
+  max-width:min(82vw,1100px)!important;
+  max-height:72vh!important;
+  object-fit:contain!important;
+  border-radius:4px!important;
+  box-shadow:0 35px 100px rgba(0,0,0,.65)!important;
+  transform:scale(.96);
+  animation:cinematicPhotoIn .55s cubic-bezier(.16,1,.3,1) forwards;
+}
+
+#galleryModal:before,
+.gallery-modal:before{
+  content:"OUR MOMENTS";
+  position:absolute;
+  top:28px;
+  left:50%;
+  transform:translateX(-50%);
+  color:rgba(255,255,255,.65);
+  font-size:9px;
+  letter-spacing:6px;
+  z-index:2;
+  white-space:nowrap;
+}
+
+#galleryModal:after,
+.gallery-modal:after{
+  content:"FRANS  &  FITRI";
+  position:absolute;
+  bottom:30px;
+  left:50%;
+  transform:translateX(-50%);
+  color:rgba(255,255,255,.42);
+  font-size:8px;
+  letter-spacing:5px;
+  z-index:2;
+  white-space:nowrap;
+}
+
+.modal-close,
+.close-modal{
+  position:absolute!important;
+  top:22px!important;
+  right:24px!important;
+  width:46px!important;
+  height:46px!important;
+  border:1px solid rgba(255,255,255,.2)!important;
+  border-radius:50%!important;
+  background:rgba(255,255,255,.06)!important;
+  color:#fff!important;
+  display:grid!important;
+  place-items:center!important;
+  font-size:25px!important;
+  line-height:1!important;
+  z-index:5!important;
+  transition:.3s ease!important;
+}
+.modal-close:hover,.close-modal:hover{
+  background:#fff!important;
+  color:#111!important;
+  transform:rotate(90deg);
+}
+
+.modal-nav,
+.prev,.next{
+  width:54px!important;
+  height:54px!important;
+  border:1px solid rgba(255,255,255,.18)!important;
+  border-radius:50%!important;
+  background:rgba(255,255,255,.05)!important;
+  color:#fff!important;
+  display:grid!important;
+  place-items:center!important;
+  font-size:26px!important;
+  line-height:1!important;
+  transition:.3s ease!important;
+  z-index:5!important;
+}
+.modal-nav:hover,.prev:hover,.next:hover{
+  background:#fff!important;
+  color:#111!important;
+  transform:scale(1.08);
+}
+
+.gallery-counter{
+  position:absolute;
+  left:50%;
+  bottom:60px;
+  transform:translateX(-50%);
+  z-index:5;
+  color:#fff;
+  font-size:10px;
+  letter-spacing:3px;
+  padding:12px 18px;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:100px;
+  background:rgba(255,255,255,.05);
+  backdrop-filter:blur(12px);
+}
+
+@keyframes cinematicPhotoIn{
+  from{opacity:0;transform:scale(.94) translateY(16px)}
+  to{opacity:1;transform:scale(1) translateY(0)}
+}
+
+/* Mobile cinematic viewer */
+@media(max-width:768px){
+  #galleryModal .modal-inner,
+  .gallery-modal .modal-inner{
+    padding:70px 18px 105px!important;
+  }
+  #galleryModal img,
+  .gallery-modal img,
+  #modalImage{
+    max-width:91vw!important;
+    max-height:68vh!important;
+    border-radius:3px!important;
+  }
+  #galleryModal:before,
+  .gallery-modal:before{
+    top:22px;
+    font-size:8px;
+    letter-spacing:4px;
+  }
+  #galleryModal:after,
+  .gallery-modal:after{
+    bottom:24px;
+    font-size:7px;
+    letter-spacing:3px;
+  }
+  .modal-close,.close-modal{
+    top:14px!important;
+    right:14px!important;
+    width:42px!important;
+    height:42px!important;
+  }
+  .modal-nav,.prev,.next{
+    width:44px!important;
+    height:44px!important;
+    font-size:22px!important;
+  }
+  .prev{left:12px!important}
+  .next{right:12px!important}
+  .gallery-counter{
+    bottom:54px;
+    font-size:8px;
+    letter-spacing:2px;
+    padding:10px 14px;
+  }
+}
+
 </style>
 </head>
 
@@ -776,6 +962,7 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
  </div>
 </div>
 
+<div class="gallery-counter" id="galleryCounter">01 / 01</div>
 <div class="toast" id="toast"></div>
 
 <script>
@@ -921,5 +1108,45 @@ $("shareButton").addEventListener("click",async()=>{
  else{try{await navigator.clipboard.writeText(location.href);toast("Invitation link copied ✓")}catch(e){toast(location.href)}}
 });
 </script>
+
+<script>
+(function(){
+  const counter=document.getElementById('galleryCounter');
+  if(!counter) return;
+
+  const items=[...document.querySelectorAll('.gallery-item')];
+  let current=0;
+
+  function update(){
+    const total=Math.max(items.length,1);
+    const a=String(current+1).padStart(2,'0');
+    const b=String(total).padStart(2,'0');
+    counter.textContent=`${a} / ${b}`;
+  }
+
+  items.forEach((item,index)=>{
+    item.addEventListener('click',()=>{current=index;update();});
+  });
+
+  document.addEventListener('keydown',(e)=>{
+    if(e.key==='ArrowRight'){current=(current+1)%Math.max(items.length,1);update();}
+    if(e.key==='ArrowLeft'){current=(current-1+Math.max(items.length,1))%Math.max(items.length,1);update();}
+  });
+
+  const observer=new MutationObserver(()=>{
+    const modal=document.getElementById('galleryModal') || document.querySelector('.gallery-modal');
+    if(modal && (modal.classList.contains('active') || modal.style.display==='block')){
+      counter.style.display='block';
+      update();
+    } else {
+      counter.style.display='none';
+    }
+  });
+  observer.observe(document.body,{subtree:true,attributes:true,attributeFilter:['class','style']});
+  counter.style.display='none';
+  update();
+})();
+</script>
+
 </body>
 </html>
