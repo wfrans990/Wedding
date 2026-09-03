@@ -369,6 +369,51 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
   .qris-button{width:auto!important;margin-top:11px!important}
 }
 
+
+/* =========================================================
+   GIFT PAYMENT CARDS — MATCHING LEFT-ALIGNED LAYOUT
+========================================================= */
+.qris-card{
+  text-align:left!important;
+  align-items:stretch!important;
+}
+.qris-preview{
+  width:100%;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  justify-content:center!important;
+  text-align:left!important;
+}
+.payment-heading{
+  font-family:Italiana,serif;
+  font-size:34px;
+  line-height:1;
+  color:#fff;
+}
+.payment-label{
+  margin-top:22px;
+  font-size:9px;
+  letter-spacing:2.2px;
+  color:#aaa;
+}
+.qris-preview p{
+  margin:9px 0 0!important;
+  color:#aaa!important;
+  font-size:10px!important;
+  line-height:1.6!important;
+}
+.qris-button{
+  align-self:flex-start!important;
+  min-width:0!important;
+  margin-top:17px!important;
+}
+@media(max-width:768px){
+  .payment-heading{font-size:30px}
+  .payment-label{margin-top:17px}
+  .qris-preview p{font-size:9px!important}
+}
+
 /* QRIS ON-DEMAND */
 .qris-card{position:relative}
 .qris-preview{text-align:center;width:100%}
@@ -560,14 +605,14 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
   <div class="opening-content">
     <div class="opening-top">The Wedding Of</div>
     <div class="opening-names">Frans<span>&</span>Fitri</div>
-    <div class="guest-name">Kepada Yth.<strong id="guestName">Bapak / Ibu / Saudara / i</strong></div>
-    <button class="open-button" id="openInvitation">Buka Undangan</button>
+    <div class="guest-name">Dear<strong id="guestName">Family & Friends</strong></div>
+    <button class="open-button" id="openInvitation">Open Invitation</button>
   </div>
 </div>
 
 <section class="hero" id="home">
   <div class="hero-inner">
-    <!-- GANTI FOTO HERO DI SINI -->
+    
     <img class="hero-image" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=90" alt="Wedding">
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -584,7 +629,7 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
     <div class="intro-text reveal">
       <div class="label">A New Beginning</div>
       <h2 class="section-title">Two souls.<br>One journey.</h2>
-      <p>Dengan penuh rasa syukur kepada Tuhan Yang Maha Esa, kami mengundang Bapak, Ibu, Saudara dan Sahabat untuk menjadi bagian dari hari yang paling berharga dalam perjalanan hidup kami.</p>
+      <p>With grateful hearts, we invite you to celebrate one of the most meaningful moments of our lives and to be part of the beginning of our forever.</p>
       <div class="signature">Frans & Fitri</div>
     </div>
   </div>
@@ -593,12 +638,12 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
 <section class="couple-section" id="couple">
   <div class="couple-grid">
     <article class="couple-card">
-      <!-- GANTI FOTO PRIA -->
+      
       <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1200&q=90" alt="Frans">
       <div class="couple-info"><small>THE GROOM</small><h2>Frans</h2><p>FRANS WILLIAM ISKANDAR TAMBUNAN</p></div>
     </article>
     <article class="couple-card">
-      <!-- GANTI FOTO WANITA -->
+      
       <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=90" alt="Fitri">
       <div class="couple-info"><small>THE BRIDE</small><h2>Fitri</h2><p>FITRI SRI YULINAR NAINGGOLAN</p></div>
     </article>
@@ -623,8 +668,8 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
  <div class="container">
   <div class="label">Save The Date</div><h2 class="section-title">Our Celebration</h2>
   <div class="event-grid">
-   <article class="event-card reveal"><div class="event-number">01 — HOLY MATRIMONY</div><h3>Akad Nikah</h3><p id="akadInfo">Tanggal akan segera diumumkan<br><br>Jam acara akan segera diumumkan<br><br>Lokasi akan segera diumumkan</p><a class="event-link" id="akadMap" href="#" target="_blank">LIHAT LOKASI →</a></article>
-   <article class="event-card reveal"><div class="event-number">02 — WEDDING RECEPTION</div><h3>Resepsi</h3><p id="resepsiInfo">Tanggal akan segera diumumkan<br><br>Jam acara akan segera diumumkan<br><br>Lokasi akan segera diumumkan</p><a class="event-link" id="resepsiMap" href="#" target="_blank">LIHAT LOKASI →</a></article>
+   <article class="event-card reveal"><div class="event-number">01 — HOLY MATRIMONY</div><h3>Wedding Ceremony</h3><p id="akadInfo">Date to be announced<br><br>Time to be announced<br><br>Venue to be announced</p><a class="event-link" id="akadMap" href="#" target="_blank">VIEW LOCATION →</a></article>
+   <article class="event-card reveal"><div class="event-number">02 — WEDDING RECEPTION</div><h3>Wedding Reception</h3><p id="resepsiInfo">Date to be announced<br><br>Time to be announced<br><br>Venue to be announced</p><a class="event-link" id="resepsiMap" href="#" target="_blank">VIEW LOCATION →</a></article>
   </div>
  </div>
 </section>
@@ -633,9 +678,9 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
  <div class="container">
   <div class="label">Our Journey</div><h2 class="section-title">Love Story</h2>
   <div class="story">
-   <div class="story-row reveal"><div class="story-year">Chapter I</div><div class="story-content"><h3>The Beginning</h3><p>Setiap cerita memiliki awal. Dan terkadang, sebuah pertemuan sederhana dapat menjadi awal dari sesuatu yang luar biasa.</p></div></div>
-   <div class="story-row reveal"><div class="story-year">Chapter II</div><div class="story-content"><h3>Growing Together</h3><p>Kami belajar untuk memahami, berjalan bersama, dan menemukan arti sebuah rumah dalam diri satu sama lain.</p></div></div>
-   <div class="story-row reveal"><div class="story-year">Chapter III</div><div class="story-content"><h3>Forever Begins</h3><p>Kini kami memulai perjalanan baru. Bukan lagi dua jalan yang berbeda, tetapi satu perjalanan untuk selamanya.</p></div></div>
+   <div class="story-row reveal"><div class="story-year">Chapter I</div><div class="story-content"><h3>The Beginning</h3><p>Every love story has a beginning. Sometimes, a simple meeting can become the start of something truly extraordinary.</p></div></div>
+   <div class="story-row reveal"><div class="story-year">Chapter II</div><div class="story-content"><h3>Growing Together</h3><p>We learned to understand one another, walk through life together, and discover the meaning of home in each other.</p></div></div>
+   <div class="story-row reveal"><div class="story-year">Chapter III</div><div class="story-content"><h3>Forever Begins</h3><p>Today, we begin a new journey—not as two separate paths, but as one journey for a lifetime.</p></div></div>
   </div>
  </div>
 </section>
@@ -647,7 +692,7 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
 <section class="section gallery" id="gallery">
  <div class="container">
   <div class="label" style="color:#999">Our Moments</div><h2 class="section-title">Memories</h2>
-  <!-- GANTI URL FOTO DI BAWAH INI DENGAN FOTO KALIAN -->
+  
   <div class="gallery-grid" id="galleryGrid">
    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=90" alt="Moment 1"></div>
    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=90" alt="Moment 2"></div>
@@ -661,20 +706,20 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
 <section class="section gift" id="gift">
  <div class="container">
   <div class="label">Wedding Gift</div><h2 class="section-title">A Little Love</h2>
-  <p class="gift-text">Doa dan kehadiran Anda merupakan hadiah terindah bagi kami. Namun apabila Anda ingin memberikan tanda kasih, dapat melalui informasi berikut.</p>
+  <p class="gift-text">Your presence and kind wishes are the greatest gifts to us. However, if you would like to send a wedding gift, you may use the information below.</p>
   <div class="gift-grid">
    <div class="gift-card reveal">
     <div class="bank">MANDIRI</div>
     <div class="account">1050016086625</div>
-    <div class="account-name">a.n. FRANS WILLIAM ISKANDAR T</div>
-    <button class="btn copy-button" id="copyAccount">SALIN NOMOR REKENING</button>
+    <div class="account-name">Account Holder: FRANS WILLIAM ISKANDAR T</div>
+    <button class="btn copy-button" id="copyAccount">COPY ACCOUNT NUMBER</button>
    </div>
    <div class="qris-card reveal">
     <div class="qris-preview">
-      <div class="qris-icon">⌘</div>
-      <div style="font-size:10px;letter-spacing:4px;margin-top:16px">QRIS PAYMENT</div>
-      <p style="margin-top:10px;color:#aaa;font-size:11px">Klik tombol untuk menampilkan QR Code</p>
-      <button class="btn dark qris-button" id="showQris">TAMPILKAN QRIS</button>
+      <div class="payment-heading">QRIS PAYMENT</div>
+      <div class="payment-label">DIGITAL WEDDING GIFT</div>
+      <p>Scan the QR code to send your wedding gift.</p>
+      <button class="btn dark qris-button" id="showQris">VIEW QR CODE</button>
     </div>
    </div>
   </div>
@@ -685,10 +730,10 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
  <div class="container">
   <div class="label">RSVP & Wishes</div><h2 class="section-title">Will You Be There?</h2>
   <form class="rsvp-form" id="rsvpForm">
-   <input id="rsvpName" type="text" placeholder="Nama Anda" required>
-   <select id="rsvpAttendance" required><option value="">Konfirmasi Kehadiran</option><option value="Hadir">Hadir</option><option value="Tidak Dapat Hadir">Tidak Dapat Hadir</option></select>
-   <textarea id="rsvpWish" placeholder="Tulis ucapan dan doa untuk kami"></textarea>
-   <button class="send-button">KIRIM UCAPAN</button>
+   <input id="rsvpName" type="text" placeholder="Your Name" required>
+   <select id="rsvpAttenandce" required><option value="">Attenandce Confirmation</option><option value="Will Attend">Will Attend</option><option value="Unable to Attend">Unable to Attend</option></select>
+   <textarea id="rsvpWish" placeholder="Leave your wishes for us"></textarea>
+   <button class="send-button">SEND YOUR WISHES</button>
   </form>
   <div class="form-status" id="formStatus"></div>
   <div id="wishList" style="max-width:650px;margin:45px auto 0;text-align:left"></div>
@@ -703,12 +748,12 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
  <small>WITH LOVE • FOREVER BEGINS HERE</small>
 </footer>
 
-<button class="share-fab" id="shareButton" aria-label="Bagikan undangan">↗</button>
+<button class="share-fab" id="shareButton" aria-label="Bagikan unandgan">↗</button>
 <button class="music" id="musicButton" aria-label="Musik">♫</button>
 <audio id="music" loop><source src="music.mp3" type="audio/mpeg"></audio>
 
 <nav class="mobile-nav">
- <a href="#home">Home</a><a href="#couple">Couple</a><a href="#event">Event</a><a href="#gallery">Gallery</a><a href="#gift">Gift</a>
+ <a href="#home">Home</a><a href="#couple">Couple</a><a href="#event">Events</a><a href="#gallery">Gallery</a><a href="#gift">Gift</a>
 </nav>
 
 <div class="lightbox" id="lightbox">
@@ -724,32 +769,29 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
  <div class="qris-modal-card">
   <button class="qris-close" id="closeQris">×</button>
   <div class="label">Wedding Gift</div>
-  <h3>Scan QRIS</h3>
-  <!-- GANTI DIV DI BAWAH DENGAN FOTO QRIS ASLI ANDA -->
+  <h3>Scan QR Code</h3>
+  
   <div class="qris-large">QR</div>
-  <p>Silakan scan QR Code untuk mengirimkan tanda kasih kepada kami.</p>
+  <p>Scan the QR code to send your wedding gift.</p>
  </div>
 </div>
 
 <div class="toast" id="toast"></div>
 
 <script>
-/* =========================================================
-   FRANS & FITRI — CONFIGURATION CENTER
-   UBAH DATA UTAMA DI BAGIAN INI SAJA
-========================================================= */
+
 const WEDDING_CONFIG = {
   weddingDate: "2027-12-31T09:00:00",
   weddingDateText: "SAVE THE DATE • COMING SOON",
   title: "Frans & Fitri Wedding",
   location: "Indonesia",
-  akadInfo: "Tanggal akan segera diumumkan\\n\\nJam acara akan segera diumumkan\\n\\nLokasi akan segera diumumkan",
-  resepsiInfo: "Tanggal akan segera diumumkan\\n\\nJam acara akan segera diumumkan\\n\\nLokasi akan segera diumumkan",
+  akadInfo: "Date to be announced\\n\\nTime to be announced\\n\\nVenue to be announced",
+  resepsiInfo: "Date to be announced\\n\\nTime to be announced\\n\\nVenue to be announced",
   akadMap: "#",
   resepsiMap: "#",
-  // Masukkan URL embed YouTube jika sudah ada, contoh: https://www.youtube.com/embed/VIDEO_ID
+  // Add your YouTube embed URL here, for example: https://www.youtube.com/embed/VIDEO_ID
   videoUrl: "",
-  // Masukkan URL Google Apps Script di sini jika nanti ingin RSVP tersimpan ke Google Sheets
+  // Add your Google Apps Script URL here if you want RSVP responses saved to Google Sheets
   rsvpEndpoint: ""
 };
 
@@ -768,7 +810,7 @@ $("openInvitation").addEventListener("click", async ()=>{
   try{ await music.play(); musicButton.classList.add("playing"); }catch(e){}
 });
 musicButton.addEventListener("click", async ()=>{
-  if(music.paused){try{await music.play();musicButton.classList.add("playing")}catch(e){toast("Tambahkan file music.mp3 terlebih dahulu")}}
+  if(music.paused){try{await music.play();musicButton.classList.add("playing")}catch(e){toast("Please add the music.mp3 file first")}}
   else{music.pause();musicButton.classList.remove("playing")}
 });
 
@@ -815,8 +857,8 @@ $("calendarButton").addEventListener("click",()=>{
 
 /* Copy */
 $("copyAccount").addEventListener("click",async()=>{
- try{await navigator.clipboard.writeText("1050016086625");toast("Nomor rekening berhasil disalin ✓")}
- catch(e){toast("Nomor rekening: 1050016086625")}
+ try{await navigator.clipboard.writeText("1050016086625");toast("Account number copied ✓")}
+ catch(e){toast("Account number: 1050016086625")}
 });
 
 /* Gallery lightbox */
@@ -830,7 +872,7 @@ document.addEventListener("keydown",e=>{if(!$("lightbox").classList.contains("ac
 
 /* Wedding film */
 $("playFilm").addEventListener("click",()=>{
- if(!WEDDING_CONFIG.videoUrl){toast("Masukkan URL video prewedding di WEDDING_CONFIG");return}
+ if(!WEDDING_CONFIG.videoUrl){toast("Please add your pre-wedding video URL in WEDDING_CONFIG");return}
  $("videoFrame").src=WEDDING_CONFIG.videoUrl;$("videoModal").classList.add("active");document.body.classList.add("lock");
 });
 $("closeVideo").onclick=()=>{$("videoModal").classList.remove("active");$("videoFrame").src="";document.body.classList.remove("lock")};
@@ -851,32 +893,32 @@ $("qrisModal").addEventListener("click",e=>{
 
 /* RSVP + wishes
    Mode default: tampil langsung di browser.
-   Jika rsvpEndpoint diisi, data juga dikirim ke endpoint Google Apps Script.
+   If rsvpEndpoint is configured, the data will also be sent to the Google Apps Script endpoint.
 */
 const wishesKey="frans_fitri_wishes_v1";
 function renderWishes(){
  const list=$("wishList");const data=JSON.parse(localStorage.getItem(wishesKey)||"[]");
  if(!data.length){list.innerHTML="";return}
- list.innerHTML=data.slice().reverse().map(w=>`<div style="padding:22px 0;border-top:1px solid var(--line)"><strong>${escapeHTML(w.name)}</strong><div style="font-size:11px;color:var(--muted);margin:6px 0">${escapeHTML(w.attendance)}</div><p style="line-height:1.8;color:var(--muted)">${escapeHTML(w.wish||"Terima kasih atas doanya ❤️")}</p></div>`).join("");
+ list.innerHTML=data.slice().reverse().map(w=>`<div style="padding:22px 0;border-top:1px solid var(--line)"><strong>${escapeHTML(w.name)}</strong><div style="font-size:11px;color:var(--muted);margin:6px 0">${escapeHTML(w.attenandce)}</div><p style="line-height:1.8;color:var(--muted)">${escapeHTML(w.wish||"Thank you for your kind wishes ❤️")}</p></div>`).join("");
 }
 function escapeHTML(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
 $("rsvpForm").addEventListener("submit",async e=>{
  e.preventDefault();
- const data={name:$("rsvpName").value.trim(),attendance:$("rsvpAttendance").value,wish:$("rsvpWish").value.trim(),createdAt:new Date().toISOString()};
- if(!data.name||!data.attendance)return;
+ const data={name:$("rsvpName").value.trim(),attenandce:$("rsvpAttenandce").value,wish:$("rsvpWish").value.trim(),createdAt:new Date().toISOString()};
+ if(!data.name||!data.attenandce)return;
  const saved=JSON.parse(localStorage.getItem(wishesKey)||"[]");saved.push(data);localStorage.setItem(wishesKey,JSON.stringify(saved));
  if(WEDDING_CONFIG.rsvpEndpoint){
    try{await fetch(WEDDING_CONFIG.rsvpEndpoint,{method:"POST",mode:"no-cors",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)})}catch(err){}
  }
- $("rsvpForm").reset();$("formStatus").textContent="Terima kasih! Ucapan Anda telah diterima ❤️";renderWishes();
+ $("rsvpForm").reset();$("formStatus").textContent="Thank you! Your wishes have been received ❤️";renderWishes();
 });
 renderWishes();
 
 /* Share */
 $("shareButton").addEventListener("click",async()=>{
- const data={title:WEDDING_CONFIG.title,text:"Anda diundang ke pernikahan Frans & Fitri",url:location.href};
+ const data={title:WEDDING_CONFIG.title,text:"You are invited to celebrate the wedding of Frans & Fitri",url:location.href};
  if(navigator.share){try{await navigator.share(data)}catch(e){}}
- else{try{await navigator.clipboard.writeText(location.href);toast("Link undangan berhasil disalin ✓")}catch(e){toast(location.href)}}
+ else{try{await navigator.clipboard.writeText(location.href);toast("Invitation link copied ✓")}catch(e){toast(location.href)}}
 });
 </script>
 </body>
