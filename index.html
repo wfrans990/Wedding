@@ -116,17 +116,172 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
 /* TOAST */
 .toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,120px);background:#151515;color:#fff;padding:14px 22px;font-size:12px;z-index:12000;transition:.35s}.toast.show{transform:translate(-50%,0)}
 
+/* =========================================================
+   MOBILE EXPERIENCE — REDESIGNED FOR PHONE
+========================================================= */
 @media(max-width:768px){
- .hero{padding:12px}.hero-inner{min-height:95vh;padding:35px}
- .intro-grid,.couple-grid,.event-grid,.gift-grid{grid-template-columns:1fr}
- .intro-image{height:480px}.couple-card{min-height:540px;padding:35px}
- .countdown-grid{grid-template-columns:1fr 1fr}.time:nth-child(3){border-left:1px solid var(--line)}
- .story-row{grid-template-columns:1fr;gap:15px}.gallery-grid{grid-template-columns:1fr 1fr}.gallery-item:first-child{grid-column:span 2;grid-row:auto}.gallery-item img{min-height:220px}
- .event-card{padding:40px 28px}.film{min-height:620px}.gift-card{padding:40px 28px}
- .mobile-nav{position:fixed;display:flex;justify-content:space-around;align-items:center;bottom:0;left:0;right:0;height:65px;background:rgba(21,21,21,.95);backdrop-filter:blur(12px);z-index:9997;color:#fff}.mobile-nav a{font-size:8px;letter-spacing:1px;text-transform:uppercase;text-align:center}
- .music{bottom:82px}.share-fab{bottom:146px}footer{padding-bottom:110px}
- .modal-nav{font-size:32px}.prev{left:8px}.next{right:8px}
+  body{padding-bottom:82px}
+  .section{padding:76px 18px}
+  .container{width:100%}
+  .label{font-size:9px;letter-spacing:3px}
+  .section-title{font-size:52px;line-height:.92;margin-top:16px}
+
+  /* Opening */
+  .opening-content{padding:24px 20px;width:100%}
+  .opening-top{font-size:9px;letter-spacing:4px;margin-bottom:26px}
+  .opening-names{font-size:78px}
+  .opening-names span{margin:13px;font-size:26%}
+  .guest-name{margin-top:30px;font-size:9px}
+  .guest-name strong{font-size:14px}
+  .open-button{margin-top:34px;width:100%;max-width:310px}
+
+  /* Hero */
+  .hero{min-height:100svh;padding:0}
+  .hero-inner{
+    min-height:100svh;
+    width:100%;
+    border-radius:0;
+    padding:0 24px 115px;
+    align-items:flex-end;
+  }
+  .hero-image{filter:grayscale(100%) contrast(.95);opacity:.78}
+  .hero-overlay{background:linear-gradient(to top,rgba(0,0,0,.9) 0%,rgba(0,0,0,.25) 60%,rgba(0,0,0,.1) 100%)}
+  .hero-content{width:100%}
+  .hero-label{font-size:9px;letter-spacing:3px;margin-bottom:24px}
+  .hero-title{font-size:86px;line-height:.7}
+  .hero-title span{margin:18px 0;font-size:.25em}
+  .hero-meta{margin-top:30px;gap:9px;display:flex;flex-direction:column;font-size:9px;letter-spacing:1.5px}
+
+  /* Intro */
+  .intro-grid,.couple-grid,.event-grid,.gift-grid{grid-template-columns:1fr}
+  .intro-grid{gap:36px}
+  .intro-image{height:440px;border-radius:2px}
+  .intro-text{padding:0}
+  .intro-text p{margin-top:28px;font-size:14px;line-height:1.9}
+  .signature{font-size:36px;margin-top:28px}
+
+  /* Couple */
+  .couple-card{min-height:470px;padding:28px 24px}
+  .couple-info h2{font-size:62px;margin-top:12px}
+  .couple-info p{font-size:10px;line-height:1.6;max-width:280px}
+
+  /* Countdown */
+  .countdown-wrap{text-align:left}
+  .countdown-grid{grid-template-columns:repeat(2,1fr);margin-top:38px}
+  .time{padding:27px 12px}
+  .time:nth-child(3){border-left:1px solid var(--line)}
+  .time-number{font-size:52px}
+  .time-label{font-size:8px;letter-spacing:2px}
+  #calendarButton{width:100%;margin-top:24px}
+
+  /* Events */
+  .event-section{padding:70px 14px}
+  .event-grid{gap:12px;margin-top:38px}
+  .event-card{padding:34px 24px}
+  .event-card h3{font-size:46px;margin:18px 0}
+  .event-card p{font-size:13px;line-height:1.8}
+
+  /* Love Story */
+  .story{margin-top:38px}
+  .story-row{grid-template-columns:1fr;gap:10px;padding:28px 0}
+  .story-year{font-size:34px}
+  .story-content h3{font-size:17px}
+  .story-content p{font-size:13px;line-height:1.85}
+
+  /* Film */
+  .film{min-height:540px;padding:25px}
+  .film-title{font-size:62px}
+  .play-film{width:76px;height:76px;margin-top:36px}
+
+  /* Gallery */
+  .gallery{padding:76px 12px}
+  .gallery-grid{grid-template-columns:1fr 1fr;gap:7px;margin-top:36px}
+  .gallery-item:first-child{grid-column:span 2;grid-row:auto;height:330px}
+  .gallery-item{height:210px}
+  .gallery-item img{height:100%;min-height:0}
+
+  /* Gift */
+  .gift{text-align:left}
+  .gift-text{margin:24px 0 0;font-size:13px;line-height:1.9}
+  .gift-grid{margin-top:38px;gap:12px}
+  .gift-card{padding:32px 22px}
+  .bank{font-size:44px}
+  .account{margin-top:48px;font-size:24px}
+  .account-name{font-size:9px;line-height:1.6}
+  .copy-button{width:100%;margin-top:28px}
+  .qris-card{min-height:340px;padding:35px}
+  .qris-placeholder{width:180px;height:180px}
+
+  /* RSVP */
+  .rsvp{padding-left:18px;padding-right:18px}
+  .rsvp-form{margin-top:38px}
+  .rsvp-form input,.rsvp-form textarea,.rsvp-form select{padding:16px;font-size:13px}
+  .send-button{padding:18px}
+  #wishList{margin-top:30px!important}
+
+  /* Quote + Footer */
+  .quote{padding:85px 22px}
+  .quote-text{font-size:50px}
+  footer{padding:80px 20px 105px}
+  .footer-names{font-size:76px}
+  .footer-note{font-size:13px;line-height:1.8}
+  footer small{margin-top:42px;font-size:8px}
+
+  /* Floating controls */
+  .music,.share-fab{
+    width:46px;height:46px;
+    right:16px;
+    box-shadow:0 8px 25px rgba(0,0,0,.18);
+  }
+  .music{bottom:94px}
+  .share-fab{bottom:150px}
+
+  /* Modern dock navigation */
+  .mobile-nav{
+    position:fixed;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    gap:2px;
+    bottom:10px;
+    left:10px;
+    right:10px;
+    height:62px;
+    border-radius:18px;
+    background:rgba(20,20,20,.94);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    z-index:9997;
+    color:#fff;
+    box-shadow:0 12px 35px rgba(0,0,0,.3);
+    padding:0 6px;
+  }
+  .mobile-nav a{
+    flex:1;
+    padding:10px 2px;
+    font-size:8px;
+    letter-spacing:.3px;
+    text-transform:uppercase;
+    text-align:center;
+    color:#aaa;
+  }
+  .mobile-nav a:first-letter{color:#fff}
+
+  /* Modals */
+  .modal-nav{font-size:36px}
+  .prev{left:5px}.next{right:5px}
 }
+
+@media(max-width:390px){
+  .hero-title{font-size:72px}
+  .section-title{font-size:46px}
+  .opening-names{font-size:68px}
+  .couple-card{min-height:430px}
+  .film-title{font-size:54px}
+  .quote-text{font-size:45px}
+  .mobile-nav a{font-size:7px}
+}
+
 </style>
 </head>
 
