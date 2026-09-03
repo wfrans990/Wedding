@@ -222,6 +222,83 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
   .gift-card .account{font-size:22px}
 }
 
+
+/* =========================================================
+   COMPACT PREMIUM GIFT CARDS — REFINED PROPORTION
+========================================================= */
+.gift-grid{
+  max-width:780px;
+  margin:48px auto 0;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+.gift-card,
+.qris-card{
+  height:310px;
+  min-height:310px;
+  padding:34px 32px;
+}
+.gift-card .bank{
+  font-size:42px;
+  margin-bottom:4px;
+}
+.gift-card .account{
+  margin-top:34px;
+  font-size:24px;
+}
+.gift-card .account-name{
+  margin-top:10px;
+}
+.gift-card .copy-button{
+  margin-top:25px;
+  padding:13px 18px;
+}
+.qris-icon{
+  width:58px;
+  height:58px;
+  font-size:24px;
+}
+.qris-button{
+  min-width:180px;
+  margin-top:20px;
+  padding:13px 18px;
+}
+
+/* Phone */
+@media(max-width:768px){
+  .gift-grid{
+    max-width:460px;
+    margin:32px auto 0;
+    gap:12px;
+  }
+  .gift-card,
+  .qris-card{
+    height:255px;
+    min-height:255px;
+    padding:26px 24px;
+  }
+  .gift-card .bank{font-size:36px}
+  .gift-card .account{
+    margin-top:26px;
+    font-size:22px;
+  }
+  .gift-card .copy-button{
+    margin-top:20px;
+    padding:12px 14px;
+  }
+  .qris-preview p{
+    margin-top:7px!important;
+  }
+  .qris-icon{
+    width:52px;
+    height:52px;
+    font-size:22px;
+  }
+  .qris-button{
+    margin-top:17px;
+  }
+}
+
 /* QRIS ON-DEMAND */
 .qris-card{position:relative}
 .qris-preview{text-align:center;width:100%}
