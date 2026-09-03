@@ -1,13 +1,13 @@
 {
   "couple": {
-    "groomShort": "Kuman",
-    "groomFull": "Kuman Sehat",
-    "brideShort": "Rambut",
-    "brideFull": "Rambut Halus"
+    "groomShort": "Rumah",
+    "groomFull": "TEST",
+    "brideShort": "Rembes",
+    "brideFull": "AJA"
   },
   "event": {
-    "dateText": "SAVE THE DATE • COMING SOON",
-    "date": "2027-12-31T09:00"
+    "date": "2027-12-31T09:00",
+    "dateText": "SAVE THE DATE"
   },
   "gift": {
     "bank": "MANDIRI",
@@ -27,5 +27,6 @@
     "film": true,
     "gift": true,
     "rsvp": true
-  }
+  },
+  "_publishedMedia": []
 }
