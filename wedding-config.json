@@ -1,0 +1,31 @@
+{
+  "couple": {
+    "groomShort": "Kuman",
+    "groomFull": "Kuman Sehat",
+    "brideShort": "Rambut",
+    "brideFull": "Rambut Halus"
+  },
+  "event": {
+    "dateText": "SAVE THE DATE • COMING SOON",
+    "date": "2027-12-31T09:00"
+  },
+  "gift": {
+    "bank": "MANDIRI",
+    "account": "1050016086625",
+    "holder": "FRANS WILLIAM ISKANDAR T",
+    "qris": ""
+  },
+  "media": {
+    "hero": "",
+    "groom": "",
+    "bride": "",
+    "gallery": [],
+    "video": ""
+  },
+  "sections": {
+    "gallery": true,
+    "film": true,
+    "gift": true,
+    "rsvp": true
+  }
+}
