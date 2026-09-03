@@ -117,6 +117,111 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
 .toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,120px);background:#151515;color:#fff;padding:14px 22px;font-size:12px;z-index:12000;transition:.35s}.toast.show{transform:translate(-50%,0)}
 
 
+
+/* =========================================================
+   PREMIUM WEDDING GIFT — BALANCED EQUAL CARDS
+========================================================= */
+.gift-grid{
+  max-width:980px;
+  margin:65px auto 0;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  align-items:stretch;
+}
+.gift-card,
+.qris-card{
+  min-height:430px;
+  height:430px;
+  padding:48px;
+  border:1px solid var(--line);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  border-radius:2px;
+}
+.gift-card{
+  background:#fff;
+  text-align:left;
+}
+.qris-card{
+  background:#151515;
+  color:#fff;
+  text-align:center;
+}
+.gift-card .bank{
+  font-size:50px;
+  line-height:1;
+  margin-bottom:8px;
+}
+.gift-card .account{
+  margin-top:52px;
+  font-size:30px;
+  letter-spacing:.5px;
+}
+.gift-card .account-name{
+  margin-top:14px;
+}
+.gift-card .copy-button{
+  margin-top:38px;
+  align-self:flex-start;
+}
+.qris-preview{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+.qris-button{
+  margin-top:30px;
+  min-width:210px;
+}
+
+/* Mobile: equal visual cards without oversized QR area */
+@media(max-width:768px){
+  .gift-grid{
+    grid-template-columns:1fr;
+    gap:14px;
+    margin-top:36px;
+  }
+  .gift-card,
+  .qris-card{
+    width:100%;
+    height:330px;
+    min-height:330px;
+    padding:32px 26px;
+  }
+  .gift-card .bank{
+    font-size:42px;
+  }
+  .gift-card .account{
+    margin-top:42px;
+    font-size:25px;
+  }
+  .gift-card .copy-button{
+    width:100%;
+    margin-top:28px;
+  }
+  .qris-icon{
+    width:64px;
+    height:64px;
+    font-size:28px;
+  }
+  .qris-button{
+    width:100%;
+    margin-top:24px;
+  }
+}
+@media(max-width:390px){
+  .gift-card,
+  .qris-card{
+    height:315px;
+    min-height:315px;
+    padding:28px 22px;
+  }
+  .gift-card .account{font-size:22px}
+}
+
 /* QRIS ON-DEMAND */
 .qris-card{position:relative}
 .qris-preview{text-align:center;width:100%}
