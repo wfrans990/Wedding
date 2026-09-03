@@ -780,6 +780,89 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
   }
 }
 
+
+/* =========================================================
+   FINAL POLISH — CINEMATIC GALLERY + DOWNLOAD EXPERIENCE
+========================================================= */
+.lightbox{
+  background:radial-gradient(circle at 50% 35%,rgba(255,255,255,.09),transparent 28%),rgba(5,5,6,.98)!important;
+  backdrop-filter:blur(22px);
+  -webkit-backdrop-filter:blur(22px);
+  padding:0!important;
+  overflow:hidden;
+}
+.lightbox:before{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(115deg,rgba(255,255,255,.025) 0%,transparent 42%,rgba(255,255,255,.02) 100%);
+  pointer-events:none;
+}
+.lightbox-top{
+  position:absolute;top:0;left:0;right:0;z-index:20;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:22px 28px;
+}
+.lightbox-brand{display:flex;flex-direction:column;gap:5px;color:#fff}
+.lightbox-brand span{font-size:9px;letter-spacing:5px}
+.lightbox-brand small{font-size:7px;letter-spacing:3px;color:rgba(255,255,255,.45)}
+.lightbox-actions{display:flex;align-items:center;gap:10px}
+.download-image{
+  height:44px;padding:0 17px;border:1px solid rgba(255,255,255,.2);
+  border-radius:999px;display:flex;align-items:center;gap:8px;
+  color:#fff;text-decoration:none;font-size:8px;letter-spacing:2px;
+  background:rgba(255,255,255,.06);backdrop-filter:blur(12px);
+  transition:.3s ease;
+}
+.download-image:hover{background:#fff;color:#111;transform:translateY(-2px)}
+.close-modal{
+  position:static!important;width:44px!important;height:44px!important;
+  border:1px solid rgba(255,255,255,.2)!important;border-radius:50%!important;
+  background:rgba(255,255,255,.06)!important;color:#fff!important;
+  display:grid!important;place-items:center!important;font-size:25px!important;
+  transition:.3s ease!important;
+}
+.lightbox-stage{
+  width:100%;height:100%;display:flex;align-items:center;justify-content:center;
+  padding:95px 105px 110px;box-sizing:border-box;position:relative;
+}
+.lightbox img{
+  width:auto!important;height:auto!important;max-width:min(80vw,1200px)!important;
+  max-height:72vh!important;object-fit:contain!important;border-radius:3px!important;
+  box-shadow:0 40px 120px rgba(0,0,0,.75)!important;
+}
+.lightbox-caption{
+  position:absolute;left:50%;bottom:66px;transform:translateX(-50%);
+  color:rgba(255,255,255,.5);font-size:8px;letter-spacing:4px;
+}
+.lightbox .modal-nav{
+  z-index:20!important;width:54px!important;height:54px!important;
+  border:1px solid rgba(255,255,255,.18)!important;border-radius:50%!important;
+  background:rgba(255,255,255,.05)!important;color:#fff!important;
+  display:grid!important;place-items:center!important;font-size:28px!important;
+}
+.lightbox .modal-nav:hover{background:#fff!important;color:#111!important}
+.lightbox .gallery-counter{
+  position:absolute;left:50%;bottom:28px;transform:translateX(-50%);
+  z-index:20;color:#fff;font-size:9px;letter-spacing:3px;
+  padding:10px 16px;border:1px solid rgba(255,255,255,.15);border-radius:999px;
+  background:rgba(255,255,255,.05);
+}
+.gallery-download-note{
+  margin-top:14px;color:rgba(255,255,255,.5);font-size:9px;letter-spacing:1.8px;
+}
+@media(max-width:768px){
+  .lightbox-top{padding:15px 14px}
+  .lightbox-brand span{font-size:7px;letter-spacing:3px}
+  .download-image{width:42px;height:42px;padding:0;justify-content:center}
+  .download-image span{display:none}
+  .lightbox-stage{padding:82px 14px 105px}
+  .lightbox img{max-width:92vw!important;max-height:66vh!important}
+  .lightbox .modal-nav{width:42px!important;height:42px!important;font-size:22px!important}
+  .lightbox .prev{left:9px!important}.lightbox .next{right:9px!important}
+  .lightbox-caption{bottom:58px;font-size:7px;letter-spacing:3px}
+  .lightbox .gallery-counter{bottom:18px;font-size:8px}
+}
+
 </style>
 </head>
 
@@ -877,7 +960,7 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
 
 <section class="section gallery" id="gallery">
  <div class="container">
-  <div class="label" style="color:#999">Our Moments</div><h2 class="section-title">Memories</h2>
+  <div class="label" style="color:#999">Our Moments</div><h2 class="section-title">Memories</h2><div class="gallery-download-note">OPEN A PHOTO TO VIEW AND DOWNLOAD IT</div>
   
   <div class="gallery-grid" id="galleryGrid">
    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=90" alt="Moment 1"></div>
@@ -917,7 +1000,7 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
   <div class="label">RSVP & Wishes</div><h2 class="section-title">Will You Be There?</h2>
   <form class="rsvp-form" id="rsvpForm">
    <input id="rsvpName" type="text" placeholder="Your Name" required>
-   <select id="rsvpAttenandce" required><option value="">Attenandce Confirmation</option><option value="Will Attend">Will Attend</option><option value="Unable to Attend">Unable to Attend</option></select>
+   <select id="rsvpAttendance" required><option value="">Attendance Confirmation</option><option value="Will Attend">Will Attend</option><option value="Unable to Attend">Unable to Attend</option></select>
    <textarea id="rsvpWish" placeholder="Leave your wishes for us"></textarea>
    <button class="send-button">SEND YOUR WISHES</button>
   </form>
@@ -943,7 +1026,17 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
 </nav>
 
 <div class="lightbox" id="lightbox">
- <button class="close-modal" id="closeLightbox">×</button><button class="modal-nav prev" id="prevImage">‹</button><img id="lightboxImage" alt="Gallery preview"><button class="modal-nav next" id="nextImage">›</button>
+ <div class="lightbox-top">
+      <div class="lightbox-brand"><span>OUR MOMENTS</span><small>FRANS & FITRI</small></div>
+      <div class="lightbox-actions">
+        <a id="downloadImage" class="download-image" href="#" download aria-label="Download photo">↓ <span>DOWNLOAD</span></a>
+        <button class="close-modal" id="closeLightbox" aria-label="Close">×</button>
+      </div>
+    </div>
+    <button class="modal-nav prev" id="prevImage" aria-label="Previous photo">‹</button>
+    <div class="lightbox-stage"><img id="lightboxImage" alt="Gallery preview"><div class="lightbox-caption" id="lightboxCaption">MEMORY 01</div></div>
+    <button class="modal-nav next" id="nextImage" aria-label="Next photo">›</button>
+    <div class="gallery-counter" id="galleryCounter">01 / 01</div>
 </div>
 
 <div class="video-modal" id="videoModal">
@@ -962,7 +1055,6 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
  </div>
 </div>
 
-<div class="gallery-counter" id="galleryCounter">01 / 01</div>
 <div class="toast" id="toast"></div>
 
 <script>
@@ -1051,8 +1143,22 @@ $("copyAccount").addEventListener("click",async()=>{
 /* Gallery lightbox */
 const galleryImages=[...document.querySelectorAll("#galleryGrid img")].map(i=>i.src);
 let currentImage=0;
-function showImage(i){currentImage=(i+galleryImages.length)%galleryImages.length;$("lightboxImage").src=galleryImages[currentImage];}
-document.querySelectorAll("#galleryGrid img").forEach((img,i)=>img.addEventListener("click",()=>{$("lightbox").classList.add("active");showImage(i);document.body.classList.add("lock")}));
+function showImage(i){
+  currentImage=(i+galleryImages.length)%galleryImages.length;
+  const image=$("lightboxImage");
+  const src=galleryImages[currentImage];
+  image.style.opacity="0";
+  image.style.transform="scale(.98)";
+  setTimeout(()=>{image.src=src;image.alt=`Wedding memory ${currentImage+1}`;image.style.opacity="1";image.style.transform="scale(1)"},120);
+  const download=$("downloadImage");
+  download.href=src;
+  download.setAttribute("download",`frans-fitri-memory-${String(currentImage+1).padStart(2,"0")}.jpg`);
+  $("lightboxCaption").textContent=`MEMORY ${String(currentImage+1).padStart(2,"0")}`;
+  $("galleryCounter").textContent=`${String(currentImage+1).padStart(2,"0")} / ${String(galleryImages.length).padStart(2,"0")}`;
+}
+document.querySelectorAll("#galleryGrid img").forEach((img,i)=>img.addEventListener("click",()=>{
+  $("lightbox").classList.add("active");showImage(i);document.body.classList.add("lock")
+}));
 $("closeLightbox").onclick=()=>{$("lightbox").classList.remove("active");document.body.classList.remove("lock")};
 $("prevImage").onclick=()=>showImage(currentImage-1);$("nextImage").onclick=()=>showImage(currentImage+1);
 document.addEventListener("keydown",e=>{if(!$("lightbox").classList.contains("active"))return;if(e.key==="Escape")$("closeLightbox").click();if(e.key==="ArrowLeft")$("prevImage").click();if(e.key==="ArrowRight")$("nextImage").click()});
