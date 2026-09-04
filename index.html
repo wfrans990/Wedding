@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#151515">
-<title>Frans & Fitri — Wedding Invitation</title>
+<title>Frans & Fitri — Undangan Pernikahan</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Italiana&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -27,7 +27,7 @@ button{font:inherit}
 .section{padding:clamp(90px,12vw,170px) 25px}
 .container{max-width:1200px;margin:auto}
 .label{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--muted)}
-.section-title{font-family:Italiana,serif;font-size:clamp(52px,7vw,100px);font-weight:400;line-height:.9;margin-top:22px}
+.section-title{font-family:Manrope,sans-serif;font-size:clamp(52px,7vw,100px);font-weight:400;line-height:.9;margin-top:22px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:17px 26px;border:1px solid var(--ink);background:transparent;cursor:pointer;font-size:10px;letter-spacing:2px;text-transform:uppercase;transition:.3s}
 .btn:hover{background:var(--ink);color:#fff}
 .btn.dark{border-color:#fff;color:#fff}.btn.dark:hover{background:#fff;color:#111}
@@ -38,7 +38,7 @@ button{font:inherit}
 #opening.hide{transform:translateY(-100%)}
 .opening-content{text-align:center;padding:30px}
 .opening-top{font-size:10px;letter-spacing:5px;text-transform:uppercase;opacity:.6;margin-bottom:35px}
-.opening-names{font-family:Italiana,serif;font-size:clamp(62px,11vw,145px);line-height:.82}
+.opening-names{font-family:Manrope,sans-serif;font-size:clamp(62px,11vw,145px);line-height:.82}
 .opening-names span{display:block;font-family:Manrope,sans-serif;font-size:30%;margin:18px;opacity:.6}
 .guest-name{margin-top:38px;font-size:10px;letter-spacing:2px;color:#999;text-transform:uppercase}
 .guest-name strong{display:block;color:#fff;font-size:15px;margin-top:10px;letter-spacing:1px;text-transform:none}
@@ -53,7 +53,7 @@ button{font:inherit}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.72),rgba(0,0,0,.04))}
 .hero-content{position:relative;z-index:1;color:#fff}
 .hero-label{font-size:10px;letter-spacing:5px;text-transform:uppercase;margin-bottom:28px}
-.hero-title{font-family:Italiana,serif;font-size:clamp(76px,14vw,190px);font-weight:400;line-height:.74}
+.hero-title{font-family:Manrope,sans-serif;font-size:clamp(76px,14vw,190px);font-weight:400;line-height:.74}
 .hero-title span{font-family:Manrope,sans-serif;display:block;font-size:.28em;font-weight:300;margin:22px 0}
 .hero-meta{margin-top:40px;display:flex;gap:28px;flex-wrap:wrap;font-size:10px;letter-spacing:2px}
 
@@ -61,7 +61,7 @@ button{font:inherit}
 .intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(45px,10vw,140px);align-items:end}
 .intro-image{height:680px;overflow:hidden;background:#ddd}.intro-image img{height:100%;object-fit:cover;filter:grayscale(100%)}
 .intro-text{padding-bottom:35px}.intro-text p{margin-top:38px;line-height:2;color:var(--muted);max-width:520px}
-.signature{font-family:Italiana,serif;font-size:42px;margin-top:38px}
+.signature{font-family:Manrope,sans-serif;font-size:42px;margin-top:38px}
 
 /* COUPLE */
 .couple-section{background:#151515;color:#fff}.couple-grid{display:grid;grid-template-columns:1fr 1fr}
@@ -69,38 +69,38 @@ button{font:inherit}
 .couple-card:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75),transparent 60%)}
 .couple-card img{position:absolute;inset:0;height:100%;object-fit:cover;opacity:.7;filter:grayscale(100%);transition:1s}
 .couple-card:hover img{transform:scale(1.05);filter:grayscale(0)}
-.couple-info{position:relative;z-index:1}.couple-info small{font-size:10px;letter-spacing:4px}.couple-info h2{font-family:Italiana,serif;font-size:72px;font-weight:400;margin-top:18px}.couple-info p{font-size:12px;color:#ddd;margin-top:15px;letter-spacing:1px}
+.couple-info{position:relative;z-index:1}.couple-info small{font-size:10px;letter-spacing:4px}.couple-info h2{font-family:Manrope,sans-serif;font-size:72px;font-weight:400;margin-top:18px}.couple-info p{font-size:12px;color:#ddd;margin-top:15px;letter-spacing:1px}
 
 /* COUNTDOWN */
 .countdown-wrap{text-align:center}.countdown-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:65px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .time{padding:42px 10px;border-right:1px solid var(--line)}.time:first-child{border-left:1px solid var(--line)}
-.time-number{font-family:Italiana,serif;font-size:65px}.time-label{font-size:9px;letter-spacing:3px;color:var(--muted);margin-top:10px}
+.time-number{font-family:Manrope,sans-serif;font-size:65px}.time-label{font-size:9px;letter-spacing:3px;color:var(--muted);margin-top:10px}
 
 /* EVENT */
 .event-section{background:#e8e3dc}.event-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:65px}
-.event-card{background:#fff;padding:55px}.event-number{font-size:10px;letter-spacing:3px;color:var(--muted)}.event-card h3{font-family:Italiana,serif;font-size:58px;font-weight:400;margin:25px 0}.event-card p{line-height:2;color:var(--muted)}.event-link{display:inline-block;margin-top:35px;font-size:10px;letter-spacing:2px;border-bottom:1px solid var(--ink);padding-bottom:8px}
+.event-card{background:#fff;padding:55px}.event-number{font-size:10px;letter-spacing:3px;color:var(--muted)}.event-card h3{font-family:Manrope,sans-serif;font-size:58px;font-weight:400;margin:25px 0}.event-card p{line-height:2;color:var(--muted)}.event-link{display:inline-block;margin-top:35px;font-size:10px;letter-spacing:2px;border-bottom:1px solid var(--ink);padding-bottom:8px}
 
 /* STORY */
-.story{max-width:880px;margin:70px auto 0}.story-row{display:grid;grid-template-columns:160px 1fr;gap:70px;padding:45px 0;border-top:1px solid var(--line)}.story-year{font-family:Italiana,serif;font-size:42px}.story-content h3{font-size:19px}.story-content p{margin-top:15px;color:var(--muted);line-height:2}
+.story{max-width:880px;margin:70px auto 0}.story-row{display:grid;grid-template-columns:160px 1fr;gap:70px;padding:45px 0;border-top:1px solid var(--line)}.story-year{font-family:Manrope,sans-serif;font-size:42px}.story-content h3{font-size:19px}.story-content p{margin-top:15px;color:var(--muted);line-height:2}
 
 /* FILM */
 .film{min-height:760px;position:relative;background:#222 url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1800&q=90") center/cover;color:#fff;display:grid;place-items:center;text-align:center}
-.film:before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.55)}.film-content{position:relative;z-index:1}.film-title{font-family:Italiana,serif;font-size:clamp(58px,8vw,120px);font-weight:400;line-height:.88;margin-top:25px}.play-film{margin-top:48px;width:90px;height:90px;border-radius:50%;border:1px solid #fff;background:transparent;color:#fff;cursor:pointer;font-size:18px;transition:.3s}.play-film:hover{background:#fff;color:#111;transform:scale(1.08)}
+.film:before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.55)}.film-content{position:relative;z-index:1}.film-title{font-family:Manrope,sans-serif;font-size:clamp(58px,8vw,120px);font-weight:400;line-height:.88;margin-top:25px}.play-film{margin-top:48px;width:90px;height:90px;border-radius:50%;border:1px solid #fff;background:transparent;color:#fff;cursor:pointer;font-size:18px;transition:.3s}.play-film:hover{background:#fff;color:#111;transform:scale(1.08)}
 
 /* GALLERY */
 .gallery{background:#151515;color:#fff}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:70px}.gallery-item{overflow:hidden;cursor:pointer}.gallery-item:first-child{grid-row:span 2}.gallery-item img{height:100%;min-height:330px;object-fit:cover;filter:grayscale(100%);transition:1s}.gallery-item:hover img{transform:scale(1.06);filter:none}
 
 /* GIFT */
-.gift{text-align:center}.gift-text{max-width:620px;margin:30px auto;line-height:2;color:var(--muted)}.gift-grid{max-width:950px;margin:65px auto 0;display:grid;grid-template-columns:1.4fr .8fr;gap:20px;text-align:left}.gift-card{background:#fff;border:1px solid var(--line);padding:55px}.bank{font-family:Italiana,serif;font-size:52px}.account{margin-top:70px;font-family:DM Mono,monospace;font-size:clamp(22px,3vw,34px);word-break:break-all}.account-name{margin-top:15px;color:var(--muted);font-size:11px}.qris-card{background:#151515;color:#fff;padding:45px;display:grid;place-items:center;text-align:center}.qris-placeholder{width:190px;height:190px;background:#fff;color:#111;display:grid;place-items:center;font-family:DM Mono,monospace;font-size:36px}.copy-button{margin-top:35px}
+.gift{text-align:center}.gift-text{max-width:620px;margin:30px auto;line-height:2;color:var(--muted)}.gift-grid{max-width:950px;margin:65px auto 0;display:grid;grid-template-columns:1.4fr .8fr;gap:20px;text-align:left}.gift-card{background:#fff;border:1px solid var(--line);padding:55px}.bank{font-family:Manrope,sans-serif;font-size:52px}.account{margin-top:70px;font-family:Manrope,sans-serif;font-size:clamp(22px,3vw,34px);word-break:break-all}.account-name{margin-top:15px;color:var(--muted);font-size:11px}.qris-card{background:#151515;color:#fff;padding:45px;display:grid;place-items:center;text-align:center}.qris-placeholder{width:190px;height:190px;background:#fff;color:#111;display:grid;place-items:center;font-family:Manrope,sans-serif;font-size:36px}.copy-button{margin-top:35px}
 
 /* RSVP */
 .rsvp{text-align:center;background:#e8e3dc}.rsvp-form{max-width:650px;margin:60px auto 0;display:grid;gap:14px}.rsvp-form input,.rsvp-form textarea,.rsvp-form select{width:100%;padding:18px;border:1px solid var(--line);background:#fff;font-family:Manrope,sans-serif;outline:none}.rsvp-form textarea{min-height:140px;resize:vertical}.send-button{border:0;background:#151515;color:#fff;padding:19px;cursor:pointer;font-size:10px;letter-spacing:3px}.form-status{margin-top:20px;color:var(--muted)}
 
 /* QUOTE */
-.quote{background:#151515;color:#fff;text-align:center}.quote-text{font-family:Italiana,serif;font-size:clamp(48px,7vw,105px);line-height:.95;max-width:1050px;margin:auto}.quote small{display:block;margin-top:40px;letter-spacing:4px;color:#999}
+.quote{background:#151515;color:#fff;text-align:center}.quote-text{font-family:Manrope,sans-serif;font-size:clamp(48px,7vw,105px);line-height:.95;max-width:1050px;margin:auto}.quote small{display:block;margin-top:40px;letter-spacing:4px;color:#999}
 
 /* FOOTER */
-footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Italiana,serif;font-size:clamp(65px,10vw,140px);line-height:.78}.footer-names span{font-family:Manrope,sans-serif;display:block;font-size:.25em;margin:20px}.footer-note{margin-top:40px;color:var(--muted)}footer small{display:block;margin-top:65px;font-size:9px;letter-spacing:3px}
+footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Manrope,sans-serif;font-size:clamp(65px,10vw,140px);line-height:.78}.footer-names span{font-family:Manrope,sans-serif;display:block;font-size:.25em;margin:20px}.footer-note{margin-top:40px;color:var(--muted)}footer small{display:block;margin-top:65px;font-size:9px;letter-spacing:3px}
 
 /* FIXED */
 .music,.share-fab{position:fixed;right:24px;width:54px;height:54px;border-radius:50%;border:0;background:#151515;color:#fff;cursor:pointer;z-index:1000}
@@ -386,7 +386,7 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
   text-align:left!important;
 }
 .payment-heading{
-  font-family:Italiana,serif;
+  font-family:Manrope,sans-serif;
   font-size:34px;
   line-height:1;
   color:#fff;
@@ -422,8 +422,8 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
 .qris-modal{position:fixed;inset:0;background:rgba(0,0,0,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);z-index:12000;display:none;align-items:center;justify-content:center;padding:20px}
 .qris-modal.active{display:flex}
 .qris-modal-card{width:min(390px,100%);background:#f4f1ec;padding:38px 28px;text-align:center;position:relative;animation:qrisIn .35s cubic-bezier(.2,.8,.2,1)}
-.qris-modal-card h3{font-family:Italiana,serif;font-size:48px;font-weight:400;margin:16px 0 28px}
-.qris-large{width:min(260px,75vw);aspect-ratio:1;background:#fff;border:1px solid var(--line);margin:auto;display:grid;place-items:center;font-family:DM Mono,monospace;font-size:58px;color:#151515}
+.qris-modal-card h3{font-family:Manrope,sans-serif;font-size:48px;font-weight:400;margin:16px 0 28px}
+.qris-large{width:min(260px,75vw);aspect-ratio:1;background:#fff;border:1px solid var(--line);margin:auto;display:grid;place-items:center;font-family:Manrope,sans-serif;font-size:58px;color:#151515}
 .qris-modal-card p{margin:24px auto 0;max-width:290px;color:var(--muted);font-size:12px;line-height:1.8}
 .qris-close{position:absolute;right:14px;top:8px;border:0;background:transparent;font-size:32px;cursor:pointer;color:#151515}
 @keyframes qrisIn{from{opacity:0;transform:translateY(20px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
@@ -472,7 +472,7 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
   .intro-text p{margin-top:28px;font-size:14px;line-height:1.9}
   .signature{font-size:36px;margin-top:28px}
 
-  /* Couple */
+  /* Mempelai */
   .couple-card{min-height:470px;padding:28px 24px}
   .couple-info h2{font-size:62px;margin-top:12px}
   .couple-info p{font-size:10px;line-height:1.6;max-width:280px}
@@ -486,14 +486,14 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
   .time-label{font-size:8px;letter-spacing:2px}
   #calendarButton{width:100%;margin-top:24px}
 
-  /* Events */
+  /* Acara */
   .event-section{padding:70px 14px}
   .event-grid{gap:12px;margin-top:38px}
   .event-card{padding:34px 24px}
   .event-card h3{font-size:46px;margin:18px 0}
   .event-card p{font-size:13px;line-height:1.8}
 
-  /* Love Story */
+  /* Kisah Cinta */
   .story{margin-top:38px}
   .story-row{grid-template-columns:1fr;gap:10px;padding:28px 0}
   .story-year{font-size:34px}
@@ -505,14 +505,14 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
   .film-title{font-size:62px}
   .play-film{width:76px;height:76px;margin-top:36px}
 
-  /* Gallery */
+  /* Galeri */
   .gallery{padding:76px 12px}
   .gallery-grid{grid-template-columns:1fr 1fr;gap:7px;margin-top:36px}
   .gallery-item:first-child{grid-column:span 2;grid-row:auto;height:330px}
   .gallery-item{height:210px}
   .gallery-item img{height:100%;min-height:0}
 
-  /* Gift */
+  /* Hadiah */
   .gift{text-align:left}
   .gift-text{margin:24px 0 0;font-size:13px;line-height:1.9}
   .gift-grid{margin-top:38px;gap:12px}
@@ -642,7 +642,7 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
 
 #galleryModal:before,
 .gallery-modal:before{
-  content:"OUR MOMENTS";
+  content:"MOMEN KAMI";
   position:absolute;
   top:28px;
   left:50%;
@@ -866,13 +866,13 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
 
 /* ===== FINAL ULTRA PREMIUM ADDITIONS ===== */
 #luxuryLoader{position:fixed;inset:0;z-index:50000;background:#0b0b0c;color:#fff;display:flex;align-items:center;justify-content:center;transition:.8s}
-#luxuryLoader.hide{opacity:0;visibility:hidden}.loader-inner{text-align:center}.loader-monogram{width:110px;height:110px;border:1px solid #555;border-radius:50%;display:grid;place-items:center;margin:auto;font-family:Italiana,serif;font-size:42px}.loader-line{height:45px;width:1px;background:#777;margin:18px auto}.loader-text{font-size:8px;letter-spacing:5px;color:#aaa}
+#luxuryLoader.hide{opacity:0;visibility:hidden}.loader-inner{text-align:center}.loader-monogram{width:110px;height:110px;border:1px solid #555;border-radius:50%;display:grid;place-items:center;margin:auto;font-family:Manrope,sans-serif;font-size:42px}.loader-line{height:45px;width:1px;background:#777;margin:18px auto}.loader-text{font-size:8px;letter-spacing:5px;color:#aaa}
 .scroll-progress{position:fixed;top:0;left:0;height:2px;background:var(--accent);z-index:16000;width:0}
-.note-from-us{max-width:720px;margin:auto;padding:90px 24px;text-align:center}.note-from-us h2{font-family:Italiana,serif;font-size:60px;font-weight:400}.note-from-us p{color:var(--muted);line-height:2;font-size:14px}.note-signature{font-size:34px;margin-top:25px}
+.note-from-us{max-width:720px;margin:auto;padding:90px 24px;text-align:center}.note-from-us h2{font-family:Manrope,sans-serif;font-size:60px;font-weight:400}.note-from-us p{color:var(--muted);line-height:2;font-size:14px}.note-signature{font-size:34px;margin-top:25px}
 .dress-code{background:#111;color:#fff;padding:80px 20px;text-align:center}.dress-code .section-title{color:#fff}.dress-text{color:#aaa;max-width:500px;margin:15px auto 35px}.palette{display:flex;justify-content:center;gap:18px;flex-wrap:wrap}.palette-item{display:flex;flex-direction:column;align-items:center;gap:10px}.color-dot{width:60px;height:60px;border-radius:50%;border:1px solid #555}.palette-item span{font-size:8px;letter-spacing:2px;color:#aaa}.black{background:#171717}.champagne{background:#d8c3a5}.nude{background:#c9a28f}.olive{background:#59604e}
-.location-premium{max-width:950px;margin:45px auto 0;display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line)}.map-preview{min-height:300px;background:#171717;display:grid;place-items:center;color:#fff;font-size:36px}.location-details{padding:42px}.location-details h3{font-family:Italiana,serif;font-size:42px;font-weight:400}.location-details p{color:var(--muted);line-height:1.8;font-size:13px}.location-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.location-premium{max-width:950px;margin:45px auto 0;display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line)}.map-preview{min-height:300px;background:#171717;display:grid;place-items:center;color:#fff;font-size:36px}.location-details{padding:42px}.location-details h3{font-family:Manrope,sans-serif;font-size:42px;font-weight:400}.location-details p{color:var(--muted);line-height:1.8;font-size:13px}.location-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
 .now-playing{position:fixed;left:18px;bottom:18px;z-index:12000;background:rgba(20,20,20,.9);color:#fff;padding:11px 15px;border-radius:14px;font-size:8px;letter-spacing:1px}
-.rsvp-success{position:fixed;inset:0;z-index:40000;background:rgba(0,0,0,.85);backdrop-filter:blur(12px);display:none;align-items:center;justify-content:center;padding:20px}.rsvp-success.active{display:flex}.success-card{background:#f5f1eb;width:min(400px,100%);padding:48px 28px;text-align:center}.success-card h3{font-family:Italiana,serif;font-size:52px;font-weight:400;margin:18px}.success-card p{color:var(--muted);line-height:1.8}
+.rsvp-success{position:fixed;inset:0;z-index:40000;background:rgba(0,0,0,.85);backdrop-filter:blur(12px);display:none;align-items:center;justify-content:center;padding:20px}.rsvp-success.active{display:flex}.success-card{background:#f5f1eb;width:min(400px,100%);padding:48px 28px;text-align:center}.success-card h3{font-family:Manrope,sans-serif;font-size:52px;font-weight:400;margin:18px}.success-card p{color:var(--muted);line-height:1.8}
 @media(max-width:768px){.note-from-us{padding:65px 20px}.note-from-us h2{font-size:48px}.dress-code{padding:65px 18px}.location-premium{grid-template-columns:1fr}.map-preview{min-height:220px}.location-details{padding:30px 22px}.now-playing{bottom:86px;left:12px}.loader-monogram{width:90px;height:90px;font-size:34px}}
 
 
@@ -886,10 +886,10 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
 #luxuryLoader:before{top:-22vw;left:-14vw}#luxuryLoader:after{right:-16vw;bottom:-24vw}
 .loader-inner{position:relative;z-index:2;text-align:center;animation:loaderReveal 1.2s cubic-bezier(.16,1,.3,1) both}
 .loader-eyebrow{font-size:8px;letter-spacing:6px;color:rgba(255,255,255,.42);margin-bottom:22px}
-.loader-names{display:flex;align-items:center;justify-content:center;gap:24px;font-family:Italiana,serif;color:#f5f1eb}
+.loader-names{display:flex;align-items:center;justify-content:center;gap:24px;font-family:Manrope,sans-serif;color:#f5f1eb}
 .loader-names span{font-size:82px;line-height:1;font-weight:400;animation:letterFloat 2.8s ease-in-out infinite}
 .loader-names span:last-child{animation-delay:.35s}
-.loader-names i{font-family:Italiana,serif;font-style:italic;font-size:30px;color:#bca98a;transform:translateY(4px)}
+.loader-names i{font-family:Manrope,sans-serif;font-style:italic;font-size:30px;color:#bca98a;transform:translateY(4px)}
 .loader-divider{width:150px;height:1px;background:rgba(255,255,255,.16);margin:27px auto 18px;overflow:hidden}
 .loader-divider span{display:block;width:45%;height:100%;background:#d8c3a5;animation:lineMove 1.8s ease-in-out infinite}
 .loader-text{font-size:7px;letter-spacing:3px;color:rgba(255,255,255,.45)}
@@ -902,13 +902,1119 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
  .loader-divider{width:125px}
 }
 
+
+/* =========================================================
+   SMART FLOATING CONTROLS — MUNCUL SAAT SCROLL, RINGKAS SAAT DIAM
+   ========================================================= */
+.floating-controls{
+  position:fixed;
+  right:24px;
+  bottom:24px;
+  z-index:15000;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:10px;
+  pointer-events:none;
+}
+.floating-control{
+  pointer-events:auto;
+  height:52px;
+  min-width:52px;
+  border:0;
+  border-radius:999px;
+  background:rgba(21,21,21,.96);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  overflow:hidden;
+  cursor:pointer;
+  box-shadow:0 12px 35px rgba(0,0,0,.20);
+  transition:
+    width .42s cubic-bezier(.16,1,.3,1),
+    min-width .42s cubic-bezier(.16,1,.3,1),
+    padding .42s cubic-bezier(.16,1,.3,1),
+    opacity .35s ease,
+    transform .35s ease,
+    background .25s ease;
+  width:52px;
+  padding:0;
+}
+.floating-control .control-icon{
+  width:52px;
+  min-width:52px;
+  height:52px;
+  display:grid;
+  place-items:center;
+  font-size:18px;
+  line-height:1;
+}
+.floating-control .control-text{
+  white-space:nowrap;
+  opacity:0;
+  transform:translateX(-8px);
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:1.6px;
+  text-transform:uppercase;
+  transition:opacity .22s ease .08s,transform .35s cubic-bezier(.16,1,.3,1);
+}
+.floating-controls.scrolling .floating-control,
+.floating-controls:hover .floating-control,
+.floating-controls:focus-within .floating-control{
+  width:148px;
+  padding-right:18px;
+}
+.floating-controls.scrolling .control-text,
+.floating-controls:hover .control-text,
+.floating-controls:focus-within .control-text{
+  opacity:1;
+  transform:translateX(0);
+}
+.floating-control:hover{
+  background:#2b2b2b;
+  transform:translateX(-3px);
+}
+.floating-control.music-active .control-icon{
+  animation:musicPulse 1.8s ease-in-out infinite;
+}
+@keyframes musicPulse{
+  50%{transform:scale(1.14)}
+}
+
+/* Sembunyikan tombol lama agar hanya kontrol kanan bawah yang digunakan */
+.music,.share-fab,.now-playing{
+  display:none!important;
+}
+@media(max-width:768px){
+  body{padding-bottom:0!important}
+  .floating-controls{
+    right:14px;
+    bottom:16px;
+    gap:8px;
+  }
+  .floating-control{
+    width:46px;
+    min-width:46px;
+    height:46px;
+  }
+  .floating-control .control-icon{
+    width:46px;
+    min-width:46px;
+    height:46px;
+    font-size:16px;
+  }
+  .floating-controls.scrolling .floating-control,
+  .floating-controls:hover .floating-control,
+  .floating-controls:focus-within .floating-control{
+    width:132px;
+    padding-right:14px;
+  }
+  .floating-control .control-text{
+    font-size:8px;
+    letter-spacing:1.2px;
+  }
+}
+
+/* Semua teks memakai Manrope */
+html,body,button,input,textarea,select,
+.section-title,.opening-names,.hero-title,.signature,
+.couple-info h2,.time-number,.event-card h3,.story-year,
+.film-title,.bank,.payment-heading,.quote-text,.footer-names,
+.loader-monogram,.loader-names,.loader-names i,.note-signature,
+.note-from-us h2,.location-details h3,.success-card h3,
+.qris-modal-card h3{
+  font-family:"Manrope",sans-serif!important;
+}
+.section-title,.opening-names,.hero-title,.signature,.couple-info h2,
+.time-number,.event-card h3,.story-year,.film-title,.bank,
+.payment-heading,.quote-text,.footer-names,.loader-monogram,
+.note-signature,.note-from-us h2,.location-details h3,.success-card h3,
+.qris-modal-card h3{
+  font-weight:700!important;
+  letter-spacing:-.04em;
+}
+
+
+/* =========================================================
+   SMART CONTROLS — ADDITIVE ONLY
+   Seluruh isi undangan asli tetap utuh.
+   ========================================================= */
+#shareButton.share-fab,
+#musicButton.music{
+  display:none !important;
+}
+
+#smartControls{
+  --smart-bg:#25292d;
+  position:fixed;
+  right:24px;
+  bottom:24px;
+  z-index:99999;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:10px;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transform:translateY(12px);
+  transition:opacity .55s ease,transform .55s cubic-bezier(.22,1,.36,1),visibility 0s linear .55s;
+}
+body.invitation-opened #smartControls{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+  transform:translateY(0);
+  transition:opacity .55s ease,transform .55s cubic-bezier(.22,1,.36,1),visibility 0s;
+}
+
+#smartControls .smart-btn{
+  box-sizing:border-box;
+  border:0;
+  height:54px;
+  width:54px;
+  padding:0;
+  margin:0;
+  border-radius:999px;
+  background:var(--smart-bg);
+  color:#fff;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  white-space:nowrap;
+  font-family:"Manrope",sans-serif;
+  cursor:pointer;
+  box-shadow:0 12px 28px rgba(0,0,0,.16);
+  transition:width .62s cubic-bezier(.22,1,.36,1),padding .62s cubic-bezier(.22,1,.36,1);
+}
+
+#smartControls .smart-icon{
+  width:54px;
+  min-width:54px;
+  height:54px;
+  display:grid;
+  place-items:center;
+  flex:0 0 54px;
+  font-size:18px;
+  line-height:1;
+  color:#fff;
+}
+
+#smartControls .smart-label{
+  opacity:0;
+  transform:translateX(8px);
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:1.2px;
+  transition:opacity .25s ease .18s,transform .42s cubic-bezier(.22,1,.36,1) .12s;
+}
+
+#smartControls .music-bars,
+#smartControls .music-copy{
+  display:none;
+}
+
+/* Saat scroll: Bagikan membuka */
+#smartControls.is-active .smart-share{
+  width:150px;
+}
+#smartControls.is-active .smart-share .smart-label{
+  opacity:1;
+  transform:none;
+}
+
+/* Saat musik belum diputar */
+#smartControls.is-active .smart-music:not(.is-playing){
+  width:150px;
+}
+#smartControls.is-active .smart-music:not(.is-playing) .smart-label{
+  opacity:1;
+  transform:none;
+}
+
+/* Saat musik diputar: icon tetap di depan lalu konten mengalir setelahnya.
+   Mekanisme flex membuat icon ikut mendorong konten secara natural. */
+#smartControls .smart-music.is-playing .music-bars{
+  display:flex;
+  width:15px;
+  min-width:15px;
+  height:18px;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:2px;
+  flex:0 0 15px;
+}
+#smartControls .music-bars i{
+  width:2px;
+  display:block;
+  background:#fff;
+  border-radius:99px;
+  transform-origin:bottom;
+  animation:equalize .9s ease-in-out infinite;
+}
+#smartControls .music-bars i:nth-child(1){height:7px;animation-delay:-.25s}
+#smartControls .music-bars i:nth-child(2){height:16px;animation-delay:-.05s}
+#smartControls .music-bars i:nth-child(3){height:10px;animation-delay:-.45s}
+
+#smartControls .smart-music.is-playing .music-copy{
+  display:flex;
+  align-items:center;
+  gap:4px;
+  min-width:0;
+  flex:1 1 auto;
+  overflow:hidden;
+  white-space:nowrap;
+  font-size:9px;
+  color:#ddd;
+}
+#smartControls .music-copy b{color:#fff;font-weight:800;letter-spacing:.25px}
+#smartControls .music-copy span{overflow:hidden;text-overflow:ellipsis}
+
+#smartControls.is-active .smart-music.is-playing{
+  width:min(360px,calc(100vw - 48px));
+  padding-right:14px;
+  gap:9px;
+}
+
+/* Saat diam, width mengecil; overflow:hidden membuat konten masuk
+   secara natural mengikuti gerakan icon, tanpa hilang mendadak. */
+#smartControls:not(.is-active) .smart-music.is-playing{
+  gap:0;
+  padding:0;
+}
+#smartControls:not(.is-active) .smart-music .music-bars,
+#smartControls:not(.is-active) .smart-music .music-copy{
+  opacity:1;
+}
+
+@keyframes equalize{
+  0%,100%{transform:scaleY(.45);opacity:.55}
+  50%{transform:scaleY(1);opacity:1}
+}
+
+@media(max-width:768px){
+  #smartControls{right:14px;bottom:16px;gap:8px}
+  #smartControls .smart-btn{height:48px;width:48px}
+  #smartControls .smart-icon{width:48px;min-width:48px;height:48px;flex-basis:48px}
+  #smartControls.is-active .smart-share,
+  #smartControls.is-active .smart-music:not(.is-playing){width:142px}
+  #smartControls.is-active .smart-music.is-playing{
+    width:min(350px,calc(100vw - 28px));
+    padding-right:12px;
+    gap:8px;
+  }
+  #smartControls .smart-music.is-playing .music-copy{font-size:8.4px}
+}
+
+
+/* =========================================================
+   SMART CONTROLS — SPACING & OVERLAP FIX
+   ========================================================= */
+
+/* Container selalu menyusun tombol secara vertikal dengan jarak nyata */
+#smartControls{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-end !important;
+  justify-content:flex-end !important;
+  gap:16px !important;
+}
+
+/* Setiap tombol adalah baris mandiri dan tidak boleh keluar dari flow */
+#smartControls > .smart-btn{
+  position:relative !important;
+  flex:0 0 auto !important;
+  margin:0 !important;
+  clear:both !important;
+}
+
+/* Pastikan animasi hanya mengubah lebar, bukan posisi vertikal */
+#smartControls .smart-share,
+#smartControls .smart-music{
+  transform:none !important;
+}
+
+/* Beri jarak tambahan saat tombol sedang memanjang */
+#smartControls.is-active{
+  gap:16px !important;
+}
+
+/* Mobile tetap memiliki jarak proporsional */
+@media(max-width:768px){
+  #smartControls,
+  #smartControls.is-active{
+    gap:12px !important;
+  }
+}
+
+
+/* =========================================================
+   FINAL FIX — HANYA SATU SISTEM FLOATING CONTROL
+   ========================================================= */
+
+/* File ini memiliki kontrol bawaan #floatingControls dan kontrol baru
+   #smartControls. Agar tidak terlihat double/bertumpuk, kontrol bawaan
+   disembunyikan sepenuhnya. Elemen tetap ada di HTML, jadi konten undangan
+   tidak dihapus. */
+#floatingControls{
+  display:none !important;
+}
+
+/* Selector lama ternyata tidak cocok dengan class tombol bawaan.
+   Pengaman tambahan agar keduanya tidak muncul kembali. */
+#floatingControls #shareButton,
+#floatingControls #musicButton{
+  display:none !important;
+}
+
+/* Smart controls menjadi satu-satunya tombol yang tampil */
+#smartControls{
+  gap:14px !important;
+}
+@media(max-width:768px){
+  #smartControls{gap:12px !important;}
+}
+
+
+/* =========================================================
+   FOTO FULL COLOR — BLACK & WHITE EFFECT REMOVED
+   ========================================================= */
+
+/* Semua foto tampil dengan warna asli */
+img,
+picture img,
+.gallery-item img,
+.gallery-grid img,
+.photo img,
+.couple-photo img,
+.hero img,
+.intro img,
+section img{
+  filter:none !important;
+  -webkit-filter:none !important;
+  mix-blend-mode:normal !important;
+  opacity:1 !important;
+}
+
+/* Hilangkan filter grayscale pada container foto */
+.gallery-item,
+.gallery-grid,
+.photo,
+.couple-photo,
+.hero-image,
+.intro-image{
+  filter:none !important;
+  -webkit-filter:none !important;
+}
+
+/* Pastikan efek hover/animation tidak mengubah foto menjadi hitam putih */
+.gallery-item:hover img,
+.gallery-item.moment-active img,
+.photo:hover img,
+.couple-photo:hover img{
+  filter:none !important;
+  -webkit-filter:none !important;
+}
+
+/* Tetap pertahankan kualitas dan komposisi foto */
+img{
+  color-scheme:normal !important;
+}
+
+
+/* =========================================================
+   COMPACT SIZE ONLY
+   HANYA MEMPERKECIL UKURAN — TIDAK MENGUBAH ANIMASI / MEKANISME
+   ========================================================= */
+
+/* Desktop */
+#smartControls .smart-btn{
+  width:46px !important;
+  min-width:46px !important;
+  height:46px !important;
+  min-height:46px !important;
+}
+
+#smartControls .smart-icon{
+  width:46px !important;
+  min-width:46px !important;
+  height:46px !important;
+  flex-basis:46px !important;
+  font-size:16px !important;
+}
+
+/* Lebar tombol saat memanjang hanya diperkecil secara proporsional */
+#smartControls.is-active .smart-share,
+#smartControls.is-active .smart-music:not(.is-playing){
+  width:136px !important;
+}
+
+#smartControls.is-active .smart-music.is-playing{
+  width:min(330px,calc(100vw - 36px)) !important;
+}
+
+/* Mobile */
+@media(max-width:768px){
+  #smartControls .smart-btn{
+    width:42px !important;
+    min-width:42px !important;
+    height:42px !important;
+    min-height:42px !important;
+  }
+
+  #smartControls .smart-icon{
+    width:42px !important;
+    min-width:42px !important;
+    height:42px !important;
+    flex-basis:42px !important;
+    font-size:15px !important;
+  }
+
+  #smartControls.is-active .smart-share,
+  #smartControls.is-active .smart-music:not(.is-playing){
+    width:126px !important;
+  }
+
+  #smartControls.is-active .smart-music.is-playing{
+    width:min(300px,calc(100vw - 28px)) !important;
+  }
+}
+
+
+/* =========================================================
+   MICRO FIX ONLY — STABILKAN POSISI ICON
+   Tidak mengubah warna, ukuran, struktur, atau mekanisme tombol.
+   ========================================================= */
+
+/* Icon memiliki slot tetap; perubahan width tombol tidak mengubah pusatnya */
+#smartControls .smart-icon{
+  flex-shrink:0 !important;
+  margin:0 !important;
+  padding:0 !important;
+  box-sizing:border-box !important;
+  line-height:1 !important;
+  transform:translateZ(0) !important;
+}
+
+/* Hindari sub-pixel rendering pada icon ketika tombol membuka/menutup */
+#smartControls .smart-btn{
+  box-sizing:border-box !important;
+  -webkit-font-smoothing:antialiased;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+}
+
+/* Label tidak boleh memengaruhi ukuran slot icon */
+#smartControls .smart-label,
+#smartControls .music-bars,
+#smartControls .music-copy{
+  flex-shrink:0;
+}
+
+/* Hanya transisi width yang dipakai untuk badan tombol */
+#smartControls .smart-btn{
+  transition-property:width,padding !important;
+}
+
+
+/* =========================================================
+   FINAL MOTION POLISH — SMART CONTROLS ONLY
+   Memperhalus gerakan tanpa mengubah desain.
+   ========================================================= */
+
+#smartControls .smart-btn{
+  /* satu easing yang konsisten untuk buka dan tutup */
+  transition:
+    width 560ms cubic-bezier(.16,1,.3,1),
+    padding 560ms cubic-bezier(.16,1,.3,1) !important;
+}
+
+#smartControls .smart-icon{
+  /* slot icon tetap dan tidak ikut terkena interpolasi sub-pixel */
+  flex:0 0 46px !important;
+  width:46px !important;
+  min-width:46px !important;
+  margin:0 !important;
+  transform:none !important;
+  transition:none !important;
+  will-change:auto !important;
+}
+
+/* Hilangkan pergeseran kecil pada isi saat tombol berubah lebar */
+#smartControls .smart-label,
+#smartControls .music-bars,
+#smartControls .music-copy{
+  transform:translateX(0) !important;
+  transition:none !important;
+}
+
+/* Mobile menggunakan slot yang sama secara konsisten */
+@media(max-width:768px){
+  #smartControls .smart-icon{
+    flex-basis:42px !important;
+    width:42px !important;
+    min-width:42px !important;
+  }
+}
+
+
+/* =========================================================
+   MOTION REBUILD — SMART CONTROLS ONLY
+   Perbaikan khusus pergeseran saat buka/tutup.
+   ========================================================= */
+
+/* Matikan transisi lama yang saling bertabrakan */
+#smartControls .smart-btn{
+  transition:none !important;
+}
+
+/* Icon selalu menjadi titik anchor dengan ukuran tetap */
+#smartControls .smart-icon{
+  position:relative !important;
+  flex:0 0 46px !important;
+  width:46px !important;
+  min-width:46px !important;
+  height:46px !important;
+  margin:0 !important;
+  padding:0 !important;
+  transform:translate3d(0,0,0) !important;
+  transition:none !important;
+}
+
+/* Tombol membuka ke kiri tanpa memindahkan anchor icon secara terpisah */
+#smartControls .smart-btn{
+  overflow:visible !important;
+  transform-origin:right center !important;
+}
+
+/* Area yang memanjang dianimasikan sebagai pseudo background/content shell */
+#smartControls .smart-btn::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  border-radius:inherit;
+  background:inherit;
+  transform-origin:right center;
+  transform:scaleX(1);
+  transition:transform 620ms cubic-bezier(.22,1,.36,1);
+}
+
+/* Konten tetap memakai clipping internal agar masuk/keluar tanpa loncat */
+#smartControls .smart-label,
+#smartControls .music-bars,
+#smartControls .music-copy{
+  transition:
+    opacity 220ms ease,
+    transform 420ms cubic-bezier(.22,1,.36,1) !important;
+}
+
+/* Override transisi width sebelumnya dengan satu animasi konsisten */
+#smartControls .smart-share,
+#smartControls .smart-music{
+  transition:
+    width 620ms cubic-bezier(.22,1,.36,1),
+    padding 620ms cubic-bezier(.22,1,.36,1),
+    gap 620ms cubic-bezier(.22,1,.36,1) !important;
+  overflow:hidden !important;
+  will-change:width !important;
+  backface-visibility:hidden;
+}
+
+/* Paksa semua elemen icon menggunakan integer dimensions */
+@media(max-width:768px){
+  #smartControls .smart-icon{
+    flex-basis:42px !important;
+    width:42px !important;
+    min-width:42px !important;
+    height:42px !important;
+  }
+}
+
+
+/* =========================================================
+   FINAL SIZE CONSISTENCY FIX
+   Ukuran icon & bulatan SAMA saat hide maupun muncul.
+   ========================================================= */
+
+/* Anchor berada di sisi kanan container */
+#smartControls{
+  align-items:flex-end !important;
+}
+
+/* Satu ukuran absolut untuk seluruh state */
+#smartControls .smart-btn{
+  --control-size:46px;
+  height:var(--control-size) !important;
+  min-height:var(--control-size) !important;
+  box-sizing:border-box !important;
+  padding:0 !important;
+  gap:0 !important;
+  overflow:hidden !important;
+  transition:width 600ms cubic-bezier(.22,1,.36,1) !important;
+}
+
+/* Icon SELALU memiliki slot yang sama persis */
+#smartControls .smart-icon{
+  width:var(--control-size) !important;
+  min-width:var(--control-size) !important;
+  max-width:var(--control-size) !important;
+  height:var(--control-size) !important;
+  flex:0 0 var(--control-size) !important;
+  margin:0 !important;
+  padding:0 !important;
+  box-sizing:border-box !important;
+  display:grid !important;
+  place-items:center !important;
+  line-height:1 !important;
+}
+
+/* State hide = benar-benar bulatan dengan ukuran yang sama */
+#smartControls:not(.is-active) .smart-btn{
+  width:var(--control-size) !important;
+}
+
+/* Saat muncul, hanya WIDTH tombol bertambah ke arah kiri.
+   Slot icon tidak berubah sama sekali. */
+#smartControls.is-active .smart-share,
+#smartControls.is-active .smart-music:not(.is-playing){
+  width:136px !important;
+}
+
+/* Konten musik aktif juga tidak mengubah tinggi/icon */
+#smartControls.is-active .smart-music.is-playing{
+  height:var(--control-size) !important;
+  min-height:var(--control-size) !important;
+}
+
+/* Hilangkan padding state lama yang membuat pusat icon berubah */
+#smartControls.is-active .smart-share,
+#smartControls.is-active .smart-music{
+  padding:0 !important;
+}
+
+/* Mobile memakai satu ukuran konsisten untuk SEMUA state */
+@media(max-width:768px){
+  #smartControls .smart-btn{
+    --control-size:42px;
+    height:var(--control-size) !important;
+    min-height:var(--control-size) !important;
+  }
+
+  #smartControls .smart-icon{
+    width:var(--control-size) !important;
+    min-width:var(--control-size) !important;
+    max-width:var(--control-size) !important;
+    height:var(--control-size) !important;
+    flex-basis:var(--control-size) !important;
+  }
+
+  #smartControls:not(.is-active) .smart-btn{
+    width:var(--control-size) !important;
+  }
+
+  #smartControls.is-active .smart-share,
+  #smartControls.is-active .smart-music:not(.is-playing){
+    width:126px !important;
+  }
+}
+
+
+/* =========================================================
+   SMART CONTROLS — GEOMETRY & EQUALIZER SPACING FIX
+   ========================================================= */
+
+/* Gunakan satu geometri tetap untuk setiap state */
+#smartControls .smart-btn{
+  --control-size:46px;
+  height:46px !important;
+  min-height:46px !important;
+  max-height:46px !important;
+  padding:0 !important;
+  box-sizing:border-box !important;
+  border-radius:23px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  overflow:hidden !important;
+  gap:0 !important;
+  transition:width 520ms cubic-bezier(.22,1,.36,1) !important;
+}
+
+/* Lingkaran icon selalu identik, baik hide maupun muncul */
+#smartControls .smart-icon{
+  flex:0 0 46px !important;
+  width:46px !important;
+  min-width:46px !important;
+  max-width:46px !important;
+  height:46px !important;
+  min-height:46px !important;
+  max-height:46px !important;
+  margin:0 !important;
+  padding:0 !important;
+  box-sizing:border-box !important;
+  display:grid !important;
+  place-items:center !important;
+  transform:none !important;
+}
+
+/* Konten yang muncul memiliki ruang sendiri dan tidak mendorong icon */
+#smartControls .smart-label{
+  margin:0 !important;
+  padding:0 15px 0 8px !important;
+  line-height:46px !important;
+  white-space:nowrap !important;
+}
+
+/* Equalizer tidak lagi terlalu mepet dengan icon */
+#smartControls .music-bars{
+  margin-left:12px !important;
+  margin-right:10px !important;
+  flex:0 0 auto !important;
+}
+
+/* Teks musik juga diberi jarak yang konsisten */
+#smartControls .music-copy{
+  margin:0 14px 0 0 !important;
+  flex:0 0 auto !important;
+  white-space:nowrap !important;
+}
+
+/* Pastikan state hide benar-benar memakai geometri yang sama */
+#smartControls:not(.is-active) .smart-btn{
+  width:46px !important;
+}
+
+/* Saat muncul, hanya badan tombol yang melebar */
+#smartControls.is-active .smart-share,
+#smartControls.is-active .smart-music:not(.is-playing){
+  width:136px !important;
+}
+
+#smartControls.is-active .smart-music.is-playing{
+  height:46px !important;
+  min-height:46px !important;
+  border-radius:23px !important;
+}
+
+/* Mobile: seluruh ukuran tetap konsisten */
+@media(max-width:768px){
+  #smartControls .smart-btn{
+    --control-size:42px;
+    height:42px !important;
+    min-height:42px !important;
+    max-height:42px !important;
+    border-radius:21px !important;
+  }
+
+  #smartControls .smart-icon{
+    flex:0 0 42px !important;
+    width:42px !important;
+    min-width:42px !important;
+    max-width:42px !important;
+    height:42px !important;
+    min-height:42px !important;
+    max-height:42px !important;
+  }
+
+  #smartControls .smart-label{
+    line-height:42px !important;
+    padding:0 13px 0 7px !important;
+  }
+
+  #smartControls .music-bars{
+    margin-left:10px !important;
+    margin-right:9px !important;
+  }
+
+  #smartControls .music-copy{
+    margin-right:12px !important;
+  }
+
+  #smartControls:not(.is-active) .smart-btn{
+    width:42px !important;
+  }
+
+  #smartControls.is-active .smart-share,
+  #smartControls.is-active .smart-music:not(.is-playing){
+    width:126px !important;
+  }
+
+  #smartControls.is-active .smart-music.is-playing{
+    height:42px !important;
+    min-height:42px !important;
+    border-radius:21px !important;
+  }
+}
+
+
+/* =========================================================
+   EQUALIZER SIZE ALIGNMENT ONLY
+   Menyamakan skala equalizer agar tidak membuat tombol Musik
+   terlihat lebih besar saat mode muncul.
+   ========================================================= */
+
+/* Equalizer dibuat lebih kecil dan terkunci di dalam area yang konsisten */
+#smartControls .music-bars{
+  transform:scale(.72) !important;
+  transform-origin:center center !important;
+  width:20px !important;
+  min-width:20px !important;
+  height:18px !important;
+  overflow:visible !important;
+}
+
+/* Beri ruang visual yang seimbang tanpa memperbesar geometri tombol */
+#smartControls .smart-music.is-playing .music-bars{
+  margin-left:8px !important;
+  margin-right:7px !important;
+}
+
+/* Mobile sedikit lebih kecil lagi agar proporsional dengan icon 42px */
+@media(max-width:768px){
+  #smartControls .music-bars{
+    transform:scale(.68) !important;
+    width:18px !important;
+    min-width:18px !important;
+    height:16px !important;
+  }
+
+  #smartControls .smart-music.is-playing .music-bars{
+    margin-left:7px !important;
+    margin-right:6px !important;
+  }
+}
+
+
+/* =========================================================
+   TEXT LAYER FIX — SMART CONTROLS
+   Teks tidak lagi ikut memengaruhi posisi icon.
+   ========================================================= */
+
+/* Icon adalah anchor tetap di sisi kanan */
+#smartControls .smart-btn{
+  position:relative !important;
+  padding:0 !important;
+  gap:0 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-end !important;
+}
+
+/* Slot icon benar-benar tetap */
+#smartControls .smart-icon{
+  position:absolute !important;
+  right:0 !important;
+  top:50% !important;
+  transform:translateY(-50%) !important;
+  margin:0 !important;
+  z-index:3 !important;
+}
+
+/* Label dipisahkan dari flow utama dan hanya di-reveal */
+#smartControls .smart-label{
+  position:absolute !important;
+  right:46px !important;
+  top:0 !important;
+  height:46px !important;
+  line-height:46px !important;
+  padding:0 10px 0 8px !important;
+  margin:0 !important;
+  white-space:nowrap !important;
+  pointer-events:none !important;
+  opacity:0 !important;
+  clip-path:inset(0 0 0 100%) !important;
+  transform:none !important;
+  transition:
+    clip-path 460ms cubic-bezier(.22,1,.36,1),
+    opacity 180ms ease !important;
+}
+
+/* Saat muncul, teks dibuka TANPA mendorong icon */
+#smartControls.is-active .smart-share .smart-label{
+  opacity:1 !important;
+  clip-path:inset(0 0 0 0) !important;
+}
+
+/* Music copy juga tidak ikut mengubah slot icon */
+#smartControls .music-copy{
+  position:relative !important;
+  flex:0 0 auto !important;
+  margin:0 12px 0 0 !important;
+  transform:none !important;
+}
+
+/* Mobile memakai anchor dan layer yang sama */
+@media(max-width:768px){
+  #smartControls .smart-label{
+    right:42px !important;
+    height:42px !important;
+    line-height:42px !important;
+    padding:0 9px 0 7px !important;
+  }
+}
+
+
+/* =========================================================
+   MUSIC ICON — POSISI KIRI, MENDORONG TEKS
+   ========================================================= */
+
+/* Tombol musik tetap memakai alur flex agar icon selalu berada
+   di sebelah kiri teks/equalizer saat tombol membuka. */
+#smartControls .smart-music{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  overflow:hidden !important;
+  padding:0 !important;
+}
+
+/* Icon musik menjadi elemen pertama / sisi kiri */
+#smartControls .smart-music .music-icon{
+  position:relative !important;
+  inset:auto !important;
+  top:auto !important;
+  right:auto !important;
+  left:auto !important;
+  order:1 !important;
+  flex:0 0 46px !important;
+  width:46px !important;
+  min-width:46px !important;
+  height:46px !important;
+  margin:0 !important;
+  padding:0 !important;
+  transform:none !important;
+  transition:none !important;
+  z-index:5 !important;
+  display:grid !important;
+  place-items:center !important;
+}
+
+/* Equalizer berada setelah icon */
+#smartControls .smart-music .music-bars{
+  order:2 !important;
+  flex:0 0 auto !important;
+  position:relative !important;
+  margin-left:6px !important;
+  margin-right:7px !important;
+  transform:scale(.72) !important;
+  transform-origin:center !important;
+}
+
+/* Tulisan lagu berada setelah equalizer */
+#smartControls .smart-music .music-copy{
+  order:3 !important;
+  flex:1 1 auto !important;
+  min-width:0 !important;
+  position:relative !important;
+  margin:0 12px 0 0 !important;
+  transform:none !important;
+}
+
+/* Label saat musik belum diputar juga berada setelah icon */
+#smartControls .smart-music .smart-label{
+  order:2 !important;
+  position:relative !important;
+  right:auto !important;
+  margin:0 !important;
+}
+
+/* Saat tombol mengecil, width + overflow yang meng-clip isi.
+   Karena icon adalah elemen pertama, icon terlihat menarik dan
+   mendorong equalizer/teks masuk secara natural. */
+#smartControls .smart-music.is-playing .music-bars,
+#smartControls .smart-music.is-playing .music-copy{
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+@media(max-width:768px){
+  #smartControls .smart-music .music-icon{
+    flex-basis:42px !important;
+    width:42px !important;
+    min-width:42px !important;
+    height:42px !important;
+  }
+
+  #smartControls .smart-music .music-bars{
+    margin-left:5px !important;
+    margin-right:6px !important;
+    transform:scale(.68) !important;
+  }
+}
+
+
+/* =========================================================
+   FINAL MUSIC BUTTON FIX
+   Icon musik utama di kiri — equalizer & teks setelahnya.
+   ========================================================= */
+#smartControls .smart-music{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  overflow:hidden !important;
+  padding:0 !important;
+}
+
+/* ICON MUSIK UTAMA */
+#smartControls .smart-music .music-icon{
+  position:relative !important;
+  top:auto !important;
+  right:auto !important;
+  bottom:auto !important;
+  left:auto !important;
+  inset:auto !important;
+  order:1 !important;
+  flex:0 0 46px !important;
+  width:46px !important;
+  min-width:46px !important;
+  height:46px !important;
+  margin:0 !important;
+  padding:0 !important;
+  z-index:10 !important;
+  display:grid !important;
+  place-items:center !important;
+  transform:none !important;
+}
+
+/* Equalizer setelah icon musik */
+#smartControls .smart-music .music-bars{
+  order:2 !important;
+  flex:0 0 auto !important;
+}
+
+/* Nama lagu setelah equalizer */
+#smartControls .smart-music .music-copy{
+  order:3 !important;
+  min-width:0 !important;
+}
+
+/* Label Musik juga selalu setelah icon utama */
+#smartControls .smart-music .smart-label{
+  order:2 !important;
+  position:relative !important;
+  right:auto !important;
+}
+
+/* Mobile */
+@media(max-width:768px){
+  #smartControls .smart-music .music-icon{
+    flex-basis:42px !important;
+    width:42px !important;
+    min-width:42px !important;
+    height:42px !important;
+  }
+}
+
 </style>
 </head>
 
 <body>
 <div id="luxuryLoader">
   <div class="loader-inner">
-    <div class="loader-eyebrow">THE WEDDING OF</div>
+    <div class="loader-eyebrow">UNDANGAN PERNIKAHAN</div>
     <div class="loader-names"><span>F</span><i>&</i><span>F</span></div>
     <div class="loader-divider"><span></span></div>
     <div class="loader-text">FRANS WILLIAM &nbsp;—&nbsp; FITRI SRI YULINAR</div>
@@ -920,10 +2026,10 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
 <!-- ================= CONFIGURABLE OPENING ================= -->
 <div id="opening">
   <div class="opening-content">
-    <div class="opening-top">The Wedding Of</div>
+    <div class="opening-top">Undangan Pernikahan</div>
     <div class="opening-names">Frans<span>&</span>Fitri</div>
-    <div class="guest-name">Dear<strong id="guestName">Family & Friends</strong></div>
-    <button class="open-button" id="openInvitation">Open Invitation</button>
+    <div class="guest-name">Kepada Yth.<strong id="guestName">Keluarga & Sahabat</strong></div>
+    <button class="open-button" id="openInvitation">Buka Undangan</button>
   </div>
 </div>
 
@@ -933,9 +2039,9 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
     <img class="hero-image" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=90" alt="Wedding">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <div class="hero-label">Wedding Invitation</div>
+      <div class="hero-label">Undangan Pernikahan</div>
       <h1 class="hero-title">Frans<span>&</span>Fitri</h1>
-      <div class="hero-meta"><span id="heroDate">SAVE THE DATE • COMING SOON</span><span>FRANS & FITRI</span></div>
+      <div class="hero-meta"><span id="heroDate">SIMPAN TANGGAL • SEGERA HADIR</span><span>FRANS & FITRI</span></div>
     </div>
   </div>
 </section>
@@ -944,9 +2050,9 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
   <div class="container intro-grid">
     <div class="intro-image reveal"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=90" alt="Wedding"></div>
     <div class="intro-text reveal">
-      <div class="label">A New Beginning</div>
-      <h2 class="section-title">Two souls.<br>One journey.</h2>
-      <p>With grateful hearts, we invite you to celebrate one of the most meaningful moments of our lives and to be part of the beginning of our forever.</p>
+      <div class="label">Awal Perjalanan Baru</div>
+      <h2 class="section-title">Dua hati.<br>Satu perjalanan.</h2>
+      <p>Dengan penuh rasa syukur, kami mengundang Anda untuk merayakan salah satu momen paling berarti dalam hidup kami dan menjadi bagian dari awal perjalanan kami untuk selamanya.</p>
       <div class="signature">Frans & Fitri</div>
     </div>
   </div>
@@ -957,58 +2063,58 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
     <article class="couple-card">
       
       <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1200&q=90" alt="Frans">
-      <div class="couple-info"><small>THE GROOM</small><h2>Frans</h2><p>FRANS WILLIAM ISKANDAR TAMBUNAN</p></div>
+      <div class="couple-info"><small>MEMPELAI PRIA</small><h2>Frans</h2><p>FRANS WILLIAM ISKANDAR TAMBUNAN</p></div>
     </article>
     <article class="couple-card">
       
       <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=90" alt="Fitri">
-      <div class="couple-info"><small>THE BRIDE</small><h2>Fitri</h2><p>FITRI SRI YULINAR NAINGGOLAN</p></div>
+      <div class="couple-info"><small>MEMPELAI WANITA</small><h2>Fitri</h2><p>FITRI SRI YULINAR NAINGGOLAN</p></div>
     </article>
   </div>
 </section>
 
 <section class="section" id="date">
   <div class="container countdown-wrap reveal">
-    <div class="label">The Celebration Begins In</div>
-    <h2 class="section-title">Counting Down</h2>
+    <div class="label">Perayaan Akan Dimulai Dalam</div>
+    <h2 class="section-title">Hitung Mundur</h2>
     <div class="countdown-grid">
-      <div class="time"><div class="time-number" id="days">00</div><div class="time-label">DAYS</div></div>
-      <div class="time"><div class="time-number" id="hours">00</div><div class="time-label">HOURS</div></div>
-      <div class="time"><div class="time-number" id="minutes">00</div><div class="time-label">MINUTES</div></div>
-      <div class="time"><div class="time-number" id="seconds">00</div><div class="time-label">SECONDS</div></div>
+      <div class="time"><div class="time-number" id="days">00</div><div class="time-label">HARI</div></div>
+      <div class="time"><div class="time-number" id="hours">00</div><div class="time-label">JAM</div></div>
+      <div class="time"><div class="time-number" id="minutes">00</div><div class="time-label">MENIT</div></div>
+      <div class="time"><div class="time-number" id="seconds">00</div><div class="time-label">DETIK</div></div>
     </div>
-    <button class="btn" style="margin-top:35px" id="calendarButton">＋ ADD TO CALENDAR</button>
+    <button class="btn" style="margin-top:35px" id="calendarButton">＋ TAMBAHKAN KE KALENDER</button>
   </div>
 </section>
 
 <section class="section event-section" id="event">
  <div class="container">
-  <div class="label">Save The Date</div><h2 class="section-title">Our Celebration</h2>
+  <div class="label">Simpan Tanggal</div><h2 class="section-title">Hari Bahagia Kami</h2>
   <div class="event-grid">
-   <article class="event-card reveal"><div class="event-number">01 — HOLY MATRIMONY</div><h3>Wedding Ceremony</h3><p id="akadInfo">Date to be announced<br><br>Time to be announced<br><br>Venue to be announced</p><a class="event-link" id="akadMap" href="#" target="_blank">VIEW LOCATION →</a></article>
-   <article class="event-card reveal"><div class="event-number">02 — WEDDING RECEPTION</div><h3>Wedding Reception</h3><p id="resepsiInfo">Date to be announced<br><br>Time to be announced<br><br>Venue to be announced</p><a class="event-link" id="resepsiMap" href="#" target="_blank">VIEW LOCATION →</a></article>
+   <article class="event-card reveal"><div class="event-number">01 — PEMBERKATAN NIKAH</div><h3>Pemberkatan Nikah</h3><p id="akadInfo">Tanggal akan diumumkan<br><br>Waktu akan diumumkan<br><br>Lokasi akan diumumkan</p><a class="event-link" id="akadMap" href="#" target="_blank">LIHAT LOKASI →</a></article>
+   <article class="event-card reveal"><div class="event-number">02 — RESEPSI PERNIKAHAN</div><h3>Resepsi Pernikahan</h3><p id="resepsiInfo">Tanggal akan diumumkan<br><br>Waktu akan diumumkan<br><br>Lokasi akan diumumkan</p><a class="event-link" id="resepsiMap" href="#" target="_blank">LIHAT LOKASI →</a></article>
   </div>
  </div>
 </section>
 
 <section class="section" id="story">
  <div class="container">
-  <div class="label">Our Journey</div><h2 class="section-title">Love Story</h2>
+  <div class="label">Perjalanan Kami</div><h2 class="section-title">Kisah Cinta</h2>
   <div class="story">
-   <div class="story-row reveal"><div class="story-year">Chapter I</div><div class="story-content"><h3>The Beginning</h3><p>Every love story has a beginning. Sometimes, a simple meeting can become the start of something truly extraordinary.</p></div></div>
-   <div class="story-row reveal"><div class="story-year">Chapter II</div><div class="story-content"><h3>Growing Together</h3><p>We learned to understand one another, walk through life together, and discover the meaning of home in each other.</p></div></div>
-   <div class="story-row reveal"><div class="story-year">Chapter III</div><div class="story-content"><h3>Forever Begins</h3><p>Today, we begin a new journey—not as two separate paths, but as one journey for a lifetime.</p></div></div>
+   <div class="story-row reveal"><div class="story-year">Bab I</div><div class="story-content"><h3>Awal Pertemuan</h3><p>Setiap kisah cinta memiliki awal. Terkadang, sebuah pertemuan sederhana dapat menjadi awal dari sesuatu yang begitu istimewa.</p></div></div>
+   <div class="story-row reveal"><div class="story-year">Bab II</div><div class="story-content"><h3>Tumbuh Bersama</h3><p>Kami belajar untuk saling memahami, berjalan bersama dalam kehidupan, dan menemukan arti rumah dalam diri satu sama lain.</p></div></div>
+   <div class="story-row reveal"><div class="story-year">Bab III</div><div class="story-content"><h3>Selamanya Dimulai</h3><p>Hari ini, kami memulai perjalanan baru—bukan lagi sebagai dua jalan yang terpisah, melainkan satu perjalanan untuk seumur hidup.</p></div></div>
   </div>
  </div>
 </section>
 
 <section class="film" id="film">
- <div class="film-content reveal"><div class="label" style="color:#ddd">Our Wedding Film</div><h2 class="film-title">A moment.<br>A memory.<br>A lifetime.</h2><button class="play-film" id="playFilm" aria-label="Play wedding film">▶</button></div>
+ <div class="film-content reveal"><div class="label" style="color:#ddd">Film Pernikahan Kami</div><h2 class="film-title">Satu momen.<br>Satu kenangan.<br>Seumur hidup.</h2><button class="play-film" id="playFilm" aria-label="Putar film pernikahan">▶</button></div>
 </section>
 
 <section class="section gallery" id="gallery">
  <div class="container">
-  <div class="label" style="color:#999">Our Moments</div><h2 class="section-title">Memories</h2><div class="gallery-download-note">OPEN A PHOTO TO VIEW AND DOWNLOAD IT</div>
+  <div class="label" style="color:#999">Momen Kami</div><h2 class="section-title">Kenangan</h2><div class="gallery-download-note">BUKA FOTO UNTUK MELIHATNYA</div>
   
   <div class="gallery-grid" id="galleryGrid">
    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=90" alt="Moment 1"></div>
@@ -1022,21 +2128,21 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
 
 <section class="section gift" id="gift">
  <div class="container">
-  <div class="label">Wedding Gift</div><h2 class="section-title">A Little Love</h2>
-  <p class="gift-text">Your presence and kind wishes are the greatest gifts to us. However, if you would like to send a wedding gift, you may use the information below.</p>
+  <div class="label">Hadiah Pernikahan</div><h2 class="section-title">Tanda Kasih</h2>
+  <p class="gift-text">Kehadiran dan doa tulus Anda adalah hadiah terindah bagi kami. Namun, apabila Anda ingin mengirimkan tanda kasih, Anda dapat menggunakan informasi berikut.</p>
   <div class="gift-grid">
    <div class="gift-card reveal">
     <div class="bank">MANDIRI</div>
     <div class="account">1050016086625</div>
-    <div class="account-name">Account Holder: FRANS WILLIAM ISKANDAR T</div>
-    <button class="btn copy-button" id="copyAccount">COPY ACCOUNT NUMBER</button>
+    <div class="account-name">Atas Nama: FRANS WILLIAM ISKANDAR T</div>
+    <button class="btn copy-button" id="copyAccount">SALIN NOMOR REKENING</button>
    </div>
    <div class="qris-card reveal">
     <div class="qris-preview">
-      <div class="payment-heading">QRIS PAYMENT</div>
-      <div class="payment-label">DIGITAL WEDDING GIFT</div>
-      <p>Scan the QR code to send your wedding gift.</p>
-      <button class="btn dark qris-button" id="showQris">VIEW QR CODE</button>
+      <div class="payment-heading">PEMBAYARAN QRIS</div>
+      <div class="payment-label">TANDA KASIH DIGITAL</div>
+      <p>Pindai kode QR untuk mengirimkan tanda kasih Anda.</p>
+      <button class="btn dark qris-button" id="showQris">LIHAT KODE QR</button>
     </div>
    </div>
   </div>
@@ -1045,44 +2151,69 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
 
 <section class="section rsvp" id="rsvp">
  <div class="container">
-  <div class="label">RSVP & Wishes</div><h2 class="section-title">Will You Be There?</h2>
+  <div class="label">KONFIRMASI & UCAPAN</div><h2 class="section-title">Apakah Anda Akan Hadir?</h2>
   <form class="rsvp-form" id="rsvpForm">
-   <input id="rsvpName" type="text" placeholder="Your Name" required>
-   <select id="rsvpAttendance" required><option value="">Attendance Confirmation</option><option value="Will Attend">Will Attend</option><option value="Unable to Attend">Unable to Attend</option></select>
-   <textarea id="rsvpWish" placeholder="Leave your wishes for us"></textarea>
-   <button class="send-button">SEND YOUR WISHES</button>
+   <input id="rsvpName" type="text" placeholder="Nama Anda" required>
+   
+<input type="hidden" id="rsvpAttendance" value="" required>
+<div class="attendance-choice" id="attendanceChoice" role="group" aria-label="Konfirmasi Kehadiran">
+  <button type="button" class="attendance-btn attendance-yes" data-value="Akan Hadir" aria-pressed="false">
+    <span class="attendance-check">✓</span>
+    <span class="attendance-text">
+      <strong>Akan Hadir</strong>
+      <small>InsyaAllah saya akan hadir</small>
+    </span>
+  </button>
+
+  <button type="button" class="attendance-btn attendance-no" data-value="Tidak Dapat Hadir" aria-pressed="false">
+    <span class="attendance-check">×</span>
+    <span class="attendance-text">
+      <strong>Tidak Dapat Hadir</strong>
+      <small>Maaf, saya belum dapat hadir</small>
+    </span>
+  </button>
+</div>
+
+   <textarea id="rsvpWish" placeholder="Tuliskan ucapan dan doa untuk kami"></textarea>
+   <button class="send-button">KIRIM UCAPAN</button>
   </form>
   <div class="form-status" id="formStatus"></div>
   <div id="wishList" style="max-width:650px;margin:45px auto 0;text-align:left"></div>
  </div>
 </section>
 
-<section class="section quote"><div class="quote-text">“And suddenly,<br>all the love songs<br>were about you.”</div><small>FRANS & FITRI</small></section>
+<section class="section quote"><div class="quote-text">“Dan tiba-tiba,<br>semua lagu tentang cinta<br>seakan bercerita tentangmu.”</div><small>FRANS & FITRI</small></section>
 
 <footer>
  <div class="footer-names">Frans<span>&</span>Fitri</div>
- <p class="footer-note">Thank you for being part of our story.</p>
- <small>WITH LOVE • FOREVER BEGINS HERE</small>
+ <p class="footer-note">Terima kasih telah menjadi bagian dari perjalanan kami.</p>
+ <small>DENGAN CINTA • PERJALANAN SELAMANYA DIMULAI DI SINI</small>
 </footer>
 
-<button class="share-fab" id="shareButton" aria-label="Bagikan unandgan">↗</button>
-<button class="music" id="musicButton" aria-label="Musik">♫</button>
+<div class="floating-controls" id="floatingControls" aria-label="Kontrol cepat">
+  <button class="floating-control" id="shareButton" aria-label="Bagikan undangan">
+    <span class="control-icon">↗</span><span class="control-text">Bagikan</span>
+  </button>
+  <button class="floating-control" id="musicButton" aria-label="Musik">
+    <span class="control-icon">♫</span><span class="control-text">Musik</span>
+  </button>
+</div>
 <audio id="music" loop><source src="music.mp3" type="audio/mpeg"></audio>
 
 <nav class="mobile-nav">
- <a href="#home">Home</a><a href="#couple">Couple</a><a href="#event">Events</a><a href="#gallery">Gallery</a><a href="#gift">Gift</a>
+ <a href="#home">Beranda</a><a href="#couple">Mempelai</a><a href="#event">Acara</a><a href="#gallery">Galeri</a><a href="#gift">Hadiah</a>
 </nav>
 
 <div class="lightbox" id="lightbox">
  <div class="lightbox-top">
-      <div class="lightbox-brand"><span>OUR MOMENTS</span><small>FRANS & FITRI</small></div>
+      <div class="lightbox-brand"><span>MOMEN KAMI</span><small>FRANS & FITRI</small></div>
       <div class="lightbox-actions">
         <a id="downloadImage" class="download-image" href="#" download aria-label="Download photo">↓ <span>DOWNLOAD</span></a>
         <button class="close-modal" id="closeLightbox" aria-label="Close">×</button>
       </div>
     </div>
     <button class="modal-nav prev" id="prevImage" aria-label="Previous photo">‹</button>
-    <div class="lightbox-stage"><img id="lightboxImage" alt="Gallery preview"><div class="lightbox-caption" id="lightboxCaption">MEMORY 01</div></div>
+    <div class="lightbox-stage"><img id="lightboxImage" alt="Galeri preview"><div class="lightbox-caption" id="lightboxCaption">MEMORY 01</div></div>
     <button class="modal-nav next" id="nextImage" aria-label="Next photo">›</button>
     <div class="gallery-counter" id="galleryCounter">01 / 01</div>
 </div>
@@ -1095,11 +2226,11 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
 <div class="qris-modal" id="qrisModal">
  <div class="qris-modal-card">
   <button class="qris-close" id="closeQris">×</button>
-  <div class="label">Wedding Gift</div>
+  <div class="label">Hadiah Pernikahan</div>
   <h3>Scan QR Code</h3>
   
   <div class="qris-large">QR</div>
-  <p>Scan the QR code to send your wedding gift.</p>
+  <p>Pindai kode QR untuk mengirimkan tanda kasih Anda.</p>
  </div>
 </div>
 
@@ -1109,11 +2240,11 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Ital
 
 const WEDDING_CONFIG = {
   weddingDate: "2027-12-31T09:00:00",
-  weddingDateText: "SAVE THE DATE • COMING SOON",
+  weddingDateText: "SIMPAN TANGGAL • SEGERA HADIR",
   title: "Frans & Fitri Wedding",
   location: "Indonesia",
-  akadInfo: "Date to be announced\\n\\nTime to be announced\\n\\nVenue to be announced",
-  resepsiInfo: "Date to be announced\\n\\nTime to be announced\\n\\nVenue to be announced",
+  akadInfo: "Tanggal akan diumumkan\\n\\nWaktu akan diumumkan\\n\\nLokasi akan diumumkan",
+  resepsiInfo: "Tanggal akan diumumkan\\n\\nWaktu akan diumumkan\\n\\nLokasi akan diumumkan",
   akadMap: "#",
   resepsiMap: "#",
   // Add your YouTube embed URL here, for example: https://www.youtube.com/embed/VIDEO_ID
@@ -1188,7 +2319,7 @@ $("copyAccount").addEventListener("click",async()=>{
  catch(e){toast("Account number: 1050016086625")}
 });
 
-/* Gallery lightbox */
+/* Galeri lightbox */
 const galleryImages=[...document.querySelectorAll("#galleryGrid img")].map(i=>i.src);
 let currentImage=0;
 function showImage(i){
@@ -1251,7 +2382,7 @@ $("rsvpForm").addEventListener("submit",async e=>{
  if(WEDDING_CONFIG.rsvpEndpoint){
    try{await fetch(WEDDING_CONFIG.rsvpEndpoint,{method:"POST",mode:"no-cors",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)})}catch(err){}
  }
- $("rsvpForm").reset();$("formStatus").textContent="Thank you! Your wishes have been received ❤️";renderWishes();
+ $("rsvpForm").reset();$("formStatus").textContent="Terima kasih! Ucapan dan doa Anda telah kami terima ❤️";renderWishes();
 });
 renderWishes();
 
@@ -1259,7 +2390,7 @@ renderWishes();
 $("shareButton").addEventListener("click",async()=>{
  const data={title:WEDDING_CONFIG.title,text:"You are invited to celebrate the wedding of Frans & Fitri",url:location.href};
  if(navigator.share){try{await navigator.share(data)}catch(e){}}
- else{try{await navigator.clipboard.writeText(location.href);toast("Invitation link copied ✓")}catch(e){toast(location.href)}}
+ else{try{await navigator.clipboard.writeText(location.href);toast("Tautan undangan berhasil disalin ✓")}catch(e){toast(location.href)}}
 });
 </script>
 
@@ -1302,11 +2433,1614 @@ $("shareButton").addEventListener("click",async()=>{
 })();
 </script>
 
-<div class="now-playing">♫ NOW PLAYING — Wedding Instrumental</div>
-<div class="rsvp-success" id="rsvpSuccess"><div class="success-card"><div style="font-size:35px">✓</div><h3>Thank You</h3><p>We can't wait to celebrate this beautiful day with you.</p><button class="btn dark" onclick="document.getElementById('rsvpSuccess').classList.remove('active')">CONTINUE</button></div></div><script>
+<div class="now-playing">♫ SEDANG DIPUTAR — Instrumental Pernikahan</div>
+<div class="rsvp-success" id="rsvpSuccess"><div class="success-card"><div style="font-size:35px">✓</div><h3>Terima Kasih</h3><p>Kami tidak sabar untuk merayakan hari bahagia ini bersama Anda.</p><button class="btn dark" onclick="document.getElementById('rsvpSuccess').classList.remove('active')">LANJUTKAN</button></div></div><script>
 window.addEventListener("load",()=>setTimeout(()=>document.getElementById("luxuryLoader").classList.add("hide"),900));
 window.addEventListener("scroll",()=>{const m=document.documentElement.scrollHeight-innerHeight;document.getElementById("scrollProgress").style.width=(scrollY/m*100)+"%"},{passive:true});
 const f=document.getElementById("rsvpForm");if(f)f.addEventListener("submit",()=>setTimeout(()=>document.getElementById("rsvpSuccess").classList.add("active"),400));
 </script>
+
+<script>
+(function(){
+  const controls=document.getElementById("floatingControls");
+  const musicBtn=document.getElementById("musicButton");
+  const audio=document.getElementById("music");
+  if(!controls) return;
+
+  let idleTimer;
+  const showExpanded=()=>{
+    controls.classList.add("scrolling");
+    clearTimeout(idleTimer);
+    idleTimer=setTimeout(()=>controls.classList.remove("scrolling"),1100);
+  };
+
+  window.addEventListener("scroll",showExpanded,{passive:true});
+  window.addEventListener("touchmove",showExpanded,{passive:true});
+  showExpanded();
+
+  if(musicBtn && audio){
+    musicBtn.addEventListener("click",async()=>{
+      try{
+        if(audio.paused){
+          await audio.play();
+          musicBtn.classList.add("music-active");
+          const text=musicBtn.querySelector(".control-text");
+          if(text) text.textContent="Musik Aktif";
+        }else{
+          audio.pause();
+          musicBtn.classList.remove("music-active");
+          const text=musicBtn.querySelector(".control-text");
+          if(text) text.textContent="Musik";
+        }
+      }catch(e){}
+    });
+  }
+})();
+</script>
+
+
+<!-- SMART CONTROLS: tambahan, tidak mengganti isi undangan -->
+<div id="smartControls" aria-label="Kontrol cepat">
+  
+
+  <button class="smart-btn smart-music" id="smartMusic" type="button" aria-label="Putar musik">
+    <span class="smart-icon">♫</span>
+    <span class="music-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="music-copy"><b>SEDANG DIPUTAR</b><span>— Instrumental Pernikahan</span></span>
+    <span class="smart-label">MUSIK</span>
+  </button>
+</div>
+
+
+<script>
+(function(){
+  const controls = document.getElementById('smartControls');
+  const openButton = document.getElementById('openInvitation');
+  const share = document.getElementById('smartShare');
+  const musicButton = document.getElementById('smartMusic');
+  const audio = document.getElementById('music');
+  if(!controls) return;
+
+  let opened = false;
+  let timer;
+
+  function reveal(){
+    if(!opened) return;
+    controls.classList.add('is-active');
+    clearTimeout(timer);
+    timer = setTimeout(()=>controls.classList.remove('is-active'), 1200);
+  }
+
+  function openControls(){
+    if(opened) return;
+    opened = true;
+    document.body.classList.add('invitation-opened');
+  }
+
+  if(openButton) openButton.addEventListener('click', openControls);
+
+  window.addEventListener('scroll', reveal, {passive:true});
+  window.addEventListener('wheel', reveal, {passive:true});
+  window.addEventListener('touchmove', reveal, {passive:true});
+
+  function syncMusic(){
+    if(!audio) return;
+    musicButton.classList.toggle('is-playing', !audio.paused && !audio.ended);
+  }
+
+  if(musicButton && audio){
+    musicButton.addEventListener('click', async ()=>{
+      reveal();
+      try{
+        if(audio.paused) await audio.play();
+        else audio.pause();
+      }catch(e){}
+    });
+    audio.addEventListener('play', syncMusic);
+    audio.addEventListener('pause', syncMusic);
+    audio.addEventListener('ended', syncMusic);
+    syncMusic();
+  }
+
+  if(share){
+    share.addEventListener('click', async ()=>{
+      reveal();
+      const data={title:document.title||'Undangan Pernikahan',text:'Anda diundang untuk merayakan pernikahan kami.',url:location.href};
+      try{
+        if(navigator.share) await navigator.share(data);
+        else if(navigator.clipboard) await navigator.clipboard.writeText(location.href);
+      }catch(e){}
+    });
+  }
+})();
+</script>
+
+
+<style id="final-smart-controls-animation">
+/* =========================================================
+   FINAL — SMART CONTROLS
+   Konsep:
+   MUNCUL  : ICON → ISI
+   HIDE    : hanya ICON
+   Icon menjadi "kepala" yang menarik isi keluar dan saat
+   menutup isi terdorong kembali masuk ke belakang icon.
+   ========================================================= */
+
+/* Reset konflik dari override sebelumnya — hanya di Smart Controls */
+#smartControls{
+  --smart-size:54px;
+  --smart-bg:#25292d;
+  position:fixed !important;
+  right:24px !important;
+  bottom:24px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-end !important;
+  gap:10px !important;
+}
+
+/* Geometri tombol stabil */
+#smartControls .smart-btn{
+  position:relative !important;
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  align-self:flex-end !important;
+  height:var(--smart-size) !important;
+  min-height:var(--smart-size) !important;
+  width:var(--smart-size) !important;
+  min-width:var(--smart-size) !important;
+  max-width:calc(100vw - 48px) !important;
+  padding:0 !important;
+  margin:0 !important;
+  gap:0 !important;
+  overflow:hidden !important;
+  border-radius:999px !important;
+  background:var(--smart-bg) !important;
+  box-sizing:border-box !important;
+  transition:
+    width .72s cubic-bezier(.22,1,.36,1),
+    box-shadow .35s ease !important;
+  will-change:width !important;
+}
+
+/* ICON SELALU ELEMEN PERTAMA DAN UKURANNYA TIDAK PERNAH BERUBAH */
+#smartControls .smart-btn > .smart-icon,
+#smartControls .smart-btn > .smart-icon.music-icon{
+  position:relative !important;
+  inset:auto !important;
+  order:1 !important;
+  flex:0 0 var(--smart-size) !important;
+  width:var(--smart-size) !important;
+  min-width:var(--smart-size) !important;
+  max-width:var(--smart-size) !important;
+  height:var(--smart-size) !important;
+  min-height:var(--smart-size) !important;
+  max-height:var(--smart-size) !important;
+  margin:0 !important;
+  padding:0 !important;
+  transform:none !important;
+  display:grid !important;
+  place-items:center !important;
+  align-self:center !important;
+  line-height:1 !important;
+  z-index:5 !important;
+  transition:none !important;
+}
+
+/* ---------------- SHARE ---------------- */
+#smartControls .smart-share > .smart-label{
+  position:relative !important;
+  inset:auto !important;
+  order:2 !important;
+  display:block !important;
+  flex:0 0 auto !important;
+  width:auto !important;
+  max-width:0 !important;
+  height:auto !important;
+  margin:0 !important;
+  padding:0 !important;
+  overflow:hidden !important;
+  opacity:0 !important;
+  transform:translateX(-12px) !important;
+  white-space:nowrap !important;
+  pointer-events:none !important;
+  transition:
+    max-width .72s cubic-bezier(.22,1,.36,1),
+    padding .72s cubic-bezier(.22,1,.36,1),
+    opacity .18s ease,
+    transform .72s cubic-bezier(.22,1,.36,1) !important;
+}
+
+/* ---------------- MUSIC ---------------- */
+/* Equalizer berada setelah icon ♫ */
+#smartControls .smart-music > .music-bars{
+  position:relative !important;
+  inset:auto !important;
+  order:2 !important;
+  display:flex !important;
+  flex:0 0 auto !important;
+  width:0 !important;
+  min-width:0 !important;
+  height:18px !important;
+  margin:0 !important;
+  padding:0 !important;
+  overflow:hidden !important;
+  opacity:0 !important;
+  transform:translateX(-12px) !important;
+  transition:
+    width .72s cubic-bezier(.22,1,.36,1),
+    margin .72s cubic-bezier(.22,1,.36,1),
+    opacity .18s ease,
+    transform .72s cubic-bezier(.22,1,.36,1) !important;
+}
+
+/* Teks lagu setelah equalizer */
+#smartControls .smart-music > .music-copy{
+  position:relative !important;
+  inset:auto !important;
+  order:3 !important;
+  display:flex !important;
+  align-items:center !important;
+  flex:0 1 auto !important;
+  width:auto !important;
+  min-width:0 !important;
+  max-width:0 !important;
+  height:auto !important;
+  margin:0 !important;
+  padding:0 !important;
+  overflow:hidden !important;
+  opacity:0 !important;
+  transform:translateX(-14px) !important;
+  white-space:nowrap !important;
+  transition:
+    max-width .72s cubic-bezier(.22,1,.36,1),
+    margin .72s cubic-bezier(.22,1,.36,1),
+    opacity .18s ease,
+    transform .72s cubic-bezier(.22,1,.36,1) !important;
+}
+
+/* Label MUSIK ketika belum playing */
+#smartControls .smart-music > .smart-label{
+  position:relative !important;
+  inset:auto !important;
+  order:2 !important;
+  display:block !important;
+  flex:0 0 auto !important;
+  max-width:0 !important;
+  margin:0 !important;
+  padding:0 !important;
+  overflow:hidden !important;
+  opacity:0 !important;
+  transform:translateX(-12px) !important;
+  white-space:nowrap !important;
+  transition:
+    max-width .72s cubic-bezier(.22,1,.36,1),
+    padding .72s cubic-bezier(.22,1,.36,1),
+    opacity .18s ease,
+    transform .72s cubic-bezier(.22,1,.36,1) !important;
+}
+
+/* =========================================================
+   SAAT MUNCUL
+   Icon tetap di depan, isi terbuka tepat dari sisi kanannya.
+   ========================================================= */
+#smartControls.is-active .smart-share{
+  width:150px !important;
+}
+#smartControls.is-active .smart-share > .smart-label{
+  max-width:90px !important;
+  padding-right:18px !important;
+  opacity:1 !important;
+  transform:translateX(0) !important;
+  transition-delay:0s,.02s,.10s,0s !important;
+}
+
+/* Music belum diputar */
+#smartControls.is-active .smart-music:not(.is-playing){
+  width:150px !important;
+}
+#smartControls.is-active .smart-music:not(.is-playing) > .smart-label{
+  max-width:90px !important;
+  padding-right:18px !important;
+  opacity:1 !important;
+  transform:translateX(0) !important;
+}
+
+/* Music sedang diputar */
+#smartControls.is-active .smart-music.is-playing{
+  width:min(360px,calc(100vw - 48px)) !important;
+}
+#smartControls.is-active .smart-music.is-playing > .music-bars{
+  width:15px !important;
+  min-width:15px !important;
+  margin-right:9px !important;
+  opacity:1 !important;
+  transform:translateX(0) !important;
+}
+#smartControls.is-active .smart-music.is-playing > .music-copy{
+  max-width:270px !important;
+  margin-right:16px !important;
+  opacity:1 !important;
+  transform:translateX(0) !important;
+}
+
+/* =========================================================
+   SAAT HIDE
+   Lebar tombol mengecil ke ukuran icon.
+   Isi terlebih dahulu bergerak sedikit ke arah icon, lalu ter-clip.
+   Hasilnya terasa seperti icon mendorong isi masuk.
+   ========================================================= */
+#smartControls:not(.is-active) .smart-btn{
+  width:var(--smart-size) !important;
+}
+
+#smartControls:not(.is-active) .smart-share > .smart-label,
+#smartControls:not(.is-active) .smart-music > .music-bars,
+#smartControls:not(.is-active) .smart-music > .music-copy,
+#smartControls:not(.is-active) .smart-music > .smart-label{
+  opacity:0 !important;
+  transform:translateX(-14px) !important;
+  transition-delay:0s,0s,0s,.02s !important;
+}
+
+/* Icon diberi prioritas visual agar terasa sebagai pendorong/penarik */
+#smartControls .smart-btn > .smart-icon{
+  background:var(--smart-bg) !important;
+}
+
+/* Mobile */
+@media(max-width:768px){
+  #smartControls{
+    --smart-size:48px;
+    right:14px !important;
+    bottom:16px !important;
+    gap:8px !important;
+  }
+
+  #smartControls .smart-btn{
+    max-width:calc(100vw - 28px) !important;
+  }
+
+  #smartControls.is-active .smart-share,
+  #smartControls.is-active .smart-music:not(.is-playing){
+    width:142px !important;
+  }
+
+  #smartControls.is-active .smart-music.is-playing{
+    width:min(350px,calc(100vw - 28px)) !important;
+  }
+
+  #smartControls.is-active .smart-music.is-playing > .music-copy{
+    max-width:255px !important;
+    margin-right:13px !important;
+  }
+}
+</style>
+
+
+<script id="music-click-pause-fix">
+/* =========================================================
+   MUSIC BUTTON CLICK FIX ONLY
+   Sekali klik:
+   - jika musik sedang diputar -> JEDA
+   - jika musik sedang jeda -> PUTAR KEMBALI
+   Tidak ada mekanisme hold / long press.
+   ========================================================= */
+(function(){
+  const musicButton = document.getElementById('smartMusic');
+  const audio = document.getElementById('music');
+  const controls = document.getElementById('smartControls');
+
+  if(!musicButton || !audio) return;
+
+  // Capture phase memastikan klik tidak ditafsirkan sebagai hold oleh handler lama.
+  musicButton.addEventListener('click', async function(event){
+    event.preventDefault();
+    event.stopImmediatePropagation();
+
+    // Tetap tampilkan tombol memanjang sebentar agar state terlihat.
+    if(controls){
+      controls.classList.add('is-active');
+      clearTimeout(window.__smartMusicIdleTimer);
+      window.__smartMusicIdleTimer = setTimeout(function(){
+        controls.classList.remove('is-active');
+      }, 1200);
+    }
+
+    try{
+      if(audio.paused || audio.ended){
+        if(audio.ended) audio.currentTime = 0;
+        await audio.play();
+        musicButton.setAttribute('aria-label', 'Jeda musik');
+      }else{
+        audio.pause();
+        musicButton.setAttribute('aria-label', 'Putar musik');
+      }
+    }catch(err){
+      // Tidak mengubah bagian lain jika browser memblokir autoplay.
+    }
+  }, true);
+
+  // Sinkronkan tampilan tombol dengan kondisi audio.
+  function syncMusicState(){
+    const playing = !audio.paused && !audio.ended;
+    musicButton.classList.toggle('is-playing', playing);
+    musicButton.setAttribute('aria-label', playing ? 'Jeda musik' : 'Putar musik');
+  }
+
+  audio.addEventListener('play', syncMusicState);
+  audio.addEventListener('pause', syncMusicState);
+  audio.addEventListener('ended', syncMusicState);
+  syncMusicState();
+})();
+</script>
+
+
+<style id="music-pause-and-rsvp-final-fix">
+/* =========================================================
+   MUSIC STATUS + RSVP ONLY
+   Tidak menyentuh section/konten undangan lainnya.
+   ========================================================= */
+
+/* RSVP */
+.attendance-choice{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  width:100%;
+  margin:4px 0 2px;
+}
+
+.attendance-btn{
+  width:100%;
+  min-height:76px;
+  border-radius:16px;
+  padding:13px 15px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-align:left;
+  font-family:"Manrope",sans-serif;
+  cursor:pointer;
+  background:#fff;
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease, background .22s ease;
+}
+
+.attendance-btn:hover{ transform:translateY(-2px); }
+
+.attendance-check{
+  width:36px;
+  height:36px;
+  min-width:36px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-size:18px;
+  font-weight:800;
+}
+
+.attendance-text strong{
+  display:block;
+  font-size:13px;
+  line-height:1.3;
+}
+
+.attendance-text small{
+  display:block;
+  margin-top:3px;
+  font-size:10px;
+  line-height:1.4;
+  opacity:.72;
+}
+
+/* Akan Hadir = hijau */
+.attendance-yes{
+  color:#176c43;
+  background:rgba(34,139,82,.07);
+  border:1px solid rgba(34,139,82,.32);
+}
+.attendance-yes .attendance-check{
+  color:#176c43;
+  background:rgba(34,139,82,.14);
+}
+.attendance-yes.is-selected{
+  color:#fff;
+  background:#228b52;
+  border-color:#228b52;
+  box-shadow:0 10px 25px rgba(34,139,82,.20);
+}
+.attendance-yes.is-selected .attendance-check{
+  color:#fff;
+  background:rgba(255,255,255,.18);
+}
+
+/* Tidak Hadir = merah */
+.attendance-no{
+  color:#a93838;
+  background:rgba(185,64,64,.07);
+  border:1px solid rgba(185,64,64,.30);
+}
+.attendance-no .attendance-check{
+  color:#a93838;
+  background:rgba(185,64,64,.13);
+}
+.attendance-no.is-selected{
+  color:#fff;
+  background:#b94040;
+  border-color:#b94040;
+  box-shadow:0 10px 25px rgba(185,64,64,.18);
+}
+.attendance-no.is-selected .attendance-check{
+  color:#fff;
+  background:rgba(255,255,255,.18);
+}
+
+.attendance-choice.is-error .attendance-btn{
+  animation:attendanceShake .32s ease;
+  border-color:#d05050;
+}
+
+@keyframes attendanceShake{
+  0%,100%{transform:translateX(0)}
+  25%{transform:translateX(-4px)}
+  75%{transform:translateX(4px)}
+}
+
+@media(max-width:640px){
+  .attendance-choice{grid-template-columns:1fr;gap:9px}
+  .attendance-btn{min-height:68px}
+}
+</style>
+
+<script id="music-status-and-rsvp-final-fix">
+(function(){
+  /* =======================================================
+     MUSIC:
+     Klik = Play / Pause.
+     Status teks mengikuti kondisi audio:
+     PLAY  -> SEDANG DIPUTAR
+     PAUSE -> SEDANG DIJEDA
+     ======================================================= */
+  const musicButton = document.getElementById('smartMusic');
+  const audio = document.getElementById('music');
+
+  function updateMusicText(){
+    if(!musicButton || !audio) return;
+
+    const title = musicButton.querySelector('.music-copy b');
+    if(!title) return;
+
+    const paused = audio.paused || audio.ended;
+    title.textContent = paused ? 'SEDANG DIJEDA' : 'SEDANG DIPUTAR';
+
+    musicButton.classList.toggle('is-playing', !paused);
+    musicButton.classList.toggle('is-paused', paused);
+    musicButton.setAttribute(
+      'aria-label',
+      paused ? 'Putar musik' : 'Jeda musik'
+    );
+  }
+
+  if(musicButton && audio){
+    /* Pastikan sekali klik selalu toggle play/pause. */
+    musicButton.addEventListener('click', function(e){
+      e.preventDefault();
+
+      if(audio.paused || audio.ended){
+        if(audio.ended) audio.currentTime = 0;
+        audio.play().catch(function(){});
+      }else{
+        audio.pause();
+      }
+    }, true);
+
+    audio.addEventListener('play', updateMusicText);
+    audio.addEventListener('pause', updateMusicText);
+    audio.addEventListener('ended', updateMusicText);
+
+    updateMusicText();
+  }
+
+  /* =======================================================
+     RSVP:
+     Klik tombol langsung memilih status kehadiran.
+     Hidden input mempertahankan kompatibilitas form lama.
+     ======================================================= */
+  const attendanceInput = document.getElementById('rsvpAttendance');
+  const attendanceChoice = document.getElementById('attendanceChoice');
+
+  if(attendanceInput && attendanceChoice){
+    const buttons = attendanceChoice.querySelectorAll('.attendance-btn');
+
+    buttons.forEach(function(button){
+      button.addEventListener('click', function(){
+        const value = button.getAttribute('data-value');
+
+        buttons.forEach(function(item){
+          const selected = item === button;
+          item.classList.toggle('is-selected', selected);
+          item.setAttribute('aria-pressed', selected ? 'true' : 'false');
+        });
+
+        attendanceInput.value = value;
+        attendanceChoice.classList.remove('is-error');
+      });
+    });
+
+    const form = document.getElementById('rsvpForm');
+    if(form){
+      form.addEventListener('submit', function(e){
+        if(!attendanceInput.value){
+          e.preventDefault();
+          attendanceChoice.classList.add('is-error');
+          attendanceChoice.scrollIntoView({behavior:'smooth',block:'center'});
+        }
+      }, true);
+    }
+  }
+})();
+</script>
+
+
+<style id="music-click-pause-stable-only">
+/* =========================================================
+   MUSIC ONLY — PLAY / PAUSE DENGAN UKURAN STABIL
+   ========================================================= */
+
+/* Saat controls terbuka, lebar tombol Music SELALU sama.
+   Status DIPUTAR atau DIJEDA tidak boleh mengubah geometri tombol. */
+#smartControls.is-active #smartMusic,
+#smartControls.is-active #smartMusic.is-playing,
+#smartControls.is-active #smartMusic.is-paused{
+  width:min(360px,calc(100vw - 48px)) !important;
+  min-width:0 !important;
+}
+
+/* Equalizer dan informasi lagu selalu menggunakan layout yang sama
+   untuk kedua status. */
+#smartControls.is-active #smartMusic > .music-bars{
+  order:2 !important;
+  width:15px !important;
+  min-width:15px !important;
+  margin-right:9px !important;
+  opacity:1 !important;
+  transform:translateX(0) !important;
+}
+
+#smartControls.is-active #smartMusic > .music-copy{
+  order:3 !important;
+  max-width:270px !important;
+  margin-right:16px !important;
+  opacity:1 !important;
+  transform:translateX(0) !important;
+}
+
+/* Label MUSIK lama tidak ikut muncul sehingga tidak ada perubahan layout. */
+#smartControls.is-active #smartMusic > .smart-label{
+  max-width:0 !important;
+  padding:0 !important;
+  opacity:0 !important;
+  margin:0 !important;
+}
+
+/* Saat hide tetap hanya icon dengan ukuran yang sama. */
+#smartControls:not(.is-active) #smartMusic{
+  width:var(--smart-size) !important;
+  min-width:var(--smart-size) !important;
+}
+
+/* Icon ♫ adalah anchor tetap dan tidak pernah berubah ukuran. */
+#smartMusic > .smart-icon{
+  flex:0 0 var(--smart-size) !important;
+  width:var(--smart-size) !important;
+  min-width:var(--smart-size) !important;
+  height:var(--smart-size) !important;
+  min-height:var(--smart-size) !important;
+  max-height:var(--smart-size) !important;
+  transform:none !important;
+}
+
+@media(max-width:768px){
+  #smartControls.is-active #smartMusic,
+  #smartControls.is-active #smartMusic.is-playing,
+  #smartControls.is-active #smartMusic.is-paused{
+    width:min(350px,calc(100vw - 28px)) !important;
+  }
+
+  #smartControls.is-active #smartMusic > .music-copy{
+    max-width:255px !important;
+    margin-right:13px !important;
+  }
+}
+</style>
+
+<script id="music-click-pause-stable-only-script">
+(function(){
+  const oldButton = document.getElementById('smartMusic');
+  const audio = document.getElementById('music');
+  if(!oldButton || !audio) return;
+
+  /*
+    Clone hanya tombol Music untuk membuang handler lama yang menyebabkan
+    perilaku klik/hold bertumpuk. Isi tombol tetap persis sama.
+  */
+  const button = oldButton.cloneNode(true);
+  oldButton.replaceWith(button);
+
+  const status = button.querySelector('.music-copy b');
+
+  function syncMusicStatus(){
+    const paused = audio.paused || audio.ended;
+
+    if(status){
+      status.textContent = paused ? 'SEDANG DIJEDA' : 'SEDANG DIPUTAR';
+    }
+
+    button.classList.toggle('is-playing', !paused);
+    button.classList.toggle('is-paused', paused);
+    button.setAttribute('aria-label', paused ? 'Putar musik' : 'Jeda musik');
+  }
+
+  /*
+    SATU KLIK:
+    - DIPUTAR -> DIJEDA
+    - DIJEDA -> DIPUTAR
+    Tidak ada hold / long press.
+    Tidak mengubah lebar tombol.
+  */
+  button.addEventListener('click', async function(event){
+    event.preventDefault();
+    event.stopPropagation();
+
+    try{
+      if(audio.paused || audio.ended){
+        if(audio.ended) audio.currentTime = 0;
+        await audio.play();
+      }else{
+        audio.pause();
+      }
+    }catch(error){}
+  });
+
+  audio.addEventListener('play', syncMusicStatus);
+  audio.addEventListener('pause', syncMusicStatus);
+  audio.addEventListener('ended', syncMusicStatus);
+
+  syncMusicStatus();
+})();
+</script>
+
+
+<style id="smart-controls-font-alignment-only">
+/* =========================================================
+   FONT ALIGNMENT ONLY
+   Menyamakan tipografi agar proporsional dengan tombol.
+   ========================================================= */
+
+/* Bagikan */
+#smartControls .smart-share .smart-label{
+  font-family:"Manrope",sans-serif !important;
+  font-size:10px !important;
+  font-weight:700 !important;
+  line-height:1 !important;
+  letter-spacing:.08em !important;
+}
+
+/* Status musik */
+#smartControls .smart-music .music-copy,
+#smartControls .smart-music .music-copy b,
+#smartControls .smart-music .music-copy span{
+  font-family:"Manrope",sans-serif !important;
+  line-height:1.25 !important;
+}
+
+/* Status utama dibuat seimbang dengan ukuran BAGIKAN */
+#smartControls .smart-music .music-copy b{
+  font-size:9px !important;
+  font-weight:700 !important;
+  letter-spacing:.045em !important;
+}
+
+/* Nama lagu sedikit lebih ringan agar hierarki tetap rapi */
+#smartControls .smart-music .music-copy span{
+  font-size:9px !important;
+  font-weight:500 !important;
+  letter-spacing:.01em !important;
+}
+
+/* Jika struktur teks berupa satu elemen, tetap gunakan ukuran stabil */
+#smartControls .smart-music .music-copy{
+  font-size:9px !important;
+  font-weight:600 !important;
+  letter-spacing:.02em !important;
+}
+
+@media(max-width:768px){
+  #smartControls .smart-share .smart-label{
+    font-size:9px !important;
+  }
+
+  #smartControls .smart-music .music-copy,
+  #smartControls .smart-music .music-copy b,
+  #smartControls .smart-music .music-copy span{
+    font-size:8.5px !important;
+  }
+}
+</style>
+
+
+
+<style id="music-play-pause-one-geometry">
+/* =========================================================
+   MUSIC PLAY / PAUSE — ONE IDENTICAL GEOMETRY
+   HANYA memperbaiki tombol Music.
+   ========================================================= */
+
+#smartControls{
+  --music-btn-width:min(360px, calc(100vw - 48px));
+  --music-btn-height:46px;
+  --music-icon-slot:46px;
+  --music-bars-slot:16px;
+}
+
+/* ---------------------------------------------------------
+   WRAPPER: bentuk SELALU identik saat PLAY maupun PAUSE.
+   --------------------------------------------------------- */
+#smartControls.is-active #smartMusic,
+#smartControls.music-paused-open #smartMusic{
+  box-sizing:border-box !important;
+  width:var(--music-btn-width) !important;
+  min-width:var(--music-btn-width) !important;
+  max-width:var(--music-btn-width) !important;
+  height:var(--music-btn-height) !important;
+  min-height:var(--music-btn-height) !important;
+  max-height:var(--music-btn-height) !important;
+  margin:0 !important;
+  padding:0 !important;
+  border-radius:999px !important;
+  overflow:hidden !important;
+  display:flex !important;
+  align-items:center !important;
+  gap:0 !important;
+}
+
+/* Status PLAY dan PAUSE TIDAK boleh punya ukuran sendiri. */
+#smartControls #smartMusic.is-playing,
+#smartControls #smartMusic.is-paused{
+  height:var(--music-btn-height) !important;
+  min-height:var(--music-btn-height) !important;
+  max-height:var(--music-btn-height) !important;
+  border-radius:999px !important;
+}
+
+/* ---------------------------------------------------------
+   SLOT ICON: selalu sama.
+   --------------------------------------------------------- */
+#smartControls #smartMusic > .smart-icon{
+  order:1 !important;
+  flex:0 0 var(--music-icon-slot) !important;
+  width:var(--music-icon-slot) !important;
+  min-width:var(--music-icon-slot) !important;
+  max-width:var(--music-icon-slot) !important;
+  height:var(--music-btn-height) !important;
+  min-height:var(--music-btn-height) !important;
+  max-height:var(--music-btn-height) !important;
+  margin:0 !important;
+  padding:0 !important;
+  display:grid !important;
+  place-items:center !important;
+  box-sizing:border-box !important;
+  font-size:17px !important;
+  line-height:1 !important;
+  transform:none !important;
+}
+
+/* ---------------------------------------------------------
+   EQUALIZER: slot dan ukuran sama untuk PLAY/PAUSE.
+   --------------------------------------------------------- */
+#smartControls #smartMusic > .music-bars{
+  order:2 !important;
+  flex:0 0 var(--music-bars-slot) !important;
+  width:var(--music-bars-slot) !important;
+  min-width:var(--music-bars-slot) !important;
+  max-width:var(--music-bars-slot) !important;
+  height:18px !important;
+  margin:0 9px 0 0 !important;
+  padding:0 !important;
+  box-sizing:border-box !important;
+  opacity:1 !important;
+  transform:none !important;
+  display:flex !important;
+  align-items:center !important;
+}
+
+/* ---------------------------------------------------------
+   TEKS: ukuran identik. Hanya kata status yang berubah.
+   --------------------------------------------------------- */
+#smartControls #smartMusic > .music-copy{
+  order:3 !important;
+  flex:1 1 auto !important;
+  min-width:0 !important;
+  height:var(--music-btn-height) !important;
+  margin:0 16px 0 0 !important;
+  padding:0 !important;
+  display:flex !important;
+  align-items:center !important;
+  box-sizing:border-box !important;
+  white-space:nowrap !important;
+  overflow:hidden !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:none !important;
+  font-family:"Manrope",sans-serif !important;
+  font-size:9px !important;
+  line-height:1 !important;
+}
+
+#smartControls #smartMusic > .music-copy,
+#smartControls #smartMusic > .music-copy b,
+#smartControls #smartMusic > .music-copy span{
+  font-family:"Manrope",sans-serif !important;
+  font-size:9px !important;
+  line-height:1 !important;
+}
+
+#smartControls #smartMusic > .music-copy b{
+  font-weight:700 !important;
+  letter-spacing:.045em !important;
+}
+
+#smartControls #smartMusic > .music-copy span{
+  font-weight:500 !important;
+  letter-spacing:.01em !important;
+}
+
+/* Label lama tidak ikut mengambil ruang. */
+#smartControls #smartMusic > .smart-label{
+  display:none !important;
+}
+
+/* Saat tombol sedang tersembunyi: tetap hanya icon bulat normal. */
+#smartControls:not(.is-active):not(.music-paused-open) #smartMusic{
+  width:var(--music-icon-slot) !important;
+  min-width:var(--music-icon-slot) !important;
+  max-width:var(--music-icon-slot) !important;
+  height:var(--music-btn-height) !important;
+  min-height:var(--music-btn-height) !important;
+  max-height:var(--music-btn-height) !important;
+  overflow:hidden !important;
+}
+
+#smartControls:not(.is-active):not(.music-paused-open) #smartMusic > .music-bars,
+#smartControls:not(.is-active):not(.music-paused-open) #smartMusic > .music-copy{
+  opacity:0 !important;
+  visibility:hidden !important;
+}
+
+/* ---------------------------------------------------------
+   MOBILE: tetap proporsional dan identik.
+   --------------------------------------------------------- */
+@media(max-width:768px){
+  #smartControls{
+    --music-btn-width:min(350px, calc(100vw - 28px));
+    --music-btn-height:42px;
+    --music-icon-slot:42px;
+  }
+
+  #smartControls #smartMusic > .smart-icon{
+    font-size:16px !important;
+  }
+
+  #smartControls #smartMusic > .music-copy,
+  #smartControls #smartMusic > .music-copy b,
+  #smartControls #smartMusic > .music-copy span{
+    font-size:8.5px !important;
+  }
+}
+</style>
+
+
+<style id="smart-controls-unified-final">
+/* =========================================================
+   SMART CONTROLS — UNIFIED GEOMETRY
+   HANYA memperbaiki:
+   - ukuran/shape Share dan Music
+   - teks tetap terlihat saat Music dijeda
+   ========================================================= */
+
+#smartControls{
+  --control-size:46px;
+  --control-radius:23px;
+  --music-open-width:min(360px, calc(100vw - 48px));
+  --share-open-width:140px;
+}
+
+/* SATU SHAPE DASAR UNTUK SHARE DAN MUSIC */
+#smartControls > .smart-btn,
+#smartControls .smart-share,
+#smartControls .smart-music{
+  box-sizing:border-box !important;
+  height:var(--control-size) !important;
+  min-height:var(--control-size) !important;
+  max-height:var(--control-size) !important;
+  border-radius:var(--control-radius) !important;
+  padding:0 !important;
+  margin:0 !important;
+  overflow:hidden !important;
+}
+
+/* SLOT ICON IDENTIK */
+#smartControls .smart-share > .smart-icon,
+#smartControls .smart-music > .smart-icon{
+  flex:0 0 var(--control-size) !important;
+  width:var(--control-size) !important;
+  min-width:var(--control-size) !important;
+  max-width:var(--control-size) !important;
+  height:var(--control-size) !important;
+  min-height:var(--control-size) !important;
+  max-height:var(--control-size) !important;
+  display:grid !important;
+  place-items:center !important;
+  margin:0 !important;
+  padding:0 !important;
+  box-sizing:border-box !important;
+  line-height:1 !important;
+}
+
+/* FONT ICON SELARAS */
+#smartControls .smart-share > .smart-icon,
+#smartControls .smart-music > .smart-icon{
+  font-size:16px !important;
+}
+
+/* SAAT TERSEMBUNYI: KEDUANYA BENAR-BENAR SAMA BESAR */
+#smartControls:not(.is-active):not(.music-paused-open) .smart-share,
+#smartControls:not(.is-active):not(.music-paused-open) .smart-music{
+  width:var(--control-size) !important;
+  min-width:var(--control-size) !important;
+  max-width:var(--control-size) !important;
+}
+
+/* SAAT MUNCUL: TINGGI/RADIUS TETAP SAMA, HANYA LEBAR MEMANJANG */
+#smartControls.is-active .smart-share{
+  width:var(--share-open-width) !important;
+  min-width:var(--share-open-width) !important;
+  max-width:var(--share-open-width) !important;
+}
+
+#smartControls.is-active .smart-music,
+#smartControls.music-paused-open .smart-music{
+  width:var(--music-open-width) !important;
+  min-width:var(--music-open-width) !important;
+  max-width:var(--music-open-width) !important;
+}
+
+/* =========================================================
+   PAUSE: INFORMASI WAJIB TETAP TERLIHAT
+   ========================================================= */
+#smartControls.music-paused-open .smart-music{
+  display:flex !important;
+  align-items:center !important;
+}
+
+#smartControls.music-paused-open .smart-music > .music-bars{
+  display:flex !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  transform:none !important;
+}
+
+#smartControls.music-paused-open .smart-music > .music-copy{
+  display:flex !important;
+  align-items:center !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  transform:none !important;
+  white-space:nowrap !important;
+  overflow:hidden !important;
+  font-size:9px !important;
+}
+
+#smartControls.music-paused-open .smart-music > .music-copy,
+#smartControls.music-paused-open .smart-music > .music-copy b,
+#smartControls.music-paused-open .smart-music > .music-copy span{
+  color:inherit !important;
+  visibility:visible !important;
+  opacity:1 !important;
+}
+
+#smartControls.music-paused-open .smart-music > .music-copy b{
+  font-size:9px !important;
+  font-weight:700 !important;
+}
+
+#smartControls.music-paused-open .smart-music > .music-copy span{
+  font-size:9px !important;
+  font-weight:500 !important;
+}
+
+/* Saat pause, label lama tidak mengambil ruang */
+#smartControls.music-paused-open .smart-music > .smart-label{
+  display:none !important;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+@media(max-width:768px){
+  #smartControls{
+    --control-size:42px;
+    --control-radius:21px;
+    --music-open-width:min(350px, calc(100vw - 28px));
+    --share-open-width:132px;
+  }
+
+  #smartControls .smart-share > .smart-icon,
+  #smartControls .smart-music > .smart-icon{
+    font-size:15px !important;
+  }
+
+  #smartControls.music-paused-open .smart-music > .music-copy,
+  #smartControls.music-paused-open .smart-music > .music-copy b,
+  #smartControls.music-paused-open .smart-music > .music-copy span{
+    font-size:8.5px !important;
+  }
+}
+</style>
+
+<script id="music-pause-open-final">
+(function(){
+  const controls = document.getElementById('smartControls');
+  const audio = document.getElementById('music');
+  if(!controls || !audio) return;
+
+  let hideTimer = null;
+
+  function clearHideTimer(){
+    if(hideTimer){
+      clearTimeout(hideTimer);
+      hideTimer = null;
+    }
+  }
+
+  function setPaused(){
+    clearHideTimer();
+    controls.classList.add('is-active');
+    controls.classList.add('music-paused-open');
+  }
+
+  function setPlaying(){
+    controls.classList.remove('music-paused-open');
+    controls.classList.add('is-active');
+    clearHideTimer();
+
+    hideTimer = setTimeout(function(){
+      if(!audio.paused && !audio.ended){
+        controls.classList.remove('is-active');
+      }
+    }, 1600);
+  }
+
+  audio.addEventListener('pause', function(){
+    if(!audio.ended) setPaused();
+  });
+
+  audio.addEventListener('play', setPlaying);
+
+  if(audio.paused && !audio.ended) setPaused();
+})();
+</script>
+
+
+<style id="music-paused-scroll-visible-smooth">
+/* =========================================================
+   MUSIC PAUSE — TEXT TETAP TERLIHAT SAAT SCROLL
+   + TRANSISI SMART CONTROLS LEBIH HALUS
+   Tidak mengubah konten undangan.
+   ========================================================= */
+
+/* Transisi wrapper dibuat lebih lembut dan konsisten */
+#smartControls .smart-btn{
+  will-change:width, opacity, transform;
+  transition:
+    width 520ms cubic-bezier(.22,.8,.22,1),
+    min-width 520ms cubic-bezier(.22,.8,.22,1),
+    max-width 520ms cubic-bezier(.22,.8,.22,1),
+    opacity 280ms ease !important;
+}
+
+/* Isi tombol muncul dan masuk dengan gerakan yang lebih natural */
+#smartControls .smart-btn > .music-bars,
+#smartControls .smart-btn > .music-copy,
+#smartControls .smart-btn > .smart-label{
+  transition:
+    opacity 280ms ease,
+    transform 520ms cubic-bezier(.22,.8,.22,1),
+    visibility 0s linear 0s !important;
+}
+
+/* ---------------------------------------------------------
+   SAAT MUSIC DIJEDA:
+   state ini SELALU menang, termasuk ketika user scroll.
+   --------------------------------------------------------- */
+#smartControls.music-paused-open #smartMusic{
+  width:var(--music-open-width, min(360px, calc(100vw - 48px))) !important;
+  min-width:var(--music-open-width, min(360px, calc(100vw - 48px))) !important;
+  max-width:var(--music-open-width, min(360px, calc(100vw - 48px))) !important;
+  overflow:hidden !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+/* Equalizer tetap terlihat */
+#smartControls.music-paused-open #smartMusic > .music-bars{
+  display:flex !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:translateX(0) !important;
+}
+
+/* Seluruh tulisan tetap terlihat saat pause */
+#smartControls.music-paused-open #smartMusic > .music-copy{
+  display:flex !important;
+  align-items:center !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:translateX(0) !important;
+  pointer-events:auto !important;
+}
+
+#smartControls.music-paused-open #smartMusic > .music-copy,
+#smartControls.music-paused-open #smartMusic > .music-copy b,
+#smartControls.music-paused-open #smartMusic > .music-copy span{
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+/* Pastikan label lama tidak mengambil ruang */
+#smartControls.music-paused-open #smartMusic > .smart-label{
+  display:none !important;
+}
+
+/* Ketika pause, state hidden dari aturan lama tidak boleh menyembunyikan isi */
+#smartControls.music-paused-open:not(.is-active) #smartMusic,
+#smartControls.music-paused-open #smartMusic.is-paused{
+  width:var(--music-open-width, min(360px, calc(100vw - 48px))) !important;
+  min-width:var(--music-open-width, min(360px, calc(100vw - 48px))) !important;
+  max-width:var(--music-open-width, min(360px, calc(100vw - 48px))) !important;
+}
+
+@media(max-width:768px){
+  #smartControls.music-paused-open #smartMusic,
+  #smartControls.music-paused-open:not(.is-active) #smartMusic,
+  #smartControls.music-paused-open #smartMusic.is-paused{
+    width:min(350px, calc(100vw - 28px)) !important;
+    min-width:min(350px, calc(100vw - 28px)) !important;
+    max-width:min(350px, calc(100vw - 28px)) !important;
+  }
+
+  #smartControls .smart-btn{
+    transition-duration:460ms !important;
+  }
+}
+
+/* Menghormati preferensi aksesibilitas */
+@media(prefers-reduced-motion:reduce){
+  #smartControls .smart-btn,
+  #smartControls .smart-btn > .music-bars,
+  #smartControls .smart-btn > .music-copy,
+  #smartControls .smart-btn > .smart-label{
+    transition-duration:1ms !important;
+  }
+}
+</style>
+
+<script id="music-paused-scroll-lock-and-smooth">
+(function(){
+  const controls = document.getElementById('smartControls');
+  const audio = document.getElementById('music');
+  const musicButton = document.getElementById('smartMusic');
+  if(!controls || !audio || !musicButton) return;
+
+  let playHideTimer = null;
+
+  function clearPlayTimer(){
+    if(playHideTimer){
+      clearTimeout(playHideTimer);
+      playHideTimer = null;
+    }
+  }
+
+  function keepPauseVisible(){
+    clearPlayTimer();
+    controls.classList.add('is-active');
+    controls.classList.add('music-paused-open');
+    musicButton.classList.add('is-paused');
+    musicButton.classList.remove('is-playing');
+
+    const status = musicButton.querySelector('.music-copy b');
+    if(status) status.textContent = 'SEDANG DIJEDA';
+  }
+
+  function restorePlayingBehavior(){
+    controls.classList.remove('music-paused-open');
+    controls.classList.add('is-active');
+    musicButton.classList.remove('is-paused');
+    musicButton.classList.add('is-playing');
+
+    const status = musicButton.querySelector('.music-copy b');
+    if(status) status.textContent = 'SEDANG DIPUTAR';
+
+    clearPlayTimer();
+
+    /* Memberi waktu transisi kembali terasa halus */
+    playHideTimer = setTimeout(function(){
+      if(!audio.paused && !audio.ended){
+        controls.classList.remove('is-active');
+      }
+    }, 1800);
+  }
+
+  audio.addEventListener('pause', function(){
+    if(!audio.ended) keepPauseVisible();
+  });
+
+  audio.addEventListener('play', restorePlayingBehavior);
+
+  /* Saat user scroll, pause tidak boleh ikut ter-hide */
+  function protectPausedState(){
+    if(audio.paused && !audio.ended){
+      keepPauseVisible();
+    }
+  }
+
+  window.addEventListener('scroll', protectPausedState, {passive:true});
+  window.addEventListener('wheel', protectPausedState, {passive:true});
+  window.addEventListener('touchmove', protectPausedState, {passive:true});
+
+  /* Sinkronisasi kondisi awal */
+  if(audio.paused && !audio.ended){
+    keepPauseVisible();
+  }else if(!audio.paused && !audio.ended){
+    const status = musicButton.querySelector('.music-copy b');
+    if(status) status.textContent = 'SEDANG DIPUTAR';
+  }
+})();
+</script>
+
+
+<style id="smart-controls-click-pause-and-share-lock">
+/* =========================================================
+   FINAL CONTROL LOCK
+   Hanya Smart Controls — konten undangan tidak disentuh.
+   ========================================================= */
+/* Event audio hanya memperbarui status; tidak boleh membuka tombol sendiri. */
+  audio.addEventListener('play', function(){
+    updateMusicState();
+  });
+
+  audio.addEventListener('pause', function(){
+    updateMusicState();
+
+    /* Jika pause dilakukan melalui klik Music, tetap terbuka. */
+    if(musicPausedByUser && invitationIsOpen){
+      openMusic();
+      controls.classList.add('music-paused-open');
+    }
+  });
+
+  /* SCROLL SENGAJA TIDAK MEMBUKA CONTROLS.
+     Jika ada script lama menambah is-active saat scroll, paksa kembali icon-only
+     kecuali Music memang sedang pause oleh user atau Share sedang dibuka. */
+  function neutralizeScrollExpansion(){
+    if(!invitationIsOpen) return;
+
+    if(musicPausedByUser && audio.paused && !audio.ended){
+      openMusic();
+      controls.classList.add('music-paused-open');
+      return;
+    }
+
+    if(!controls.classList.contains('control-share-open')){
+      controls.classList.remove('is-active');
+    }
+  }
+
+  window.addEventListener('scroll', neutralizeScrollExpansion, {passive:true, capture:true});
+  window.addEventListener('wheel', neutralizeScrollExpansion, {passive:true, capture:true});
+  window.addEventListener('touchmove', neutralizeScrollExpansion, {passive:true, capture:true});
+
+  updateMusicState();
+  if(invitationIsOpen) resetToIcons();
+})();
+</script>
+
+
+<style id="smart-controls-strict-opening-gate">
+/* =========================================================
+   STRICT OPENING GATE
+   Controls TIDAK BOLEH muncul di halaman awal/cover.
+   Hanya setelah tombol "Buka Undangan" benar-benar diklik.
+   ========================================================= */
+
+/* Kunci mutlak sebelum undangan dibuka */
+body:not(.smart-controls-enabled) #smartControls{
+  display:none !important;
+  opacity:0 !important;
+  visibility:hidden !important;
+  pointer-events:none !important;
+}
+
+/* Setelah Buka Undangan diklik: tampil dengan animasi lembut */
+body.smart-controls-enabled #smartControls{
+  display:flex !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  pointer-events:auto !important;
+  transition:
+    opacity 320ms ease,
+    visibility 0s linear 0s !important;
+}
+</style>
+
+<script id="smart-controls-strict-opening-gate-script">
+(function(){
+  const controls = document.getElementById('smartControls');
+  if(!controls) return;
+
+  /* Pastikan pada load pertama controls SELALU tersembunyi. */
+  document.body.classList.remove('smart-controls-enabled');
+
+  function enableControls(){
+    document.body.classList.add('smart-controls-enabled');
+
+    /* Setelah dibuka, tetap icon-only terlebih dahulu. */
+    controls.classList.remove(
+      'control-music-open',
+      'control-share-open',
+      'music-paused-open',
+      'is-active'
+    );
+  }
+
+  /* Tombol pembuka berdasarkan selector yang digunakan di berbagai versi */
+  const candidates = [
+    ...document.querySelectorAll(
+      '#openInvitation, #openInvite, #openButton, .open-invitation, .open-invite, [data-open-invitation]'
+    )
+  ];
+
+  /* Tambahkan fallback berdasarkan tulisan tombol */
+  document.querySelectorAll('button, a, [role="button"]').forEach(function(el){
+    const label = (el.textContent || '').trim().toLowerCase();
+    if(
+      label === 'buka undangan' ||
+      label.includes('buka undangan')
+    ){
+      if(!candidates.includes(el)) candidates.push(el);
+    }
+  });
+
+  /* HANYA aksi klik tombol pembuka yang mengaktifkan Smart Controls */
+  candidates.forEach(function(button){
+    button.addEventListener('click', function(){
+      /* Beri kesempatan animasi cover mulai terlebih dahulu */
+      requestAnimationFrame(function(){
+        enableControls();
+      });
+    }, true);
+  });
+
+  /* Jika tidak ada tombol yang ditemukan, controls tetap tersembunyi.
+     Ini sengaja untuk mencegah muncul otomatis di halaman awal. */
+})();
+</script>
+
+
+<style id="music-request-exact-final">
+#smartShare,#shareButton,.smart-share,.share-button,[data-action="share"]{display:none!important}
+
+#smartControls:not(.control-music-open) #smartMusic{
+  width:46px!important; min-width:46px!important; max-width:46px!important;
+}
+#smartControls:not(.control-music-open) #smartMusic .music-bars,
+#smartControls:not(.control-music-open) #smartMusic .music-copy{
+  opacity:0!important; visibility:hidden!important; max-width:0!important; overflow:hidden!important;
+}
+#smartControls.control-music-open #smartMusic{
+  width:min(370px,calc(100vw - 32px))!important;
+  max-width:min(370px,calc(100vw - 32px))!important;
+}
+#smartControls.control-music-open #smartMusic .music-bars,
+#smartControls.control-music-open #smartMusic .music-copy{
+  opacity:1!important; visibility:visible!important; max-width:320px!important;
+}
+</style>
+
+<script id="music-request-exact-controller">
+(function(){
+  const controls = document.getElementById('smartControls');
+  const oldBtn = document.getElementById('smartMusic');
+  const audio = document.getElementById('music');
+
+  if(!controls || !oldBtn || !audio) return;
+
+  // Buang handler klik lama yang bertumpuk tanpa mengubah struktur tombol.
+  const btn = oldBtn.cloneNode(true);
+  oldBtn.replaceWith(btn);
+
+  const copy = btn.querySelector('.music-copy');
+  if(!copy) return;
+
+  // Gunakan elemen yang SUDAH ADA agar judul tidak menjadi double.
+  const status = copy.querySelector('b');
+  const title = copy.querySelector('span');
+
+  function open(){
+    controls.classList.add('control-music-open');
+  }
+
+  function sync(){
+    const paused = audio.paused || audio.ended;
+
+    if(status){
+      status.textContent = paused
+        ? 'SEDANG DIJEDA'
+        : 'SEDANG DIPUTAR';
+    }
+
+    if(title){
+      title.textContent = '— Instrumental Pernikahan';
+    }
+
+    btn.classList.toggle('is-playing', !paused);
+    btn.classList.toggle('is-paused', paused);
+
+    btn.setAttribute(
+      'aria-label',
+      paused ? 'Putar musik' : 'Jeda musik'
+    );
+  }
+
+  btn.addEventListener('click', async function(e){
+    e.preventDefault();
+    e.stopImmediatePropagation();
+
+    open();
+
+    if(audio.paused || audio.ended){
+      try{
+        if(audio.ended) audio.currentTime = 0;
+        await audio.play();
+      }catch(err){}
+    }else{
+      audio.pause();
+    }
+
+    sync();
+    open();
+  }, true);
+
+  audio.addEventListener('play', function(){
+    sync();
+    open();
+  });
+
+  audio.addEventListener('pause', function(){
+    sync();
+    open();
+  });
+
+  audio.addEventListener('ended', function(){
+    sync();
+    open();
+  });
+
+  sync();
+})();
+</script>
+
 </body>
 </html>
