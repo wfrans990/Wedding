@@ -2009,6 +2009,45 @@ img{
 }
 
 </style>
+
+<!-- =========================================================
+     FINAL MUSIC COMPACT SIZE — DESKTOP + MOBILE
+     Hanya memperkecil ruang kosong tombol musik
+========================================================= -->
+<style id="final-music-super-compact">
+/* DESKTOP / WEB */
+#smartControls.is-active .smart-music.is-playing,
+#smartControls.music-paused-open #smartMusic,
+#smartControls.music-paused-open:not(.is-active) #smartMusic,
+#smartControls.music-paused-open #smartMusic.is-paused{
+  width:min(300px, calc(100vw - 48px)) !important;
+  min-width:min(300px, calc(100vw - 48px)) !important;
+  max-width:min(300px, calc(100vw - 48px)) !important;
+  padding-right:6px !important;
+  gap:6px !important;
+}
+
+/* Kurangi ruang kosong di area teks */
+#smartControls .smart-music .music-copy{
+  padding-right:0 !important;
+  margin-right:0 !important;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  #smartControls.is-active .smart-music.is-playing,
+  #smartControls.music-paused-open #smartMusic,
+  #smartControls.music-paused-open:not(.is-active) #smartMusic,
+  #smartControls.music-paused-open #smartMusic.is-paused{
+    width:min(275px, calc(100vw - 28px)) !important;
+    min-width:min(275px, calc(100vw - 28px)) !important;
+    max-width:min(275px, calc(100vw - 28px)) !important;
+    padding-right:5px !important;
+    gap:5px !important;
+  }
+}
+</style>
+
 </head>
 
 <body>
@@ -4007,7 +4046,7 @@ body.smart-controls-enabled #smartControls{
     }
 
     if(title){
-      title.textContent = '— Instrumental Pernikahan';
+      title.textContent = ' — Instrumental Pernikahan';
     }
 
     btn.classList.toggle('is-playing', !paused);
@@ -4054,6 +4093,492 @@ body.smart-controls-enabled #smartControls{
   });
 
   sync();
+})();
+</script>
+
+
+
+<!-- =========================================================
+     FINAL FIX — MOBILE MENU & MUSIC BUTTON TIDAK BERTABRAKAN
+     Hanya mengatur posisi Smart Music di handphone.
+========================================================= -->
+<style id="final-mobile-menu-music-spacing">
+@media (max-width:768px){
+  /* Menu tetap berada di bagian paling bawah */
+  .mobile-nav{
+    z-index:9997 !important;
+  }
+
+  /* Smart Music dinaikkan ke atas menu agar tidak menutupi navigasi */
+  #smartControls{
+    bottom:calc(84px + env(safe-area-inset-bottom, 0px)) !important;
+    z-index:99999 !important;
+  }
+}
+</style>
+
+
+<!-- =========================================================
+     FINAL MUSIC AUTO FIT TEXT
+     Lebar mengikuti teks terpanjang: DIJEDA / DIPUTAR
+     ========================================================= -->
+<style id="final-music-auto-fit-text">
+
+/* Saat panel musik terbuka, lebarnya mengikuti isi teks secara natural */
+#smartControls.control-music-open #smartMusic,
+#smartControls.is-active .smart-music.is-playing,
+#smartControls.music-paused-open #smartMusic,
+#smartControls.music-paused-open:not(.is-active) #smartMusic,
+#smartControls.music-paused-open #smartMusic.is-paused{
+  width:fit-content !important;
+  min-width:0 !important;
+  max-width:calc(100vw - 32px) !important;
+  padding-right:10px !important;
+  gap:6px !important;
+}
+
+/* Isi tidak lagi dipaksa mengambil ruang kosong */
+#smartControls #smartMusic .music-copy{
+  flex:0 1 auto !important;
+  width:max-content !important;
+  min-width:0 !important;
+  max-width:calc(100vw - 110px) !important;
+  padding-right:0 !important;
+  margin-right:0 !important;
+  white-space:nowrap !important;
+}
+
+/* Equalizer tetap hanya sebesar isi */
+#smartControls #smartMusic .music-bars{
+  flex:0 0 auto !important;
+  width:auto !important;
+  min-width:0 !important;
+  margin-right:4px !important;
+}
+
+/* MOBILE: tetap mengikuti teks dengan batas layar yang aman */
+@media(max-width:768px){
+  #smartControls.control-music-open #smartMusic,
+  #smartControls.is-active .smart-music.is-playing,
+  #smartControls.music-paused-open #smartMusic,
+  #smartControls.music-paused-open:not(.is-active) #smartMusic,
+  #smartControls.music-paused-open #smartMusic.is-paused{
+    width:fit-content !important;
+    min-width:0 !important;
+    max-width:calc(100vw - 28px) !important;
+    padding-right:8px !important;
+    gap:5px !important;
+  }
+
+  #smartControls #smartMusic .music-copy{
+    width:max-content !important;
+    max-width:calc(100vw - 95px) !important;
+    font-size:8px !important;
+  }
+}
+
+</style>
+
+
+<!-- =========================================================
+     MUSIC WIDTH — FINAL EXACT TEXT FIT
+     Lebar tombol mengikuti panjang teks aktual pada setiap status
+========================================================= -->
+<style id="final-music-exact-text-fit">
+
+/* Hilangkan seluruh lebar paksa lama ketika panel musik tampil */
+#smartControls.is-active #smartMusic,
+#smartControls.is-active #smartMusic.is-playing,
+#smartControls.is-active #smartMusic.is-paused,
+#smartControls.control-music-open #smartMusic,
+#smartControls.music-paused-open #smartMusic,
+#smartControls.music-paused-open #smartMusic.is-paused{
+  width:max-content !important;
+  min-width:0 !important;
+  max-width:calc(100vw - 32px) !important;
+  flex:0 0 auto !important;
+}
+
+/* Setiap bagian mengambil ruang sesuai isi, bukan ruang kosong */
+#smartControls.is-active #smartMusic > .music-copy{
+  flex:0 0 auto !important;
+  width:max-content !important;
+  min-width:0 !important;
+  max-width:none !important;
+  margin-right:8px !important;
+  padding-right:0 !important;
+  white-space:nowrap !important;
+}
+
+#smartControls.is-active #smartMusic > .music-bars{
+  flex:0 0 auto !important;
+  margin-right:6px !important;
+}
+
+/* Saat teks berubah DIJEDA <-> DIPUTAR, lebar ikut berubah sesuai teks */
+#smartControls.is-active #smartMusic .music-copy,
+#smartControls.is-active #smartMusic .music-copy b,
+#smartControls.is-active #smartMusic .music-copy span{
+  width:max-content !important;
+  max-width:none !important;
+  flex:none !important;
+}
+
+@media(max-width:768px){
+  #smartControls.is-active #smartMusic,
+  #smartControls.is-active #smartMusic.is-playing,
+  #smartControls.is-active #smartMusic.is-paused,
+  #smartControls.control-music-open #smartMusic,
+  #smartControls.music-paused-open #smartMusic,
+  #smartControls.music-paused-open #smartMusic.is-paused{
+    width:max-content !important;
+    min-width:0 !important;
+    max-width:calc(100vw - 28px) !important;
+  }
+
+  #smartControls.is-active #smartMusic > .music-copy{
+    margin-right:7px !important;
+  }
+
+  #smartControls.is-active #smartMusic > .music-bars{
+    margin-right:5px !important;
+  }
+}
+
+</style>
+
+
+<!-- =========================================================
+     MUSIC BUTTON — FINAL JUSTIFY FIT TEXT
+     Lebar mengikuti isi aktual pada PLAY maupun PAUSE
+========================================================= -->
+<style id="final-music-justify-fit-text">
+
+/* Hilangkan lebar tetap lama yang menyebabkan space kosong */
+#smartControls.is-active #smartMusic,
+#smartControls.is-active #smartMusic.is-playing,
+#smartControls.is-active #smartMusic.is-paused,
+#smartControls.control-music-open #smartMusic,
+#smartControls.music-paused-open #smartMusic,
+#smartControls.music-paused-open #smartMusic.is-playing,
+#smartControls.music-paused-open #smartMusic.is-paused{
+  width:auto !important;
+  min-width:0 !important;
+  max-width:calc(100vw - 32px) !important;
+  flex:0 0 auto !important;
+
+  /* Layout rapi mengikuti isi */
+  justify-content:flex-start !important;
+}
+
+/* Isi musik tidak boleh mengambil sisa ruang */
+#smartControls #smartMusic .music-copy{
+  display:flex !important;
+  flex:0 0 auto !important;
+  width:auto !important;
+  min-width:0 !important;
+  max-width:none !important;
+
+  align-items:center !important;
+  justify-content:flex-start !important;
+
+  gap:4px !important;
+  padding:0 8px 0 0 !important;
+  margin:0 !important;
+  white-space:nowrap !important;
+}
+
+/* Status dan judul juga mengikuti isi aktual */
+#smartControls #smartMusic .music-copy b,
+#smartControls #smartMusic .music-copy span{
+  flex:0 0 auto !important;
+  width:auto !important;
+  min-width:0 !important;
+  max-width:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+
+/* Equalizer tidak boleh menyisakan ruang tersembunyi */
+#smartControls #smartMusic .music-bars{
+  flex:0 0 auto !important;
+  width:auto !important;
+  min-width:0 !important;
+  margin:0 5px 0 0 !important;
+  padding:0 !important;
+
+  justify-content:center !important;
+}
+
+/* Desktop: tombol benar-benar selebar konten */
+@media(min-width:769px){
+  #smartControls.is-active #smartMusic,
+  #smartControls.control-music-open #smartMusic,
+  #smartControls.music-paused-open #smartMusic{
+    width:max-content !important;
+  }
+}
+
+/* Mobile: sama, tetapi tetap aman terhadap lebar layar */
+@media(max-width:768px){
+  #smartControls.is-active #smartMusic,
+  #smartControls.control-music-open #smartMusic,
+  #smartControls.music-paused-open #smartMusic{
+    width:max-content !important;
+    max-width:calc(100vw - 28px) !important;
+  }
+
+  #smartControls #smartMusic .music-copy{
+    gap:3px !important;
+    padding-right:7px !important;
+  }
+
+  #smartControls #smartMusic .music-bars{
+    margin-right:4px !important;
+  }
+}
+
+</style>
+
+
+<!-- RSVP MOBILE: pilihan hadir tetap bersebelahan -->
+<style id="rsvp-mobile-side-by-side">
+@media(max-width:640px){
+  .attendance-choice{
+    display:grid !important;
+    grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+    gap:10px !important;
+  }
+
+  .attendance-btn{
+    min-width:0 !important;
+    min-height:68px !important;
+    padding:10px !important;
+    gap:8px !important;
+  }
+
+  .attendance-check{
+    width:34px !important;
+    height:34px !important;
+    min-width:34px !important;
+  }
+
+  .attendance-text{
+    min-width:0 !important;
+  }
+
+  .attendance-text strong{
+    font-size:12px !important;
+  }
+
+  .attendance-text small{
+    font-size:8px !important;
+    line-height:1.3 !important;
+  }
+}
+</style>
+
+
+<!-- =========================================================
+     SMART MUSIC — SMOOTH TEXT TRANSITION FINAL
+     Hanya memperhalus tulisan PLAY / PAUSE
+========================================================= -->
+<style id="music-smooth-text-transition-final">
+
+/* Tulisan utama bergerak lebih lembut saat panel dibuka/ditutup */
+#smartControls #smartMusic .music-copy{
+  will-change:opacity, transform, max-width;
+  transform-origin:left center !important;
+  transition:
+    opacity .52s cubic-bezier(.22,1,.36,1) !important,
+    transform .52s cubic-bezier(.22,1,.36,1) !important,
+    max-width .62s cubic-bezier(.22,1,.36,1) !important,
+    margin .52s cubic-bezier(.22,1,.36,1) !important;
+}
+
+/* Saat teks sedang berganti */
+#smartControls #smartMusic .music-status{
+  display:inline-block;
+  will-change:opacity, transform;
+  transition:
+    opacity .34s cubic-bezier(.22,1,.36,1),
+    transform .34s cubic-bezier(.22,1,.36,1);
+}
+
+/* Teks baru masuk dengan lembut */
+#smartControls #smartMusic .music-status.music-status-enter{
+  animation:musicStatusEnter .48s cubic-bezier(.22,1,.36,1) both;
+}
+
+@keyframes musicStatusEnter{
+  from{
+    opacity:0;
+    transform:translateX(-7px);
+    filter:blur(1px);
+  }
+  to{
+    opacity:1;
+    transform:translateX(0);
+    filter:blur(0);
+  }
+}
+
+/* Teks lama keluar secara perlahan */
+.music-status-transition-layer{
+  position:absolute;
+  left:0;
+  top:50%;
+  transform:translateY(-50%);
+  pointer-events:none;
+  white-space:nowrap;
+  animation:musicStatusLeave .34s cubic-bezier(.4,0,.2,1) forwards;
+  z-index:5;
+}
+
+@keyframes musicStatusLeave{
+  from{
+    opacity:1;
+    transform:translateY(-50%) translateX(0);
+    filter:blur(0);
+  }
+  to{
+    opacity:0;
+    transform:translateY(-50%) translateX(7px);
+    filter:blur(1px);
+  }
+}
+
+/* Container status diperlukan untuk overlay animasi */
+#smartControls #smartMusic .music-status{
+  position:relative;
+}
+
+/* Saat panel disembunyikan, perlambat transisinya */
+#smartControls:not(.control-music-open) #smartMusic .music-copy{
+  opacity:0 !important;
+  transform:translateX(-10px) !important;
+  transition:
+    opacity .48s cubic-bezier(.4,0,.2,1) !important,
+    transform .48s cubic-bezier(.4,0,.2,1) !important,
+    max-width .60s cubic-bezier(.4,0,.2,1) !important;
+}
+
+/* Saat panel muncul, teks masuk lebih halus */
+#smartControls.control-music-open #smartMusic .music-copy{
+  opacity:1 !important;
+  transform:translateX(0) !important;
+  transition:
+    opacity .56s cubic-bezier(.22,1,.36,1) !important,
+    transform .56s cubic-bezier(.22,1,.36,1) !important,
+    max-width .64s cubic-bezier(.22,1,.36,1) !important;
+}
+
+</style>
+
+<script id="music-smooth-status-transition-final">
+(function(){
+  'use strict';
+
+  const audio = document.getElementById('music');
+
+  if(!audio) return;
+
+  let transitioning = false;
+  let lastState = audio.paused || audio.ended ? 'pause' : 'play';
+
+  function getStatus(){
+    return document.querySelector('#smartMusic .music-status') ||
+           document.querySelector('#smartMusic .music-copy b');
+  }
+
+  function animateStatusChange(){
+    const status = getStatus();
+    if(!status || transitioning) return;
+
+    const nextState = audio.paused || audio.ended ? 'pause' : 'play';
+
+    if(nextState === lastState) return;
+
+    transitioning = true;
+
+    const oldText = status.textContent.trim();
+
+    /* Bungkus status agar teks lama dapat fade-out tanpa mengganggu layout */
+    const holder = document.createElement('span');
+    holder.style.position = 'relative';
+    holder.style.display = 'inline-block';
+    holder.style.verticalAlign = 'middle';
+
+    status.parentNode.insertBefore(holder, status);
+    holder.appendChild(status);
+
+    const oldLayer = document.createElement('span');
+    oldLayer.className = 'music-status-transition-layer';
+    oldLayer.textContent = oldText;
+
+    /* Samakan tampilan dengan teks asli */
+    const computed = window.getComputedStyle(status);
+    oldLayer.style.fontFamily = computed.fontFamily;
+    oldLayer.style.fontSize = computed.fontSize;
+    oldLayer.style.fontWeight = computed.fontWeight;
+    oldLayer.style.letterSpacing = computed.letterSpacing;
+    oldLayer.style.color = computed.color;
+
+    holder.appendChild(oldLayer);
+
+    /* Sembunyikan teks baru sebentar agar pergantiannya tidak mendadak */
+    status.style.opacity = '0';
+    status.style.transform = 'translateX(-7px)';
+
+    /* Tunggu handler lama selesai mengganti textContent */
+    requestAnimationFrame(function(){
+      requestAnimationFrame(function(){
+
+        oldLayer.addEventListener('animationend', function(){
+          oldLayer.remove();
+
+          status.style.opacity = '';
+          status.style.transform = '';
+
+          status.classList.remove('music-status-enter');
+          void status.offsetWidth;
+          status.classList.add('music-status-enter');
+
+          setTimeout(function(){
+            status.classList.remove('music-status-enter');
+            transitioning = false;
+          }, 520);
+
+        }, {once:true});
+
+      });
+    });
+
+    lastState = nextState;
+  }
+
+  /*
+    Capture phase dijalankan sebelum handler lama pada audio.
+    Dengan begitu teks lama sempat dianimasikan keluar terlebih dahulu.
+  */
+  document.addEventListener('play', function(e){
+    if(e.target === audio){
+      animateStatusChange();
+    }
+  }, true);
+
+  document.addEventListener('pause', function(e){
+    if(e.target === audio){
+      animateStatusChange();
+    }
+  }, true);
+
+  document.addEventListener('ended', function(e){
+    if(e.target === audio){
+      animateStatusChange();
+    }
+  }, true);
+
 })();
 </script>
 
