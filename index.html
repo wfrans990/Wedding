@@ -2506,9 +2506,24 @@ const f=document.getElementById("rsvpForm");if(f)f.addEventListener("submit",()=
 
   function reveal(){
     if(!opened) return;
+
+    /* SELAMA MUSIK BERJALAN, SCROLL TIDAK BOLEH
+       MEMUNCULKAN ATAU MEMBUKA SMART MUSIC. */
+    if(audio && !audio.paused && !audio.ended){
+      controls.classList.remove('is-active');
+      return;
+    }
+
     controls.classList.add('is-active');
     clearTimeout(timer);
-    timer = setTimeout(()=>controls.classList.remove('is-active'), 1200);
+    timer = setTimeout(()=>{
+      /* Saat musik dijeda, tombol tetap terlihat. */
+      if(audio && audio.paused && !audio.ended){
+        controls.classList.add('is-active');
+        return;
+      }
+      controls.classList.remove('is-active');
+    }, 1200);
   }
 
   function openControls(){
