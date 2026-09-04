@@ -2009,45 +2009,6 @@ img{
 }
 
 </style>
-
-<!-- =========================================================
-     FINAL MUSIC COMPACT SIZE — DESKTOP + MOBILE
-     Hanya memperkecil ruang kosong tombol musik
-========================================================= -->
-<style id="final-music-super-compact">
-/* DESKTOP / WEB */
-#smartControls.is-active .smart-music.is-playing,
-#smartControls.music-paused-open #smartMusic,
-#smartControls.music-paused-open:not(.is-active) #smartMusic,
-#smartControls.music-paused-open #smartMusic.is-paused{
-  width:min(300px, calc(100vw - 48px)) !important;
-  min-width:min(300px, calc(100vw - 48px)) !important;
-  max-width:min(300px, calc(100vw - 48px)) !important;
-  padding-right:6px !important;
-  gap:6px !important;
-}
-
-/* Kurangi ruang kosong di area teks */
-#smartControls .smart-music .music-copy{
-  padding-right:0 !important;
-  margin-right:0 !important;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  #smartControls.is-active .smart-music.is-playing,
-  #smartControls.music-paused-open #smartMusic,
-  #smartControls.music-paused-open:not(.is-active) #smartMusic,
-  #smartControls.music-paused-open #smartMusic.is-paused{
-    width:min(275px, calc(100vw - 28px)) !important;
-    min-width:min(275px, calc(100vw - 28px)) !important;
-    max-width:min(275px, calc(100vw - 28px)) !important;
-    padding-right:5px !important;
-    gap:5px !important;
-  }
-}
-</style>
-
 </head>
 
 <body>
@@ -2545,24 +2506,9 @@ const f=document.getElementById("rsvpForm");if(f)f.addEventListener("submit",()=
 
   function reveal(){
     if(!opened) return;
-
-    /* SELAMA MUSIK BERJALAN, SCROLL TIDAK BOLEH
-       MEMUNCULKAN ATAU MEMBUKA SMART MUSIC. */
-    if(audio && !audio.paused && !audio.ended){
-      controls.classList.remove('is-active');
-      return;
-    }
-
     controls.classList.add('is-active');
     clearTimeout(timer);
-    timer = setTimeout(()=>{
-      /* Saat musik dijeda, tombol tetap terlihat. */
-      if(audio && audio.paused && !audio.ended){
-        controls.classList.add('is-active');
-        return;
-      }
-      controls.classList.remove('is-active');
-    }, 1200);
+    timer = setTimeout(()=>controls.classList.remove('is-active'), 1200);
   }
 
   function openControls(){
@@ -4046,7 +3992,7 @@ body.smart-controls-enabled #smartControls{
     }
 
     if(title){
-      title.textContent = ' — Instrumental Pernikahan';
+      title.textContent = '— Instrumental Pernikahan';
     }
 
     btn.classList.toggle('is-playing', !paused);
@@ -4097,448 +4043,330 @@ body.smart-controls-enabled #smartControls{
 </script>
 
 
-
 <!-- =========================================================
-     FINAL FIX — MOBILE MENU & MUSIC BUTTON TIDAK BERTABRAKAN
-     Hanya mengatur posisi Smart Music di handphone.
+ SMART MUSIC — EXACT REVERSE
+ is-paused  : efek keluar (IN)
+ is-playing : efek yang sama persis, arah kebalikan (OUT)
 ========================================================= -->
-<style id="final-mobile-menu-music-spacing">
-@media (max-width:768px){
-  /* Menu tetap berada di bagian paling bawah */
-  .mobile-nav{
-    z-index:9997 !important;
-  }
+<style id="smart-music-paused-playing-exact-reverse">
 
-  /* Smart Music dinaikkan ke atas menu agar tidak menutupi navigasi */
-  #smartControls{
-    bottom:calc(84px + env(safe-area-inset-bottom, 0px)) !important;
-    z-index:99999 !important;
-  }
+/* SATU transisi untuk kedua state */
+#smartControls .smart-btn.smart-music{
+  overflow:hidden !important;
+  transition:
+    width .72s cubic-bezier(.22,1,.36,1) !important,
+    padding .72s cubic-bezier(.22,1,.36,1) !important;
 }
-</style>
 
+#smartControls .smart-btn.smart-music > .music-bars,
+#smartControls .smart-btn.smart-music > .music-copy{
+  transition:
+    opacity .72s cubic-bezier(.22,1,.36,1) !important,
+    transform .72s cubic-bezier(.22,1,.36,1) !important,
+    max-width .72s cubic-bezier(.22,1,.36,1) !important,
+    margin .72s cubic-bezier(.22,1,.36,1) !important;
+}
 
-<!-- =========================================================
-     FINAL MUSIC AUTO FIT TEXT
-     Lebar mengikuti teks terpanjang: DIJEDA / DIPUTAR
-     ========================================================= -->
-<style id="final-music-auto-fit-text">
-
-/* Saat panel musik terbuka, lebarnya mengikuti isi teks secara natural */
-#smartControls.control-music-open #smartMusic,
-#smartControls.is-active .smart-music.is-playing,
-#smartControls.music-paused-open #smartMusic,
-#smartControls.music-paused-open:not(.is-active) #smartMusic,
-#smartControls.music-paused-open #smartMusic.is-paused{
+/* =========================================================
+   IS-PAUSED = EFEK KELUAR DARI ICON
+========================================================= */
+#smartControls.is-active .smart-btn.smart-music.is-paused{
   width:fit-content !important;
-  min-width:0 !important;
-  max-width:calc(100vw - 32px) !important;
-  padding-right:10px !important;
-  gap:6px !important;
 }
 
-/* Isi tidak lagi dipaksa mengambil ruang kosong */
-#smartControls #smartMusic .music-copy{
-  flex:0 1 auto !important;
-  width:max-content !important;
-  min-width:0 !important;
-  max-width:calc(100vw - 110px) !important;
-  padding-right:0 !important;
-  margin-right:0 !important;
-  white-space:nowrap !important;
-}
-
-/* Equalizer tetap hanya sebesar isi */
-#smartControls #smartMusic .music-bars{
-  flex:0 0 auto !important;
-  width:auto !important;
-  min-width:0 !important;
-  margin-right:4px !important;
-}
-
-/* MOBILE: tetap mengikuti teks dengan batas layar yang aman */
-@media(max-width:768px){
-  #smartControls.control-music-open #smartMusic,
-  #smartControls.is-active .smart-music.is-playing,
-  #smartControls.music-paused-open #smartMusic,
-  #smartControls.music-paused-open:not(.is-active) #smartMusic,
-  #smartControls.music-paused-open #smartMusic.is-paused{
-    width:fit-content !important;
-    min-width:0 !important;
-    max-width:calc(100vw - 28px) !important;
-    padding-right:8px !important;
-    gap:5px !important;
-  }
-
-  #smartControls #smartMusic .music-copy{
-    width:max-content !important;
-    max-width:calc(100vw - 95px) !important;
-    font-size:8px !important;
-  }
-}
-
-</style>
-
-
-<!-- =========================================================
-     MUSIC WIDTH — FINAL EXACT TEXT FIT
-     Lebar tombol mengikuti panjang teks aktual pada setiap status
-========================================================= -->
-<style id="final-music-exact-text-fit">
-
-/* Hilangkan seluruh lebar paksa lama ketika panel musik tampil */
-#smartControls.is-active #smartMusic,
-#smartControls.is-active #smartMusic.is-playing,
-#smartControls.is-active #smartMusic.is-paused,
-#smartControls.control-music-open #smartMusic,
-#smartControls.music-paused-open #smartMusic,
-#smartControls.music-paused-open #smartMusic.is-paused{
-  width:max-content !important;
-  min-width:0 !important;
-  max-width:calc(100vw - 32px) !important;
-  flex:0 0 auto !important;
-}
-
-/* Setiap bagian mengambil ruang sesuai isi, bukan ruang kosong */
-#smartControls.is-active #smartMusic > .music-copy{
-  flex:0 0 auto !important;
-  width:max-content !important;
-  min-width:0 !important;
-  max-width:none !important;
-  margin-right:8px !important;
-  padding-right:0 !important;
-  white-space:nowrap !important;
-}
-
-#smartControls.is-active #smartMusic > .music-bars{
-  flex:0 0 auto !important;
-  margin-right:6px !important;
-}
-
-/* Saat teks berubah DIJEDA <-> DIPUTAR, lebar ikut berubah sesuai teks */
-#smartControls.is-active #smartMusic .music-copy,
-#smartControls.is-active #smartMusic .music-copy b,
-#smartControls.is-active #smartMusic .music-copy span{
-  width:max-content !important;
-  max-width:none !important;
-  flex:none !important;
-}
-
-@media(max-width:768px){
-  #smartControls.is-active #smartMusic,
-  #smartControls.is-active #smartMusic.is-playing,
-  #smartControls.is-active #smartMusic.is-paused,
-  #smartControls.control-music-open #smartMusic,
-  #smartControls.music-paused-open #smartMusic,
-  #smartControls.music-paused-open #smartMusic.is-paused{
-    width:max-content !important;
-    min-width:0 !important;
-    max-width:calc(100vw - 28px) !important;
-  }
-
-  #smartControls.is-active #smartMusic > .music-copy{
-    margin-right:7px !important;
-  }
-
-  #smartControls.is-active #smartMusic > .music-bars{
-    margin-right:5px !important;
-  }
-}
-
-</style>
-
-
-<!-- =========================================================
-     MUSIC BUTTON — FINAL JUSTIFY FIT TEXT
-     Lebar mengikuti isi aktual pada PLAY maupun PAUSE
-========================================================= -->
-<style id="final-music-justify-fit-text">
-
-/* Hilangkan lebar tetap lama yang menyebabkan space kosong */
-#smartControls.is-active #smartMusic,
-#smartControls.is-active #smartMusic.is-playing,
-#smartControls.is-active #smartMusic.is-paused,
-#smartControls.control-music-open #smartMusic,
-#smartControls.music-paused-open #smartMusic,
-#smartControls.music-paused-open #smartMusic.is-playing,
-#smartControls.music-paused-open #smartMusic.is-paused{
-  width:auto !important;
-  min-width:0 !important;
-  max-width:calc(100vw - 32px) !important;
-  flex:0 0 auto !important;
-
-  /* Layout rapi mengikuti isi */
-  justify-content:flex-start !important;
-}
-
-/* Isi musik tidak boleh mengambil sisa ruang */
-#smartControls #smartMusic .music-copy{
-  display:flex !important;
-  flex:0 0 auto !important;
-  width:auto !important;
-  min-width:0 !important;
-  max-width:none !important;
-
-  align-items:center !important;
-  justify-content:flex-start !important;
-
-  gap:4px !important;
-  padding:0 8px 0 0 !important;
-  margin:0 !important;
-  white-space:nowrap !important;
-}
-
-/* Status dan judul juga mengikuti isi aktual */
-#smartControls #smartMusic .music-copy b,
-#smartControls #smartMusic .music-copy span{
-  flex:0 0 auto !important;
-  width:auto !important;
-  min-width:0 !important;
-  max-width:none !important;
-  margin:0 !important;
-  padding:0 !important;
-}
-
-/* Equalizer tidak boleh menyisakan ruang tersembunyi */
-#smartControls #smartMusic .music-bars{
-  flex:0 0 auto !important;
-  width:auto !important;
-  min-width:0 !important;
-  margin:0 5px 0 0 !important;
-  padding:0 !important;
-
-  justify-content:center !important;
-}
-
-/* Desktop: tombol benar-benar selebar konten */
-@media(min-width:769px){
-  #smartControls.is-active #smartMusic,
-  #smartControls.control-music-open #smartMusic,
-  #smartControls.music-paused-open #smartMusic{
-    width:max-content !important;
-  }
-}
-
-/* Mobile: sama, tetapi tetap aman terhadap lebar layar */
-@media(max-width:768px){
-  #smartControls.is-active #smartMusic,
-  #smartControls.control-music-open #smartMusic,
-  #smartControls.music-paused-open #smartMusic{
-    width:max-content !important;
-    max-width:calc(100vw - 28px) !important;
-  }
-
-  #smartControls #smartMusic .music-copy{
-    gap:3px !important;
-    padding-right:7px !important;
-  }
-
-  #smartControls #smartMusic .music-bars{
-    margin-right:4px !important;
-  }
-}
-
-</style>
-
-
-<!-- RSVP MOBILE: pilihan hadir tetap bersebelahan -->
-<style id="rsvp-mobile-side-by-side">
-@media(max-width:640px){
-  .attendance-choice{
-    display:grid !important;
-    grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
-    gap:10px !important;
-  }
-
-  .attendance-btn{
-    min-width:0 !important;
-    min-height:68px !important;
-    padding:10px !important;
-    gap:8px !important;
-  }
-
-  .attendance-check{
-    width:34px !important;
-    height:34px !important;
-    min-width:34px !important;
-  }
-
-  .attendance-text{
-    min-width:0 !important;
-  }
-
-  .attendance-text strong{
-    font-size:12px !important;
-  }
-
-  .attendance-text small{
-    font-size:8px !important;
-    line-height:1.3 !important;
-  }
-}
-</style>
-
-
-<!-- =========================================================
-     SMART MUSIC — NATURAL COLLAPSE TO ICON
-     Container mengecil perlahan dari kanan ke kiri.
-     Teks tetap diam di dalam overflow:hidden.
-========================================================= -->
-<style id="music-natural-collapse-final">
-
-/* Tombol harus menjadi viewport untuk isi saat mengecil */
-#smartControls #smartMusic{
-  overflow:hidden !important;
-  white-space:nowrap !important;
-  transform-origin:left center !important;
-  will-change:width, max-width !important;
-  transition:
-    width 950ms cubic-bezier(.22,1,.36,1) !important,
-    max-width 950ms cubic-bezier(.22,1,.36,1) !important,
-    min-width 950ms cubic-bezier(.22,1,.36,1) !important,
-    padding 950ms cubic-bezier(.22,1,.36,1) !important;
-}
-
-/* Isi tidak digeser atau di-scale — container saja yang menutup */
-#smartControls #smartMusic .music-copy,
-#smartControls #smartMusic .music-bars{
-  transform:none !important;
+#smartControls.is-active .smart-btn.smart-music.is-paused > .music-bars{
   opacity:1 !important;
-  transition:none !important;
+  transform:translateX(0) !important;
+  max-width:50px !important;
 }
 
-/* Saat mulai PLAY, container menutup perlahan dari kanan */
-#smartControls.music-natural-closing #smartMusic{
-  overflow:hidden !important;
+#smartControls.is-active .smart-btn.smart-music.is-paused > .music-copy{
+  opacity:1 !important;
+  transform:translateX(0) !important;
+  max-width:320px !important;
 }
 
-/* Perlambat transisi class hide yang sudah ada */
-#smartControls:not(.is-active) #smartMusic,
-#smartControls:not(.control-music-open) #smartMusic{
-  transition:
-    width 950ms cubic-bezier(.22,1,.36,1) !important,
-    max-width 950ms cubic-bezier(.22,1,.36,1) !important,
-    min-width 950ms cubic-bezier(.22,1,.36,1) !important,
-    padding 950ms cubic-bezier(.22,1,.36,1) !important;
+/* =========================================================
+   IS-PLAYING = KEBALIKAN PERSIS DARI IS-PAUSED
+   Tidak memakai animasi baru.
+   State akhir dibuat sama seperti awal animasi paused.
+   Browser otomatis menjalankan transition yang SAMA secara reverse.
+========================================================= */
+#smartControls:not(.is-active) .smart-btn.smart-music.is-playing{
+  width:var(--smart-size) !important;
 }
 
+#smartControls:not(.is-active) .smart-btn.smart-music.is-playing > .music-bars,
+#smartControls:not(.is-active) .smart-btn.smart-music.is-playing > .music-copy{
+  opacity:0 !important;
+  transform:translateX(-14px) !important;
+  max-width:0 !important;
+  margin-right:0 !important;
+}
+
+/* Jangan pernah memakai display:none / visibility:hidden saat reverse */
+#smartControls .smart-btn.smart-music.is-playing > .music-bars,
+#smartControls .smart-btn.smart-music.is-playing > .music-copy,
+#smartControls .smart-btn.smart-music.is-paused > .music-bars,
+#smartControls .smart-btn.smart-music.is-paused > .music-copy{
+  display:flex !important;
+  visibility:visible !important;
+}
+
+/* Mobile: durasi dan arah tetap identik */
 @media(max-width:768px){
-  #smartControls #smartMusic{
-    transition-duration:1050ms !important;
+  #smartControls .smart-btn.smart-music,
+  #smartControls .smart-btn.smart-music > .music-bars,
+  #smartControls .smart-btn.smart-music > .music-copy{
+    transition-duration:.72s !important;
   }
 }
 </style>
 
-<script id="music-natural-collapse-controller">
+<script id="smart-music-exact-reverse-state">
 (function(){
   const controls = document.getElementById('smartControls');
-  const audio = document.getElementById('music');
   const button = document.getElementById('smartMusic');
+  const audio = document.getElementById('music');
 
-  if(!controls || !audio || !button) return;
+  if(!controls || !button || !audio) return;
 
-  let closing = false;
+  /*
+   Hanya sinkronkan class:
+   paused  -> is-paused + is-active
+   playing -> is-playing lalu hapus is-active pada frame berikutnya
 
-  audio.addEventListener('play', function(){
-    closing = true;
-    controls.classList.add('music-natural-closing');
+   Karena properti transition sama, proses playing adalah reverse dari paused.
+  */
+  function pausedState(){
+    button.classList.remove('is-playing');
+    button.classList.add('is-paused');
 
-    /* Beri waktu browser memulai transisi collapse secara lembut */
-    setTimeout(function(){
-      closing = false;
-      controls.classList.remove('music-natural-closing');
-    }, 1100);
-  }, true);
+    requestAnimationFrame(() => {
+      controls.classList.add('is-active');
+    });
+  }
+
+  function playingState(){
+    button.classList.remove('is-paused');
+    button.classList.add('is-playing');
+
+    requestAnimationFrame(() => {
+      controls.classList.remove('is-active');
+    });
+  }
 
   audio.addEventListener('pause', function(){
-    if(closing) return;
-    controls.classList.remove('music-natural-closing');
+    if(!audio.ended) pausedState();
   }, true);
 
-  audio.addEventListener('ended', function(){
-    closing = false;
-    controls.classList.remove('music-natural-closing');
-  }, true);
+  audio.addEventListener('play', playingState, true);
+
+  audio.addEventListener('ended', pausedState, true);
+
+  if(audio.paused || audio.ended) pausedState();
+  else playingState();
 })();
 </script>
 
 
 <!-- =========================================================
-     SMART MUSIC — COLLAPSE EXTRA SLOW
-     Memperlambat proses isi tombol masuk kembali ke icon
+     MOBILE POSITION FIX ONLY
+     Animasi is-paused / is-playing TIDAK DIUBAH.
+     Hanya posisi Smart Music agar tidak bertabrakan dengan menu.
 ========================================================= -->
-<style id="music-collapse-extra-slow">
+<style id="mobile-smart-music-no-menu-collision">
 
-/* Saat tombol berubah dari panel teks menjadi icon:
-   proses collapse dibuat jauh lebih panjang dan lembut */
-#smartControls #smartMusic{
-  transition:
-    width 1.65s cubic-bezier(.16,1,.3,1) !important,
-    max-width 1.65s cubic-bezier(.16,1,.3,1) !important,
-    min-width 1.65s cubic-bezier(.16,1,.3,1) !important,
-    padding 1.65s cubic-bezier(.16,1,.3,1) !important;
-}
+@media (max-width:768px){
 
-/* Jangan biarkan isi langsung fade/hilang.
-   Biarkan container yang perlahan menutup dari kanan ke kiri. */
-#smartControls #smartMusic .music-copy,
-#smartControls #smartMusic .music-bars{
-  opacity:1 !important;
-  transform:none !important;
-  transition:none !important;
-}
+  /* Dock tetap utuh, tetapi sisi kanan disediakan khusus untuk icon musik */
+  .mobile-nav{
+    left:10px !important;
+    right:10px !important;
+    bottom:10px !important;
+    height:62px !important;
+    padding:0 62px 0 6px !important;
+    box-sizing:border-box !important;
+    justify-content:space-around !important;
+  }
 
-/* Mobile sedikit lebih lambat agar efeknya terasa lembut */
-@media(max-width:768px){
-  #smartControls #smartMusic{
-    transition:
-      width 1.85s cubic-bezier(.16,1,.3,1) !important,
-      max-width 1.85s cubic-bezier(.16,1,.3,1) !important,
-      min-width 1.85s cubic-bezier(.16,1,.3,1) !important,
-      padding 1.85s cubic-bezier(.16,1,.3,1) !important;
+  /* Lima menu hanya memakai ruang sebelum slot musik */
+  .mobile-nav a{
+    min-width:0 !important;
+    flex:1 1 0 !important;
+    white-space:nowrap !important;
+  }
+
+  /*
+     STATE PLAYING:
+     icon musik berada di slot kanan navigation.
+     Jadi tidak menimpa menu Hadiah atau menu lainnya.
+  */
+  #smartControls{
+    --smart-size:48px !important;
+    right:17px !important;
+    bottom:17px !important;
+    z-index:10001 !important;
+    transition:bottom .38s cubic-bezier(.22,1,.36,1) !important;
+  }
+
+  /*
+     STATE PAUSED:
+     hanya ketika teks musik sedang terbuka, seluruh tombol naik
+     ke atas navigation. Dengan demikian teks panjang tidak pernah
+     menabrak item menu.
+
+     :has() hanya mengatur POSISI — animasi IN/OUT yang sudah benar
+     pada is-paused/is-playing tetap dibiarkan persis seperti sebelumnya.
+  */
+  #smartControls:has(#smartMusic.is-paused){
+    bottom:84px !important;
+  }
+
+  /*
+     Saat playing kembali, tombol turun lagi ke slot kanan.
+     Karena teks sedang melakukan OUT animation, navigation tetap
+     tidak tertutup.
+  */
+  #smartControls:has(#smartMusic.is-playing){
+    bottom:17px !important;
+  }
+
+  /* Lebar teks tetap mengikuti sistem animasi Anda */
+  #smartControls .smart-btn.smart-music{
+    max-width:calc(100vw - 28px) !important;
   }
 }
-</style>
 
-<script id="music-collapse-extra-slow-controller">
-(function(){
-  const controls = document.getElementById('smartControls');
-  const audio = document.getElementById('music');
-
-  if(!controls || !audio) return;
-
-  let timer = null;
-
-  function clearTimer(){
-    if(timer){
-      clearTimeout(timer);
-      timer = null;
+/* Browser fallback untuk engine lama */
+@supports not selector(:has(*)){
+  @media (max-width:768px){
+    #smartControls{
+      bottom:84px !important;
     }
   }
+}
+</style>
 
-  audio.addEventListener('play', function(){
-    clearTimer();
 
-    controls.classList.add('music-natural-closing');
 
-    /* Pertahankan state animasi cukup lama agar collapse selesai perlahan */
-    timer = setTimeout(function(){
-      controls.classList.remove('music-natural-closing');
-      timer = null;
-    }, 2000);
-  }, true);
+<!-- SMART MUSIC INITIAL BUTTON — STABLE & LIGHTWEIGHT -->
+<style id="smart-music-initial-round-stable">
+/* Setelah Buka Undangan: tombol awal tetap bulat seperti contoh */
+body.smart-music-initial #smartControls .smart-btn.smart-music{
+  width:48px !important;
+  min-width:48px !important;
+  max-width:48px !important;
+  height:48px !important;
+  min-height:48px !important;
+  padding:0 !important;
+  gap:0 !important;
+  border-radius:50% !important;
+  overflow:hidden !important;
+}
 
-  audio.addEventListener('pause', function(){
-    clearTimer();
-    controls.classList.remove('music-natural-closing');
-  }, true);
+/* Sembunyikan hanya isi tambahan pada kondisi awal */
+body.smart-music-initial #smartControls .smart-btn.smart-music .music-bars,
+body.smart-music-initial #smartControls .smart-btn.smart-music .music-copy,
+body.smart-music-initial #smartControls .smart-btn.smart-music .smart-label{
+  display:none !important;
+}
 
-  audio.addEventListener('ended', function(){
-    clearTimer();
-    controls.classList.remove('music-natural-closing');
-  }, true);
+/* Icon tetap tepat di tengah */
+body.smart-music-initial #smartControls .smart-btn.smart-music .smart-icon{
+  position:static !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:48px !important;
+  height:48px !important;
+  flex:0 0 48px !important;
+  opacity:1 !important;
+}
+</style>
+
+<script id="smart-music-initial-round-stable-controller">
+(function(){
+  'use strict';
+
+  const body = document.body;
+  const openButton = document.getElementById('openInvitation');
+  const musicButton = document.getElementById('smartMusic');
+
+  if (openButton) {
+    openButton.addEventListener('click', function(){
+      body.classList.add('smart-music-initial');
+    }, true);
+  }
+
+  /* Begitu tombol musik disentuh pertama kali, kembali ke animasi normal. */
+  if (musicButton) {
+    musicButton.addEventListener('click', function(){
+      body.classList.remove('smart-music-initial');
+    }, true);
+  }
 })();
 </script>
+
+
+<!-- =========================================================
+     FINAL POSITION LOCK — SMART MUSIC TIDAK PINDAH-PINDAH
+     Hanya mengunci posisi container.
+     Animasi IN/OUT is-paused dan is-playing TIDAK DIUBAH.
+========================================================= -->
+<style id="smart-music-final-position-lock">
+
+/* Desktop: jangan biarkan state musik menggeser container */
+#smartControls{
+  transform:none !important;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+  /*
+   SATU POSISI TETAP UNTUK SEMUA STATE.
+   Baik initial, is-paused maupun is-playing,
+   #smartControls selalu berada pada koordinat yang sama.
+  */
+  #smartControls,
+  #smartControls.is-active,
+  #smartControls.control-music-open,
+  #smartControls.music-paused-open,
+  #smartControls:has(#smartMusic.is-paused),
+  #smartControls:has(#smartMusic.is-playing){
+    position:fixed !important;
+    right:14px !important;
+    bottom:82px !important;
+    top:auto !important;
+    left:auto !important;
+    transform:none !important;
+    transition:none !important;
+    animation:none !important;
+    z-index:10001 !important;
+  }
+
+  /*
+   Yang boleh bergerak hanya ISI/TOMBOL musik secara horizontal.
+   Container induknya tidak pernah bergerak.
+  */
+  #smartControls .smart-btn.smart-music{
+    transform:none !important;
+    max-width:calc(100vw - 28px) !important;
+  }
+
+  /*
+   Saat tombol memanjang, anchor tetap di kanan.
+   Jadi tombol hanya tumbuh ke kiri, bukan berpindah tempat.
+  */
+  #smartControls{
+    display:flex !important;
+    align-items:flex-end !important;
+    justify-content:flex-end !important;
+  }
+}
+
+</style>
 
 </body>
 </html>
