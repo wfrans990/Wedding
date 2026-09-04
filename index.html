@@ -4378,5 +4378,167 @@ body.smart-controls-enabled #smartControls{
 }
 </style>
 
+
+<!-- =========================================================
+     SMART MUSIC — NATURAL COLLAPSE TO ICON
+     Container mengecil perlahan dari kanan ke kiri.
+     Teks tetap diam di dalam overflow:hidden.
+========================================================= -->
+<style id="music-natural-collapse-final">
+
+/* Tombol harus menjadi viewport untuk isi saat mengecil */
+#smartControls #smartMusic{
+  overflow:hidden !important;
+  white-space:nowrap !important;
+  transform-origin:left center !important;
+  will-change:width, max-width !important;
+  transition:
+    width 950ms cubic-bezier(.22,1,.36,1) !important,
+    max-width 950ms cubic-bezier(.22,1,.36,1) !important,
+    min-width 950ms cubic-bezier(.22,1,.36,1) !important,
+    padding 950ms cubic-bezier(.22,1,.36,1) !important;
+}
+
+/* Isi tidak digeser atau di-scale — container saja yang menutup */
+#smartControls #smartMusic .music-copy,
+#smartControls #smartMusic .music-bars{
+  transform:none !important;
+  opacity:1 !important;
+  transition:none !important;
+}
+
+/* Saat mulai PLAY, container menutup perlahan dari kanan */
+#smartControls.music-natural-closing #smartMusic{
+  overflow:hidden !important;
+}
+
+/* Perlambat transisi class hide yang sudah ada */
+#smartControls:not(.is-active) #smartMusic,
+#smartControls:not(.control-music-open) #smartMusic{
+  transition:
+    width 950ms cubic-bezier(.22,1,.36,1) !important,
+    max-width 950ms cubic-bezier(.22,1,.36,1) !important,
+    min-width 950ms cubic-bezier(.22,1,.36,1) !important,
+    padding 950ms cubic-bezier(.22,1,.36,1) !important;
+}
+
+@media(max-width:768px){
+  #smartControls #smartMusic{
+    transition-duration:1050ms !important;
+  }
+}
+</style>
+
+<script id="music-natural-collapse-controller">
+(function(){
+  const controls = document.getElementById('smartControls');
+  const audio = document.getElementById('music');
+  const button = document.getElementById('smartMusic');
+
+  if(!controls || !audio || !button) return;
+
+  let closing = false;
+
+  audio.addEventListener('play', function(){
+    closing = true;
+    controls.classList.add('music-natural-closing');
+
+    /* Beri waktu browser memulai transisi collapse secara lembut */
+    setTimeout(function(){
+      closing = false;
+      controls.classList.remove('music-natural-closing');
+    }, 1100);
+  }, true);
+
+  audio.addEventListener('pause', function(){
+    if(closing) return;
+    controls.classList.remove('music-natural-closing');
+  }, true);
+
+  audio.addEventListener('ended', function(){
+    closing = false;
+    controls.classList.remove('music-natural-closing');
+  }, true);
+})();
+</script>
+
+
+<!-- =========================================================
+     SMART MUSIC — COLLAPSE EXTRA SLOW
+     Memperlambat proses isi tombol masuk kembali ke icon
+========================================================= -->
+<style id="music-collapse-extra-slow">
+
+/* Saat tombol berubah dari panel teks menjadi icon:
+   proses collapse dibuat jauh lebih panjang dan lembut */
+#smartControls #smartMusic{
+  transition:
+    width 1.65s cubic-bezier(.16,1,.3,1) !important,
+    max-width 1.65s cubic-bezier(.16,1,.3,1) !important,
+    min-width 1.65s cubic-bezier(.16,1,.3,1) !important,
+    padding 1.65s cubic-bezier(.16,1,.3,1) !important;
+}
+
+/* Jangan biarkan isi langsung fade/hilang.
+   Biarkan container yang perlahan menutup dari kanan ke kiri. */
+#smartControls #smartMusic .music-copy,
+#smartControls #smartMusic .music-bars{
+  opacity:1 !important;
+  transform:none !important;
+  transition:none !important;
+}
+
+/* Mobile sedikit lebih lambat agar efeknya terasa lembut */
+@media(max-width:768px){
+  #smartControls #smartMusic{
+    transition:
+      width 1.85s cubic-bezier(.16,1,.3,1) !important,
+      max-width 1.85s cubic-bezier(.16,1,.3,1) !important,
+      min-width 1.85s cubic-bezier(.16,1,.3,1) !important,
+      padding 1.85s cubic-bezier(.16,1,.3,1) !important;
+  }
+}
+</style>
+
+<script id="music-collapse-extra-slow-controller">
+(function(){
+  const controls = document.getElementById('smartControls');
+  const audio = document.getElementById('music');
+
+  if(!controls || !audio) return;
+
+  let timer = null;
+
+  function clearTimer(){
+    if(timer){
+      clearTimeout(timer);
+      timer = null;
+    }
+  }
+
+  audio.addEventListener('play', function(){
+    clearTimer();
+
+    controls.classList.add('music-natural-closing');
+
+    /* Pertahankan state animasi cukup lama agar collapse selesai perlahan */
+    timer = setTimeout(function(){
+      controls.classList.remove('music-natural-closing');
+      timer = null;
+    }, 2000);
+  }, true);
+
+  audio.addEventListener('pause', function(){
+    clearTimer();
+    controls.classList.remove('music-natural-closing');
+  }, true);
+
+  audio.addEventListener('ended', function(){
+    clearTimer();
+    controls.classList.remove('music-natural-closing');
+  }, true);
+})();
+</script>
+
 </body>
 </html>
