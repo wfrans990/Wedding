@@ -49,7 +49,7 @@ button{font:inherit}
 /* HERO */
 .hero{min-height:100vh;padding:25px;display:flex;align-items:center}
 .hero-inner{width:min(1280px,100%);min-height:90vh;margin:auto;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:clamp(35px,7vw,100px);background:#d9d3cb}
-.hero-image{position:absolute;inset:0;height:100%;object-fit:cover;opacity:.72;filter:grayscale(100%);transition:2s}
+.hero-image{position:absolute;inset:0;height:100%;object-fit:cover;opacity:.72;filter:none;transition:2s}
 .hero-inner:hover .hero-image{transform:scale(1.03)}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.72),rgba(0,0,0,.04))}
 .hero-content{position:relative;z-index:1;color:#fff}
@@ -60,7 +60,7 @@ button{font:inherit}
 
 /* INTRO */
 .intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(45px,10vw,140px);align-items:end}
-.intro-image{height:680px;overflow:hidden;background:#ddd}.intro-image img{height:100%;object-fit:cover;filter:grayscale(100%)}
+.intro-image{height:680px;overflow:hidden;background:#ddd}.intro-image img{height:100%;object-fit:cover;filter:}
 .intro-text{padding-bottom:35px}.intro-text p{margin-top:38px;line-height:2;color:var(--muted);max-width:520px}
 .signature{font-family:Manrope,sans-serif;font-size:42px;margin-top:38px}
 
@@ -68,7 +68,7 @@ button{font:inherit}
 .couple-section{background:#151515;color:#fff}.couple-grid{display:grid;grid-template-columns:1fr 1fr}
 .couple-card{min-height:720px;position:relative;overflow:hidden;padding:60px;display:flex;align-items:flex-end}
 .couple-card:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75),transparent 60%)}
-.couple-card img{position:absolute;inset:0;height:100%;object-fit:cover;opacity:.7;filter:grayscale(100%);transition:1s}
+.couple-card img{position:absolute;inset:0;height:100%;object-fit:cover;opacity:.7;filter:none;transition:1s}
 .couple-card:hover img{transform:scale(1.05);filter:grayscale(0)}
 .couple-info{position:relative;z-index:1}.couple-info small{font-size:10px;letter-spacing:4px}.couple-info h2{font-family:Manrope,sans-serif;font-size:72px;font-weight:400;margin-top:18px}.couple-info p{font-size:12px;color:#ddd;margin-top:15px;letter-spacing:1px}
 
@@ -89,7 +89,7 @@ button{font:inherit}
 .film:before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.55)}.film-content{position:relative;z-index:1}.film-title{font-family:Manrope,sans-serif;font-size:clamp(58px,8vw,120px);font-weight:400;line-height:.88;margin-top:25px}.play-film{margin-top:48px;width:90px;height:90px;border-radius:50%;border:1px solid #fff;background:transparent;color:#fff;cursor:pointer;font-size:18px;transition:.3s}.play-film:hover{background:#fff;color:#111;transform:scale(1.08)}
 
 /* GALLERY */
-.gallery{background:#151515;color:#fff}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:70px}.gallery-item{overflow:hidden;cursor:pointer}.gallery-item:first-child{grid-row:span 2}.gallery-item img{height:100%;min-height:330px;object-fit:cover;filter:grayscale(100%);transition:1s}.gallery-item:hover img{transform:scale(1.06);filter:none}
+.gallery{background:#151515;color:#fff}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:70px}.gallery-item{overflow:hidden;cursor:pointer}.gallery-item:first-child{grid-row:span 2}.gallery-item img{height:100%;min-height:330px;object-fit:cover;filter:none;transition:1s}.gallery-item:hover img{transform:scale(1.06);filter:none}
 
 /* GIFT */
 .gift{text-align:center}.gift-text{max-width:620px;margin:30px auto;line-height:2;color:var(--muted)}.gift-grid{max-width:950px;margin:65px auto 0;display:grid;grid-template-columns:1.4fr .8fr;gap:20px;text-align:left}.gift-card{background:#fff;border:1px solid var(--line);padding:55px}.bank{font-family:Manrope,sans-serif;font-size:52px}.account{margin-top:70px;font-family:Manrope,sans-serif;font-size:clamp(22px,3vw,34px);word-break:break-all}.account-name{margin-top:15px;color:var(--muted);font-size:11px}.qris-card{background:#151515;color:#fff;padding:45px;display:grid;place-items:center;text-align:center}.qris-placeholder{width:190px;height:190px;background:#fff;color:#111;display:grid;place-items:center;font-family:Manrope,sans-serif;font-size:36px}.copy-button{margin-top:35px}
@@ -457,7 +457,7 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Manr
     padding:0 24px 115px;
     align-items:flex-end;
   }
-  .hero-image{filter:grayscale(100%) contrast(.95);opacity:.78}
+  .hero-image{filter:contrast(.95);opacity:.78}
   .hero-overlay{background:linear-gradient(to top,rgba(0,0,0,.9) 0%,rgba(0,0,0,.25) 60%,rgba(0,0,0,.1) 100%)}
   .hero-content{width:100%}
   .hero-label{font-size:9px;letter-spacing:3px;margin-bottom:24px}
@@ -1327,6 +1327,84 @@ body.invitation-opened #smartControls{
 }
 @media(max-width:390px){.mobile-nav{width:calc(100vw - 16px)!important;bottom:8px!important;border-radius:16px!important}.mobile-nav a{font-size:6px!important}}
 </style>
+
+
+<style id="photos-full-color-final">
+/* FINAL: seluruh foto undangan selalu tampil berwarna */
+.hero img,
+.hero-image,
+.hero-image img,
+.intro-image,
+.intro-image img,
+.couple-card img,
+.couple-photo,
+.couple-photo img,
+.gallery img,
+.gallery-item img,
+.lightbox img,
+#lightbox img{
+  filter:none !important;
+  -webkit-filter:none !important;
+}
+</style>
+
+
+<style id="mobile-nav-true-hide-final">
+@media (max-width:768px){
+  #mobileNav{
+    position:fixed !important;
+    left:50% !important;
+    right:auto !important;
+    bottom:14px !important;
+    width:min(370px,calc(100vw - 24px)) !important;
+    transform:translate(-50%,0) !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    pointer-events:auto !important;
+    z-index:9997 !important;
+    will-change:transform,opacity;
+    transition:
+      transform .42s cubic-bezier(.22,1,.36,1),
+      opacity .24s ease,
+      visibility 0s linear 0s !important;
+  }
+
+  /* TRUE HIDE:
+     seluruh navigasi keluar melewati batas bawah layar.
+     Tidak ada edge/handle/bar yang sengaja disisakan. */
+  #mobileNav.nav-hidden{
+    transform:translate(-50%,calc(100% + 40px)) !important;
+    opacity:0 !important;
+    visibility:hidden !important;
+    pointer-events:none !important;
+    transition:
+      transform .42s cubic-bezier(.22,1,.36,1),
+      opacity .24s ease,
+      visibility 0s linear .42s !important;
+  }
+
+  /* Music position remains independent from navigation. */
+  #smartControls{
+    right:14px !important;
+    bottom:78px !important;
+  }
+}
+
+@media(max-width:390px){
+  #mobileNav{
+    width:calc(100vw - 16px) !important;
+    bottom:8px !important;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  #mobileNav,
+  #mobileNav.nav-hidden{
+    transition:none !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <div id="luxuryLoader">
@@ -1847,8 +1925,18 @@ renderWishes();
 
   window.addEventListener('scroll',()=>{
     if(!opened) return;
-    if(audio.paused || audio.ended) show();
-    else show(900);
+
+    // Saat musik DIJEDA: tampilkan panel panjang dan biarkan tetap terbuka
+    // selama pengguna sedang membaca / melakukan scroll.
+    if(audio.paused || audio.ended){
+      show();
+      return;
+    }
+
+    // Saat musik SEDANG DIPUTAR: jangan pernah membuka panel panjang karena
+    // scrolling. Tombol tetap dalam mode compact agar tidak menghalangi layar.
+    clearHideTimer();
+    controls.classList.remove('is-active');
   },{passive:true});
 
   window.addEventListener('resize',updateOpenWidth,{passive:true});
@@ -1856,16 +1944,76 @@ renderWishes();
   sync();
 })();
 </script>
+<!-- SMART MUSIC SCROLL BEHAVIOR FINAL:
+     PAUSED = scroll may keep expanded state.
+     PLAYING = scroll never expands the control. -->
+
+
 <script id="mobile-smart-nav-controller">
 (function(){
- const nav=document.getElementById('mobileNav'); if(!nav)return;
- const links=[...nav.querySelectorAll('a[href^="#"]')]; let lastY=window.scrollY, ticking=false;
- function update(){const y=window.scrollY, delta=y-lastY; if(y<90||delta<-5)nav.classList.remove('nav-hidden'); else if(delta>5)nav.classList.add('nav-hidden'); lastY=y;ticking=false}
- window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(update);ticking=true}},{passive:true});
- links.forEach(link=>link.addEventListener('click',()=>{links.forEach(x=>x.classList.remove('is-active'));link.classList.add('is-active');nav.classList.remove('nav-hidden')}));
- const sections=links.map(l=>document.querySelector(l.getAttribute('href'))).filter(Boolean);
- if('IntersectionObserver'in window){const ob=new IntersectionObserver(es=>{const v=es.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];if(!v)return;links.forEach(l=>l.classList.toggle('is-active',document.querySelector(l.getAttribute('href'))===v.target))},{rootMargin:'-35% 0px -50% 0px',threshold:[0,.15,.3,.5]});sections.forEach(s=>ob.observe(s))}
+  const nav = document.getElementById('mobileNav');
+  if (!nav) return;
+
+  const IDLE_DELAY = 3000;
+  let idleTimer = null;
+
+  const links = Array.from(nav.querySelectorAll('a[href^="#"]'));
+  const sections = links
+    .map(link => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean);
+
+  function showNav(){
+    nav.classList.remove('nav-hidden');
+  }
+
+  function hideNav(){
+    nav.classList.add('nav-hidden');
+  }
+
+  function registerActivity(){
+    showNav();
+    window.clearTimeout(idleTimer);
+    idleTimer = window.setTimeout(hideNav, IDLE_DELAY);
+  }
+
+  // Scroll only resets inactivity timer. It never changes position/direction.
+  window.addEventListener('scroll', registerActivity, {passive:true});
+  window.addEventListener('pointerdown', registerActivity, {passive:true});
+  window.addEventListener('touchstart', registerActivity, {passive:true});
+  window.addEventListener('keydown', registerActivity);
+
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      links.forEach(item => item.classList.toggle('is-active', item === link));
+      registerActivity();
+    });
+  });
+
+  // Active item follows the visible section without affecting nav position.
+  if ('IntersectionObserver' in window && sections.length){
+    const observer = new IntersectionObserver(entries => {
+      const visible = entries
+        .filter(entry => entry.isIntersecting)
+        .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (!visible) return;
+
+      links.forEach(link => {
+        const target = document.querySelector(link.getAttribute('href'));
+        link.classList.toggle('is-active', target === visible.target);
+      });
+    }, {
+      rootMargin:'-35% 0px -50% 0px',
+      threshold:[0.1,0.25,0.5]
+    });
+
+    sections.forEach(section => observer.observe(section));
+  }
+
+  // Initial state: visible, then truly hidden after 3 seconds of inactivity.
+  registerActivity();
 })();
 </script>
+
 </body>
 </html>
