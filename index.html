@@ -1313,7 +1313,21 @@ body.invitation-opened #smartControls{
   #smartControls .music-bars,
   #smartControls .music-copy{transition-duration:1ms!important}
 }
-</style></head>
+</style>
+<style id="mobile-smart-nav-style">
+/* VARIAN A — AUTO HIDE NAVIGATION */
+@media(max-width:768px){
+  .mobile-nav{position:fixed!important;left:50%!important;right:auto!important;bottom:14px!important;transform:translateX(-50%);width:min(370px,calc(100vw - 24px))!important;height:50px!important;padding:4px!important;margin:0!important;display:flex!important;align-items:center;justify-content:space-around;border:1px solid rgba(255,255,255,.12)!important;border-radius:18px!important;background:rgba(20,20,20,.82)!important;box-shadow:0 12px 32px rgba(0,0,0,.22)!important;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);z-index:9997!important;transition:transform .38s cubic-bezier(.16,1,.3,1),opacity .3s ease!important}
+  .mobile-nav.nav-hidden{transform:translate(-50%,78px)!important;opacity:0!important;pointer-events:none}
+  .mobile-nav a{flex:1!important;min-width:0!important;height:42px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:2px!important;padding:0!important;border-radius:13px!important;color:rgba(255,255,255,.52)!important;background:transparent!important;font-size:7px!important;font-weight:700!important;letter-spacing:.45px!important;text-transform:uppercase!important;text-decoration:none!important;transition:background .25s ease,color .25s ease,transform .25s ease!important}
+  .mobile-nav a span:first-child{font-size:14px;line-height:1}
+  .mobile-nav a.is-active{background:rgba(255,255,255,.11)!important;color:#fff!important}
+  .mobile-nav a:active{transform:scale(.94)}
+  #smartControls{right:14px!important;bottom:78px!important}
+}
+@media(max-width:390px){.mobile-nav{width:calc(100vw - 16px)!important;bottom:8px!important;border-radius:16px!important}.mobile-nav a{font-size:6px!important}}
+</style>
+</head>
 <body>
 <div id="luxuryLoader">
 <div class="loader-inner">
@@ -1474,8 +1488,13 @@ body.invitation-opened #smartControls{
 </footer>
 
 <audio id="music" loop=""><source src="music.mp3" type="audio/mpeg"/></audio>
-<nav class="mobile-nav">
-<a href="#home">Beranda</a><a href="#couple">Mempelai</a><a href="#event">Acara</a><a href="#gallery">Galeri</a><a href="#gift">Hadiah</a>
+<!-- VARIAN A: AUTO HIDE MOBILE NAV -->
+<nav aria-label="Navigasi mobile" class="mobile-nav" id="mobileNav">
+<a href="#home" data-target="home"><span>⌂</span><span>Beranda</span></a>
+<a href="#couple" data-target="couple"><span>♡</span><span>Mempelai</span></a>
+<a href="#event" data-target="event"><span>◷</span><span>Acara</span></a>
+<a href="#gallery" data-target="gallery"><span>▣</span><span>Galeri</span></a>
+<a href="#gift" data-target="gift"><span>✦</span><span>Hadiah</span></a>
 </nav>
 <div class="lightbox" id="lightbox">
 <div class="lightbox-top">
@@ -1836,5 +1855,17 @@ renderWishes();
 
   sync();
 })();
-</script></body>
+</script>
+<script id="mobile-smart-nav-controller">
+(function(){
+ const nav=document.getElementById('mobileNav'); if(!nav)return;
+ const links=[...nav.querySelectorAll('a[href^="#"]')]; let lastY=window.scrollY, ticking=false;
+ function update(){const y=window.scrollY, delta=y-lastY; if(y<90||delta<-5)nav.classList.remove('nav-hidden'); else if(delta>5)nav.classList.add('nav-hidden'); lastY=y;ticking=false}
+ window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(update);ticking=true}},{passive:true});
+ links.forEach(link=>link.addEventListener('click',()=>{links.forEach(x=>x.classList.remove('is-active'));link.classList.add('is-active');nav.classList.remove('nav-hidden')}));
+ const sections=links.map(l=>document.querySelector(l.getAttribute('href'))).filter(Boolean);
+ if('IntersectionObserver'in window){const ob=new IntersectionObserver(es=>{const v=es.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];if(!v)return;links.forEach(l=>l.classList.toggle('is-active',document.querySelector(l.getAttribute('href'))===v.target))},{rootMargin:'-35% 0px -50% 0px',threshold:[0,.15,.3,.5]});sections.forEach(s=>ob.observe(s))}
+})();
+</script>
+</body>
 </html>
