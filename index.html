@@ -119,8 +119,8 @@ footer{padding:120px 25px 100px;text-align:center}.footer-names{font-family:Manr
 
 
 /* =========================================================
-PREMIUM WEDDING GIFT — BALANCED EQUAL CARDS
-#ERROR!
+  PREMIUM WEDDING GIFT — BALANCED EQUAL CARDS
+========================================================= */
 .gift-grid{
 max-width:980px;
 margin:65px auto 0;
@@ -224,8 +224,8 @@ padding:28px 22px;
 
 
 /* =========================================================
-COMPACT PREMIUM GIFT CARDS — REFINED PROPORTION
-#ERROR!
+  COMPACT PREMIUM GIFT CARDS — REFINED PROPORTION
+========================================================= */
 .gift-grid{
 max-width:780px;
 margin:48px auto 0;
@@ -301,8 +301,8 @@ margin-top:17px;
 
 
 /* =========================================================
-ULTRA COMPACT GIFT — MOBILE FIRST
-#ERROR!
+  ULTRA COMPACT GIFT — MOBILE FIRST
+========================================================= */
 .gift.section{padding-top:58px;padding-bottom:58px}
 .gift .section-title{margin-top:12px}
 .gift-text{margin-top:16px!important;margin-bottom:0!important;max-width:520px}
@@ -371,8 +371,8 @@ padding:9px 12px!important;
 
 
 /* =========================================================
-GIFT PAYMENT CARDS — MATCHING LEFT-ALIGNED LAYOUT
-#ERROR!
+  GIFT PAYMENT CARDS — MATCHING LEFT-ALIGNED LAYOUT
+========================================================= */
 .qris-card{
 text-align:left!important;
 align-items:stretch!important;
@@ -429,8 +429,8 @@ margin-top:17px!important;
 @keyframes qrisIn{from{opacity:0;transform:translateY(20px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
 
 /* =========================================================
-MOBILE EXPERIENCE — REDESIGNED FOR PHONE
-#ERROR!
+  MOBILE EXPERIENCE — REDESIGNED FOR PHONE
+========================================================= */
 @media(max-width:768px){
 body{padding-bottom:82px}
 .section{padding:76px 18px}
@@ -596,8 +596,8 @@ color:#aaa;
 
 
 /* =========================================================
-CINEMATIC MOMENTS VIEWER — PREMIUM GALLERY EXPERIENCE
-#ERROR!
+  CINEMATIC MOMENTS VIEWER — PREMIUM GALLERY EXPERIENCE
+========================================================= */
 #galleryModal,
 .gallery-modal{
 position:fixed!important;
@@ -782,8 +782,8 @@ padding:10px 14px;
 
 
 /* =========================================================
-FINAL POLISH — CINEMATIC GALLERY + DOWNLOAD EXPERIENCE
-#ERROR!
+  FINAL POLISH — CINEMATIC GALLERY + DOWNLOAD EXPERIENCE
+========================================================= */
 .lightbox{
 background:radial-gradient(circle at 50% 35%,rgba(255,255,255,.09),transparent 28%),rgba(5,5,6,.98)!important;
 backdrop-filter:blur(22px);
@@ -904,8 +904,8 @@ content:"";position:absolute;width:38vw;height:38vw;border:1px solid rgba(255,25
 
 
 /* =========================================================
-SMART FLOATING CONTROLS — MUNCUL SAAT SCROLL, RINGKAS SAAT DIAM
-#ERROR!
+  SMART FLOATING CONTROLS — MUNCUL SAAT SCROLL, RINGKAS SAAT DIAM
+  ========================================================= */
 .floating-controls{
 position:fixed;
 right:24px;
@@ -1037,9 +1037,9 @@ letter-spacing:-.04em;
 }
 </style><style id="rsvp-attendance-clean">
 /* =========================================================
-MUSIC STATUS + RSVP ONLY
-Tidak menyentuh section/konten undangan lainnya.
-#ERROR!
+  MUSIC STATUS + RSVP ONLY
+  Tidak menyentuh section/konten undangan lainnya.
+  ========================================================= */
 
 /* RSVP */
 .attendance-choice{
@@ -1152,10 +1152,10 @@ border-color:#d05050;
 </style><style id="smart-music-clean-final">
 
 /* =========================================================
-SMART MUSIC — SMOOTH REVERSE FINAL
-is-paused  = membuka
-is-playing = menutup dengan easing yang SAMA (reverse)
-#ERROR!
+  SMART MUSIC — SMOOTH REVERSE FINAL
+  is-paused  = membuka
+  is-playing = menutup dengan easing yang SAMA (reverse)
+  ========================================================= */
 #smartControls{
 --smart-size:46px;
 --smart-bg:#25292d;
@@ -1270,10 +1270,10 @@ transform var(--music-speed) var(--music-ease);
 #smartControls .smart-label{display:none}
 
 /* =========================================================
-SATU STATE OPEN UNTUK PAUSE DAN TRANSISI PLAYING
-Properti yang sama berubah ke nilai kebalikan, sehingga OUT
-adalah reverse dari IN dan terasa sama halusnya.
-#ERROR!
+  SATU STATE OPEN UNTUK PAUSE DAN TRANSISI PLAYING
+  Properti yang sama berubah ke nilai kebalikan, sehingga OUT
+  adalah reverse dari IN dan terasa sama halusnya.
+  ========================================================= */
 #smartControls.is-active #smartMusic{
 width:min(var(--music-open-width), calc(100vw - 48px));
 }
@@ -1292,7 +1292,7 @@ transform:translateX(0);
 }
 
 /* State tertutup — dipakai saat is-playing setelah delay.
-Tidak memakai display:none agar reverse transition tidak patah. */
+  Tidak memakai display:none agar reverse transition tidak patah. */
 #smartControls:not(.is-active) #smartMusic .music-bars,
 #smartControls:not(.is-active) #smartMusic .music-copy{
 opacity:0;
@@ -1312,6 +1312,12 @@ transform:translateX(-10px);
 #smartControls .music-bars,
 #smartControls .music-copy{transition-duration:1ms!important}
 }
+</style>
+
+<style id="smart-music-auto-hide-style">
+/* Smart Music ikut auto-hide seperti navigasi */
+#smartControls{transition:opacity .32s ease,transform .38s cubic-bezier(.16,1,.3,1)!important}
+#smartControls.music-hidden{opacity:0!important;pointer-events:none!important;transform:translateY(72px)!important}
 </style>
 <style id="mobile-smart-nav-style">
 /* VARIAN A — AUTO HIDE NAVIGATION */
@@ -1369,8 +1375,8 @@ visibility 0s linear 0s !important;
 }
 
 /* TRUE HIDE:
-seluruh navigasi keluar melewati batas bawah layar.
-Tidak ada edge/handle/bar yang sengaja disisakan. */
+    seluruh navigasi keluar melewati batas bawah layar.
+    Tidak ada edge/handle/bar yang sengaja disisakan. */
 #mobileNav.nav-hidden{
 transform:translate(-50%,calc(100% + 40px)) !important;
 opacity:0 !important;
@@ -1407,7 +1413,7 @@ transition:none !important;
 
 <style id="rsvp-mobile-web-layout-final">
 /* FINAL RSVP MOBILE LAYOUT
-Mobile mengikuti struktur tampilan web: dua pilihan selalu sejajar. */
+  Mobile mengikuti struktur tampilan web: dua pilihan selalu sejajar. */
 @media (max-width:768px){
 #rsvp .attendance-choice{
 display:grid !important;
@@ -1454,7 +1460,7 @@ line-height:1.35 !important;
 }
 
 /* Layar HP sangat sempit tetap mempertahankan posisi seperti web,
-hanya ukuran elemen dipadatkan sedikit agar tidak pecah. */
+  hanya ukuran elemen dipadatkan sedikit agar tidak pecah. */
 @media (max-width:390px){
 #rsvp .attendance-choice{
 gap:8px !important;
@@ -1715,28 +1721,28 @@ white-space:nowrap !important;
 SMART MUSIC — EXACT REVERSE
 is-paused  : efek keluar (IN)
 is-playing : efek yang sama persis, arah kebalikan (OUT)
-#ERROR!
+========================================================= -->
 
 
 <!-- =========================================================
-MOBILE POSITION FIX ONLY
-Animasi is-paused / is-playing TIDAK DIUBAH.
-Hanya posisi Smart Music agar tidak bertabrakan dengan menu.
-#ERROR!
+    MOBILE POSITION FIX ONLY
+    Animasi is-paused / is-playing TIDAK DIUBAH.
+    Hanya posisi Smart Music agar tidak bertabrakan dengan menu.
+========================================================= -->
 
 <!-- SMART MUSIC INITIAL BUTTON — STABLE & LIGHTWEIGHT -->
 
 
 <!-- =========================================================
-FINAL POSITION LOCK — SMART MUSIC TIDAK PINDAH-PINDAH
-Hanya mengunci posisi container.
-Animasi IN/OUT is-paused dan is-playing TIDAK DIUBAH.
-#ERROR!
+    FINAL POSITION LOCK — SMART MUSIC TIDAK PINDAH-PINDAH
+    Hanya mengunci posisi container.
+    Animasi IN/OUT is-paused dan is-playing TIDAK DIUBAH.
+========================================================= -->
 
 <!-- =========================================================
-FINAL SMART MUSIC — SHRINK TO CONTENT
-FIX: hilangkan ruang kosong di sisi kanan
-#ERROR!
+    FINAL SMART MUSIC — SHRINK TO CONTENT
+    FIX: hilangkan ruang kosong di sisi kanan
+========================================================= -->
 
 <script>
 const WEDDING_CONFIG = {
@@ -1861,8 +1867,8 @@ if(e.target===$("qrisModal")) $("closeQris").click();
 });
 
 /* RSVP + wishes
-Mode default: tampil langsung di browser.
-If rsvpEndpoint is configured, the data will also be sent to the Google Apps Script endpoint.
+  Mode default: tampil langsung di browser.
+  If rsvpEndpoint is configured, the data will also be sent to the Google Apps Script endpoint.
 */
 const wishesKey="frans_fitri_wishes_v1";
 function renderWishes(){
@@ -1934,98 +1940,95 @@ const audio=document.getElementById('music');
 const openButton=document.getElementById('openInvitation');
 if(!controls || !button || !audio) return;
 
+const IDLE_DELAY=3000;
 let opened=false;
-let hideTimer=null;
+let panelTimer=null;
+let idleTimer=null;
 
-function clearHideTimer(){
-if(hideTimer){clearTimeout(hideTimer);hideTimer=null;}
-}
+function clearPanelTimer(){if(panelTimer){clearTimeout(panelTimer);panelTimer=null;}}
+function clearIdleTimer(){if(idleTimer){clearTimeout(idleTimer);idleTimer=null;}}
 
 function updateOpenWidth(){
-// Ukur lebar isi nyata agar width selalu berupa angka yang bisa dianimasikan.
-const icon=button.querySelector('.smart-icon');
-const bars=button.querySelector('.music-bars');
-const copy=button.querySelector('.music-copy');
-const smartSize=parseFloat(getComputedStyle(controls).getPropertyValue('--smart-size')) || 46;
-const barsWidth=bars ? 21 : 0; // 14px bars + 7px gap
-const copyWidth=copy ? copy.scrollWidth + 12 : 0;
-const viewportLimit=window.innerWidth <= 768 ? window.innerWidth-28 : window.innerWidth-48;
-const width=Math.min(Math.ceil(smartSize + barsWidth + copyWidth), viewportLimit);
-controls.style.setProperty('--music-open-width', Math.max(smartSize,width)+'px');
-}
-
-function show(duration){
-updateOpenWidth();
-if(!opened) return;
-clearHideTimer();
-controls.classList.add('is-active');
-if(duration && !audio.paused && !audio.ended){
-hideTimer=setTimeout(()=>{
-if(!audio.paused && !audio.ended) controls.classList.remove('is-active');
-},duration);
-}
+ const bars=button.querySelector('.music-bars');
+ const copy=button.querySelector('.music-copy');
+ const smartSize=parseFloat(getComputedStyle(controls).getPropertyValue('--smart-size'))||46;
+ const barsWidth=bars?21:0;
+ const copyWidth=copy?copy.scrollWidth+12:0;
+ const viewportLimit=window.innerWidth<=768?window.innerWidth-28:window.innerWidth-48;
+ const width=Math.min(Math.ceil(smartSize+barsWidth+copyWidth),viewportLimit);
+ controls.style.setProperty('--music-open-width',Math.max(smartSize,width)+'px');
 }
 
 function sync(){
-const paused=audio.paused || audio.ended;
-button.classList.toggle('is-paused',paused);
-button.classList.toggle('is-playing',!paused);
-button.setAttribute('aria-label',paused?'Putar musik':'Jeda musik');
-const status=button.querySelector('.music-copy b');
-if(status) status.textContent=paused?'SEDANG DIJEDA':'SEDANG DIPUTAR';
-updateOpenWidth();
+ const paused=audio.paused||audio.ended;
+ button.classList.toggle('is-paused',paused);
+ button.classList.toggle('is-playing',!paused);
+ button.setAttribute('aria-label',paused?'Putar musik':'Jeda musik');
+ const status=button.querySelector('.music-copy b');
+ if(status) status.textContent=paused?'SEDANG DIJEDA':'SEDANG DIPUTAR';
+ updateOpenWidth();
+}
+
+function showPanel(duration){
+ updateOpenWidth();
+ if(!opened)return;
+ clearPanelTimer();
+ controls.classList.add('is-active');
+ if(duration){panelTimer=setTimeout(()=>controls.classList.remove('is-active'),duration);}
+}
+
+function showControl(){
+ if(!opened)return;
+ controls.classList.remove('music-hidden');
+}
+function hideControl(){
+ if(!opened)return;
+ controls.classList.remove('is-active');
+ controls.classList.add('music-hidden');
+}
+function registerActivity(){
+ if(!opened)return;
+ showControl();
+ clearIdleTimer();
+ idleTimer=setTimeout(hideControl,IDLE_DELAY);
 }
 
 if(openButton){
-openButton.addEventListener('click',()=>{
-opened=true;
-body.classList.add('invitation-opened');
-controls.classList.remove('is-active');
-sync();
-},true);
+ openButton.addEventListener('click',()=>{
+  opened=true;
+  body.classList.add('invitation-opened');
+  controls.classList.remove('is-active','music-hidden');
+  sync();
+  registerActivity();
+ },true);
 }
 
 button.addEventListener('click',async event=>{
-event.preventDefault();
-clearHideTimer();
-try{
-if(audio.paused || audio.ended){
-if(audio.ended) audio.currentTime=0;
-await audio.play();
-}else{
-audio.pause();
-}
-}catch(error){}
+ event.preventDefault();
+ registerActivity();
+ clearPanelTimer();
+ try{
+  if(audio.paused||audio.ended){if(audio.ended)audio.currentTime=0;await audio.play();}
+  else audio.pause();
+ }catch(error){}
 });
 
-audio.addEventListener('play',()=>{sync();show(1400);});
-audio.addEventListener('pause',()=>{sync();show();});
-audio.addEventListener('ended',()=>{sync();show();});
+audio.addEventListener('play',()=>{sync();showPanel(1400);registerActivity();});
+audio.addEventListener('pause',()=>{sync();showPanel();registerActivity();});
+audio.addEventListener('ended',()=>{sync();showPanel();registerActivity();});
 
-window.addEventListener('scroll',()=>{
-if(!opened) return;
-
-// Saat musik DIJEDA: tampilkan panel panjang dan biarkan tetap terbuka
-// selama pengguna sedang membaca / melakukan scroll.
-if(audio.paused || audio.ended){
-show();
-return;
-}
-
-// Saat musik SEDANG DIPUTAR: jangan pernah membuka panel panjang karena
-// scrolling. Tombol tetap dalam mode compact agar tidak menghalangi layar.
-clearHideTimer();
-controls.classList.remove('is-active');
-},{passive:true});
-
-window.addEventListener('resize',updateOpenWidth,{passive:true});
+// Sama seperti navigasi: setiap aktivitas menampilkan kembali, lalu hide setelah idle.
+['scroll','pointerdown','touchstart','keydown'].forEach(type=>{
+ window.addEventListener(type,registerActivity,{passive:type!=='keydown'});
+});
+window.addEventListener('resize',()=>{updateOpenWidth();registerActivity();},{passive:true});
 
 sync();
 })();
 </script>
 <!-- SMART MUSIC SCROLL BEHAVIOR FINAL:
-PAUSED = scroll may keep expanded state.
-PLAYING = scroll never expands the control. -->
+    PAUSED = scroll may keep expanded state.
+    PLAYING = scroll never expands the control. -->
 
 
 <script id="mobile-smart-nav-controller">
