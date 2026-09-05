@@ -1405,6 +1405,86 @@ body.invitation-opened #smartControls{
 }
 </style>
 
+
+<style id="rsvp-mobile-web-layout-final">
+/* FINAL RSVP MOBILE LAYOUT
+   Mobile mengikuti struktur tampilan web: dua pilihan selalu sejajar. */
+@media (max-width:768px){
+  #rsvp .attendance-choice{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+    gap:12px !important;
+    width:100% !important;
+  }
+
+  #rsvp .attendance-btn{
+    width:100% !important;
+    min-width:0 !important;
+    min-height:76px !important;
+    padding:12px 10px !important;
+    display:flex !important;
+    flex-direction:row !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    gap:10px !important;
+  }
+
+  #rsvp .attendance-check{
+    flex:0 0 36px !important;
+    width:36px !important;
+    height:36px !important;
+    min-width:36px !important;
+  }
+
+  #rsvp .attendance-text{
+    min-width:0 !important;
+    text-align:left !important;
+  }
+
+  #rsvp .attendance-text strong{
+    display:block !important;
+    font-size:12px !important;
+    white-space:nowrap !important;
+  }
+
+  #rsvp .attendance-text small{
+    display:block !important;
+    font-size:9px !important;
+    line-height:1.35 !important;
+  }
+}
+
+/* Layar HP sangat sempit tetap mempertahankan posisi seperti web,
+   hanya ukuran elemen dipadatkan sedikit agar tidak pecah. */
+@media (max-width:390px){
+  #rsvp .attendance-choice{
+    gap:8px !important;
+  }
+
+  #rsvp .attendance-btn{
+    min-height:70px !important;
+    padding:9px 7px !important;
+    gap:7px !important;
+  }
+
+  #rsvp .attendance-check{
+    flex-basis:32px !important;
+    width:32px !important;
+    height:32px !important;
+    min-width:32px !important;
+  }
+
+  #rsvp .attendance-text strong{
+    font-size:10px !important;
+  }
+
+  #rsvp .attendance-text small{
+    font-size:7.5px !important;
+    white-space:nowrap !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <div id="luxuryLoader">
